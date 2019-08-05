@@ -6,16 +6,17 @@ public class GameMethods : MonoBehaviour
 {
     public void StartGame()
     {
-        CommonVariables.GamePlaying = true;
+        if (!CommonVariables.GamePlaying) CommonVariables.GamePlaying = true;
     }
 
-    public void ScorePlus()
+    public void GameOver()
     {
-        CommonVariables.Score++;
-    }
-
-    public void ScoreZero()
-    {
+        CommonVariables.GamePlaying = false;
         CommonVariables.Score = 0;
+    }
+
+    public void GameStep()
+    {
+        if (CommonVariables.GamePlaying) CommonVariables.Score++;
     }
 }
