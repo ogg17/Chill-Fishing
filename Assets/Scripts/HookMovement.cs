@@ -8,11 +8,11 @@ public class HookMovement : MonoBehaviour
     public float stepMovement = 0.02f;
     public float speedMovement = 0.05f;
 
-    private Rigidbody2D _rigidbody;
+    private Rigidbody2D _rigidbody2D;
 
     private void Start()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     public void ReloadMovement()
@@ -27,7 +27,7 @@ public class HookMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var position = _rigidbody.position;
-        _rigidbody.position = Vector2.Lerp(position, new Vector2(position.x, CommonVariables.DepthHook), speedMovement);
+        var position = _rigidbody2D.position;
+        _rigidbody2D.position = Vector2.Lerp(position, new Vector2(position.x, CommonVariables.DepthHook), speedMovement);
     }
 }
