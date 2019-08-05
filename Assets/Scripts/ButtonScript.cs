@@ -12,6 +12,7 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     public Sprite firstState;
     public Sprite secondState;
     public bool changingImage; // enable image change
+    public bool isPressedColor; // enable pressed color
     public bool playingSound; // enable playing sound
 
     public UnityEvent click = new UnityEvent();
@@ -31,11 +32,11 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
-        _imageButton.color = pressedColor;
+        _imageButton.color = isPressedColor ? pressedColor : _imageButton.color;
     }
 
     void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
     {
-        _imageButton.color = Color.white;
+        _imageButton.color = isPressedColor ? Color.white : _imageButton.color;
     }
 }

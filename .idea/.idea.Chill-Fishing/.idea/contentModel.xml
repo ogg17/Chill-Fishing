@@ -9,6 +9,8 @@
         <e p="Scripts" t="Include">
           <e p="ButtonScript.cs" t="Include" />
           <e p="CommonVariables.cs" t="Include" />
+          <e p="HookMovement.cs" t="Include" />
+          <e p="UnwindingFishingLine.cs" t="Include" />
         </e>
       </e>
       <e p="Chill-Fishing.sln" t="IncludeFlat" />

@@ -4,5 +4,6 @@ using UnityEngine;
 
 public static class CommonVariables
 {
-    private static bool GamePlaying { get; set; } = false; // Playing game
+    public static bool GamePlaying { get; set; } = false; // Playing game
+    public static float DepthHook { get; set; } = 1f; // Hook movement base
 }
