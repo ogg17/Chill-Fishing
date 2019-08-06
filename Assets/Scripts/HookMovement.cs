@@ -22,7 +22,7 @@ public class HookMovement : MonoBehaviour
 
     public void Movement()
     {
-        CommonVariables.DepthHook -= stepMovement;
+        if (CommonVariables.GamePlaying) CommonVariables.DepthHook -= stepMovement;
     }
 
     private void FixedUpdate()
