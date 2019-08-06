@@ -17,7 +17,6 @@ public class ScoreUIScript : MonoBehaviour
 
     public void ChangeImageState()
     {
-        if (_spriteRenderer.sprite == firstState) _spriteRenderer.sprite = secondState;
-        else _spriteRenderer.sprite = firstState;
+        _spriteRenderer.sprite = _spriteRenderer.sprite == firstState ? secondState : firstState;
     }
 }

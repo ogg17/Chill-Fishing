@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Random = UnityEngine.Random;
+
+public class SpawnFish : MonoBehaviour
+{
+    public GameObject[] fish = new GameObject[1];
+
+    private void FixedUpdate()
+    {
+        if (CommonVariables.GamePlaying && CommonVariables.FishNumber < CommonVariables.MaxFishNumber)
+        {
+            Instantiate(fish[Random.Range(0, fish.Length)]);
+        }
+    }
+}

@@ -30,4 +30,9 @@ public class HookMovement : MonoBehaviour
         var position = _rigidbody2D.position;
         _rigidbody2D.position = Vector2.Lerp(position, new Vector2(position.x, CommonVariables.DepthHook), speedMovement);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Fish")) EventController.GameEvents.gameOver.Invoke();
+    }
 }

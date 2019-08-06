@@ -8,13 +8,22 @@ public class GameMethods : MonoBehaviour
     {
         CommonVariables.GamePlaying = false;
         CommonVariables.Score = 0;
-        EventController.GameEvents.gameOver.Invoke();
+        CommonVariables.FishNumber = 0;
+    }
+
+    public void GameStart()
+    {
+        
     }
 
     public void GameStep()
     {
         if (CommonVariables.GamePlaying) CommonVariables.Score++;
-        else
+    }
+
+    public void GameStartInvoke()
+    {
+        if (!CommonVariables.GamePlaying)
         {
             CommonVariables.GamePlaying = true;
             EventController.GameEvents.startGame.Invoke();
