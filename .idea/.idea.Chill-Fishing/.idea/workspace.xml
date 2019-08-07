@@ -32,33 +32,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-              <folding>
-                <marker date="1565040154884" expanded="true" signature="6:172" ph="..." />
-                <marker date="1565040154884" expanded="true" signature="277:1253" ph="{...}" />
-                <marker date="1565040154884" expanded="true" signature="647:705" ph="{...}" />
-                <marker date="1565040154884" expanded="true" signature="779:926" ph="{...}" />
-                <marker date="1565040154884" expanded="true" signature="998:1091" ph="{...}" />
-                <marker date="1565040154884" expanded="true" signature="1159:1251" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="240">
+              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding>
-                <marker date="1565118753166" expanded="true" signature="6:92" ph="..." />
-                <marker date="1565118753166" expanded="true" signature="143:476" ph="{...}" />
-                <marker date="1565118753166" expanded="true" signature="251:317" ph="{...}" />
-                <marker date="1565118753166" expanded="true" signature="349:474" ph="{...}" />
+                <marker date="1565119201862" expanded="true" signature="6:92" ph="..." />
+                <marker date="1565119201862" expanded="true" signature="143:471" ph="{...}" />
+                <marker date="1565119201862" expanded="true" signature="251:317" ph="{...}" />
+                <marker date="1565119201862" expanded="true" signature="344:469" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -82,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpawnFish.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -191,6 +174,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Pixel-Fishing/Assets/Scripts/WidingFishingLine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7A46E172-8DF7-419D-AEDC-599CEF62B7EF/8b/b7f8e602/IPointerClickHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TextScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -215,8 +199,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnFish.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs" />
       </list>
     </option>
   </component>
@@ -310,12 +294,12 @@
       <option name="presentableId" value="Default" />
       <updated>1565020403817</updated>
       <workItem from="1565020408658" duration="11724000" />
-      <workItem from="1565093792451" duration="11466000" />
+      <workItem from="1565093792451" duration="12276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23190000" />
+    <option name="totallyTimeSpent" value="24000000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -328,7 +312,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20234291" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -465,35 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/HookMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="83" selection-start-line="35" selection-start-column="83" selection-end-line="35" selection-end-column="83" />
-          <folding>
-            <marker date="1565105826931" expanded="true" signature="6:92" ph="..." />
-            <marker date="1565105826931" expanded="true" signature="135:918" ph="{...}" />
-            <marker date="1565105826931" expanded="true" signature="281:345" ph="{...}" />
-            <marker date="1565105826931" expanded="true" signature="379:430" ph="{...}" />
-            <marker date="1565105826931" expanded="true" signature="458:554" ph="{...}" />
-            <marker date="1565105826931" expanded="true" signature="586:767" ph="{...}" />
-            <marker date="1565105826931" expanded="true" signature="820:916" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1565118753166" expanded="true" signature="6:92" ph="..." />
-            <marker date="1565118753166" expanded="true" signature="143:476" ph="{...}" />
-            <marker date="1565118753166" expanded="true" signature="251:317" ph="{...}" />
-            <marker date="1565118753166" expanded="true" signature="349:474" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -522,6 +476,44 @@
             <marker date="1565104657778" expanded="true" signature="167:449" ph="{...}" />
             <marker date="1565104657778" expanded="true" signature="251:447" ph="{...}" />
             <marker date="1565104657778" expanded="true" signature="360:441" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/HookMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="83" selection-start-line="35" selection-start-column="83" selection-end-line="35" selection-end-column="83" />
+          <folding>
+            <marker date="1565105826931" expanded="true" signature="6:92" ph="..." />
+            <marker date="1565105826931" expanded="true" signature="135:918" ph="{...}" />
+            <marker date="1565105826931" expanded="true" signature="281:345" ph="{...}" />
+            <marker date="1565105826931" expanded="true" signature="379:430" ph="{...}" />
+            <marker date="1565105826931" expanded="true" signature="458:554" ph="{...}" />
+            <marker date="1565105826931" expanded="true" signature="586:767" ph="{...}" />
+            <marker date="1565105826931" expanded="true" signature="820:916" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Pixel-Fishing/Assets/Scripts/WidingFishingLine.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <marker date="1565119201862" expanded="true" signature="6:92" ph="..." />
+            <marker date="1565119201862" expanded="true" signature="143:471" ph="{...}" />
+            <marker date="1565119201862" expanded="true" signature="251:317" ph="{...}" />
+            <marker date="1565119201862" expanded="true" signature="344:469" ph="{...}" />
           </folding>
         </state>
       </provider>
