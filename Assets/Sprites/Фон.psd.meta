@@ -4,13 +4,19 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 2504170125896549414
-    second: Background
+    second: Background_water
   - first:
       213: -1440305702973216995
     second: Scene
   - first:
       213: 4270713861759610467
     second: Fog
+  - first:
+      213: -3108140654771344064
+    second: ice
+  - first:
+      213: -5332317643779937091
+    second: background_sky
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,15 +113,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Background
+      name: Background_water
       rect:
         serializedVersion: 2
         x: 0
         y: 389
         width: 405
-        height: 492
+        height: 371
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -136,7 +142,7 @@ TextureImporter:
         width: 405
         height: 720
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,7 +163,7 @@ TextureImporter:
         width: 405
         height: 119
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,6 +171,48 @@ TextureImporter:
       bones: []
       spriteID: 4cfd928c9901a8f298b77d1207d1d9b5
       internalID: 4270713861759610467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 760
+        width: 405
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a3e59fd3ca7dd47ad87b59097dc997
+      internalID: -3108140654771344064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_sky
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 772
+        width: 405
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebfedd17459b9744b498cc64e267c45
+      internalID: -5332317643779937091
       vertices: []
       indices: 
       edges: []
