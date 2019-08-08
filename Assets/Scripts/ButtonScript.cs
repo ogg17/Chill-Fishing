@@ -5,7 +5,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+[System.Serializable]
+public class UnityBoolEvent : UnityEvent<bool>
+{
+}
 public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
     public Color pressedColor;
@@ -14,9 +17,10 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     public bool changingImage; // enable image change
     public bool isPressedColor; // enable pressed color
     public bool playingSound; // enable playing sound
+    public bool toggleBool;
 
     public UnityEvent click = new UnityEvent();
-
+    public UnityBoolEvent toggle = new UnityBoolEvent();
     private Image _imageButton;
     
     private void Start()
@@ -26,7 +30,9 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
+        toggleBool = !toggleBool;
         click.Invoke();
+        toggle.Invoke(toggleBool);
         if (changingImage) _imageButton.sprite = _imageButton.sprite == firstState ? secondState : firstState;
     }
 

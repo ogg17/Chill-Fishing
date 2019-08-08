@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class ScoreUIScript : MonoBehaviour
 {
-    public Sprite firstState;
-    public Sprite secondState;
+    public Vector2 firstState;
+    public Vector2 secondState;
     
-    private SpriteRenderer _spriteRenderer;
+    private RectTransform _rectTransform;
 
     private void Start()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _rectTransform = GetComponent<RectTransform>();
     }
 
     public void ChangeImageState()
     {
-        _spriteRenderer.sprite = _spriteRenderer.sprite == firstState ? secondState : firstState;
+        _rectTransform.sizeDelta = _rectTransform.sizeDelta == firstState ? secondState : firstState;
     }
 }
