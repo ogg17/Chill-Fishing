@@ -29,4 +29,22 @@ public class GameMethods : MonoBehaviour
             EventController.GameEvents.startGame.Invoke();
         }
     }
+
+    public void TestAddIcePiece()
+    {
+        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
+        {
+            var count = 0;
+            for (int i = 0; i < CommonVariables.MaxIcePieceCount; i++)
+            {
+                if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
+            }
+
+            if (count < 5) CommonVariables.CharacterShop[CommonVariables.CurrentPanel][Random.Range(0, 5)] = 1;
+            else
+            {
+                CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] = 1;
+            }
+        }
+    }
 }

@@ -20,7 +20,16 @@ public class GameSprites : MonoBehaviour
         }
     }
     
-    public Sprite[] scrollPanelsSprite = new Sprite[CommonVariables.CharacterCount];
-    public Sprite[] characterSprites = new Sprite[CommonVariables.CharacterCount];
-    public Color[] backgroundCharacterColor = new Color[CommonVariables.CharacterCount];
+    public CharacterSprites[] characterSprites = new CharacterSprites[CommonVariables.CharacterCount];
+}
+
+[System.Serializable]
+public class CharacterSprites
+{
+    public Sprite scrollPanelSprite;
+    public Sprite characterShopSprite;
+    public Sprite characterGameSprite;
+    public Sprite characterFormSprite;
+    public Color characterBackgroundShopColor;
+    public Sprite[] icePieceSprites = new Sprite[3];
 }

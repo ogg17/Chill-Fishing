@@ -11,6 +11,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
     public UnityEvent changedPanel;
     
     public GameObject panel;
+    public Sprite lockedPanelImage;
     public int spacePanel = 2;
     public float speedStep;
     public Color colorUnActivePanel;
@@ -45,10 +46,8 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
     private IEnumerator Initialized()
     {
         yield return new WaitForSeconds(CommonVariables.InitializedTime);
-        for (var i = 0; i < CommonVariables.CharacterCount; i++)
-        {
-            _panelsImage[i].sprite = GameSprites.gameSprites.scrollPanelsSprite[i];
-        }
+        UpdateImagePanel();
+        changedPanel.Invoke();
     }
 
     private void LateUpdate()
@@ -79,12 +78,23 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
         if (CommonVariables.CurrentPanel != currentPanel)
         {
             CommonVariables.CurrentPanel = currentPanel;
+            UpdateImagePanel();
             changedPanel.Invoke();
         }
         
         if (_isScroll) return;
         _contentPos.x = Mathf.SmoothStep(_contentTransform.anchoredPosition.x, -_panelPos[currentPanel], speedStep * Time.deltaTime);
         _contentTransform.anchoredPosition = _contentPos;
+    }
+
+    public void UpdateImagePanel()
+    {
+        for (var i = 0; i < CommonVariables.CharacterCount; i++)
+        {
+            if (CommonVariables.CharacterShop[i][7] == 1)
+                _panelsImage[i].sprite = GameSprites.gameSprites.characterSprites[i].scrollPanelSprite;
+            else _panelsImage[i].sprite = lockedPanelImage;
+        }
     }
 
     void IEndDragHandler.OnEndDrag(PointerEventData eventData)

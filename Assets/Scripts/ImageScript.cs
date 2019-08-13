@@ -12,15 +12,11 @@ public class ImageScript : MonoBehaviour
     {
         _image = GetComponent<Image>();
     }
-
-    public void SetCharacter()
-    {
-        _image.sprite = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentPanel];
-    }
-
     public void SetColorBackgroundCharacter()
     {
-        _image.color = GameSprites.gameSprites.backgroundCharacterColor[CommonVariables.CurrentPanel];
+        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 1)
+            _image.color = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentPanel].characterBackgroundShopColor;
+        else _image.color = Color.white;
     }
     
 }

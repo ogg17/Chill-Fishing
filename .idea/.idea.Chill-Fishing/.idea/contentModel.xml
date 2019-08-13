@@ -17,9 +17,12 @@
           <e p="EventController.cs" t="Include" />
           <e p="GameMethods.cs" t="Include" />
           <e p="GameSprites.cs" t="Include" />
+          <e p="GameString.cs" t="Include" />
           <e p="HookMovement.cs" t="Include" />
           <e p="HorizontalSnapScroll.cs" t="Include" />
+          <e p="IceImageScript.cs" t="Include" />
           <e p="ImageScript.cs" t="Include" />
+          <e p="SaveLoadScript.cs" t="Include" />
           <e p="ScoreUIScript.cs" t="Include" />
           <e p="SpawnFish.cs" t="Include" />
           <e p="SwimmingFish.cs" t="Include" />
