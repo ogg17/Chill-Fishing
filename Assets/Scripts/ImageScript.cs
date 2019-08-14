@@ -16,7 +16,7 @@ public class ImageScript : MonoBehaviour
     {
         if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 1)
             _image.color = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentPanel].characterBackgroundShopColor;
-        else _image.color = Color.white;
+        else _image.color = Color.gray;
     }
     
 }

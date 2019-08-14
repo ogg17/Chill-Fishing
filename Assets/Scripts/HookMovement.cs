@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class HookMovement : MonoBehaviour
 {
-    public float stepMovement = 0.02f;
-    public float speedMovement = 0.05f;
+    [SerializeField] private float stepMovement = 0.02f;
+    [SerializeField] private float speedMovement = 0.05f;
 
     private Rigidbody2D _rigidbody2D;
 

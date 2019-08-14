@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ScoreUIScript : MonoBehaviour
 {
-    public Vector2 firstState;
-    public Vector2 secondState;
+    [SerializeField] private Vector2 firstState;
+    [SerializeField] private Vector2 secondState;
     
     private RectTransform _rectTransform;
 

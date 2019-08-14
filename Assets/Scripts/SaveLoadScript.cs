@@ -10,9 +10,15 @@ public class SaveLoadScript : MonoBehaviour
         for (var i = 0; i < CommonVariables.CharacterCount; i++)
         {
             CommonVariables.CharacterShop[i] = new int[9];
+            CommonVariables.CharacterShop[i][8] = 5;
         }
 
         CommonVariables.CharacterShop[0][7] = 1;
+        CommonVariables.CharacterShop[8][8] = 3;
+        CommonVariables.CharacterShop[9][8] = 3;
+
+        //CommonVariables.GameLanguage = Application.systemLanguage == SystemLanguage.Russian 
+         //   ? SystemLanguage.Russian : SystemLanguage.English;
     }
     private void Save()
     {
@@ -24,5 +30,4 @@ public class SaveLoadScript : MonoBehaviour
     {
         if (pauseStatus) Save();
     }
-
 }

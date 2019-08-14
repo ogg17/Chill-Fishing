@@ -30,7 +30,7 @@ public class GameMethods : MonoBehaviour
         }
     }
 
-    public void TestAddIcePiece()
+    public void AddIcePiece()
     {
         if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
         {
@@ -40,10 +40,19 @@ public class GameMethods : MonoBehaviour
                 if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
             }
 
-            if (count < 5) CommonVariables.CharacterShop[CommonVariables.CurrentPanel][Random.Range(0, 5)] = 1;
-            else
+            if (count < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
             {
-                CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] = 1;
+                bool exit = false;
+                while (!exit)
+                {
+                    int randomNum = Random.Range(0, CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]);
+                    
+                    if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][randomNum] == 0)
+                    {
+                        CommonVariables.CharacterShop[CommonVariables.CurrentPanel][randomNum] = 1;
+                        exit = true;
+                    }
+                }
             }
         }
     }

@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class SpawnFish : MonoBehaviour
 {
-    public GameObject[] fish = new GameObject[1];
+    [SerializeField] private GameObject[] fish = new GameObject[1];
 
     private void FixedUpdate()
     {

@@ -31,11 +31,11 @@ public class TextScript : MonoBehaviour
         if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
         {
             int count = 0;
-            for (int i = 0; i < CommonVariables.MaxIcePieceCount; i++)
+            for (int i = 0; i < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
             {
                 if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
             }
-            _text.text = count + "/5";
+            _text.text = count + "/" + CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8];
         }
         else _text.text = "";
     }
@@ -44,8 +44,23 @@ public class TextScript : MonoBehaviour
     {
         if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 1)
         {
-            _text.text = GameString.gameString.names[CommonVariables.CurrentPanel];
+            _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian 
+                ? GameString.gameString.names[CommonVariables.CurrentPanel].russian 
+                : GameString.gameString.names[CommonVariables.CurrentPanel].english;
         }
         else _text.text = "";
     }
+
+    public void SetPhraseCharacter()
+    {
+        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 1)
+        {
+            _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian 
+                ? GameString.gameString.phrase[CommonVariables.CurrentPanel].russian 
+                : GameString.gameString.phrase[CommonVariables.CurrentPanel].english;
+        }
+        else _text.text = "";
+    }
+    
+    
 }

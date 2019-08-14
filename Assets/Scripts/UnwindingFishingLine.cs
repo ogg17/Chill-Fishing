@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UnwindingFishingLine : MonoBehaviour
 {
-    public Transform hookPosition;
+    [SerializeField] private Transform hookPosition;
     
     private LineRenderer _lineRenderer;
 

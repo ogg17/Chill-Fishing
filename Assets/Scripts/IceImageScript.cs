@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class IceImageScript : MonoBehaviour
 {
-    public Image[] icePieceImage = new Image[7];
-    public Image characterImage;
-    public GameObject form;
-    public Image formImage;
+    [SerializeField] private Image[] icePieceImage = new Image[7];
+    [SerializeField] private Image characterImage;
+    [SerializeField] private GameObject form;
+    [SerializeField] private Image formImage;
 
     private void Start()
     {

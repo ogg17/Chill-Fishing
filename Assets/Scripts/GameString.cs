@@ -19,5 +19,14 @@ public class GameString : MonoBehaviour
         }
     }
     
-    public String[] names = new string[CommonVariables.CharacterCount];
+    public StringLang[] names = new StringLang[CommonVariables.CharacterCount];
+    public StringLang[] phrase = new StringLang[CommonVariables.CharacterCount];
+    public StringLang[] packs = new StringLang[CommonVariables.PacksCount];
+}
+
+[System.Serializable]
+public class StringLang
+{
+    public String russian;
+    public String english;
 }

@@ -11,21 +11,24 @@ public class UnityBoolEvent : UnityEvent<bool>
 }
 public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
-    public Color pressedColor;
-    public Sprite firstState;
-    public Sprite secondState;
-    public bool changingImage; // enable image change
-    public bool isPressedColor; // enable pressed color
-    public bool playingSound; // enable playing sound
-    public bool toggleBool;
+    [SerializeField] private Color pressedColor;
+    [SerializeField] private Sprite firstState;
+    [SerializeField] private Sprite secondState;
+    [SerializeField] private bool changingImage; // enable image change
+    [SerializeField] private bool isPressedColor; // enable pressed color
+    [SerializeField] private bool playingSound; // enable playing sound
+    [SerializeField] private bool toggleBool;
 
-    public UnityEvent click = new UnityEvent();
-    public UnityBoolEvent toggle = new UnityBoolEvent();
+    [SerializeField] private UnityEvent click = new UnityEvent();
+    [SerializeField] private UnityBoolEvent toggle = new UnityBoolEvent();
+    
     private Image _imageButton;
+    private Color _unpressedColor;
     
     private void Start()
     {
         _imageButton = GetComponent<Image>();
+        _unpressedColor = _imageButton.color;
     }
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
@@ -43,6 +46,6 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
 
     void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
     {
-        _imageButton.color = isPressedColor ? Color.white : _imageButton.color;
+        _imageButton.color = isPressedColor ? _unpressedColor : _imageButton.color;
     }
 }

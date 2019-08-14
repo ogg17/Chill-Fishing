@@ -6,10 +6,10 @@ using Random = UnityEngine.Random;
 
 public class SwimmingFish : MonoBehaviour
 {
-    public SpriteRenderer fishRenderer;
-    public float speedSwimmingMax;
-    public float speedSwimmingMin;
-    public float board;
+    [SerializeField] private SpriteRenderer fishRenderer;
+    [SerializeField] private float speedSwimmingMax;
+    [SerializeField] private float speedSwimmingMin;
+    [SerializeField] private float board;
     
     private bool _direction; // 0 - right, 1 - left
     private bool _fishActive = true;
