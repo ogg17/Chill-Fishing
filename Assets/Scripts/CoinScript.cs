@@ -1,18 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CoinScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        EventController.GameEvents.gameOver.AddListener(DestroyCoin);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Hook"))
+        {
+            CommonVariables.Gold+=100;
+            EventController.GameEvents.pickUpCoin.Invoke();
+            DestroyCoin();
+        }
     }
+
+    public void DestroyCoin() => Destroy(gameObject);
 }

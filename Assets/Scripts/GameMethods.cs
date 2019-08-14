@@ -30,7 +30,7 @@ public class GameMethods : MonoBehaviour
         }
     }
 
-    public void AddIcePiece()
+    public void BuyIcePiece()
     {
         if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
         {
@@ -40,20 +40,29 @@ public class GameMethods : MonoBehaviour
                 if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
             }
 
-            if (count < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
+            if (count < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8] && CommonVariables.Gold >=
+                CommonVariables.CharacterShop[CommonVariables.CurrentPanel][9])
             {
+                CommonVariables.Gold -= CommonVariables.CharacterShop[CommonVariables.CurrentPanel][9];
+
                 bool exit = false;
                 while (!exit)
                 {
                     int randomNum = Random.Range(0, CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]);
-                    
+
                     if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][randomNum] == 0)
                     {
                         CommonVariables.CharacterShop[CommonVariables.CurrentPanel][randomNum] = 1;
                         exit = true;
                     }
                 }
+
+                CommonVariables.CharacterShop[CommonVariables.CurrentPanel][9] += 10;
             }
+        }
+        else
+        {
+            CommonVariables.EquippedSkin = CommonVariables.CurrentPanel;
         }
     }
 }

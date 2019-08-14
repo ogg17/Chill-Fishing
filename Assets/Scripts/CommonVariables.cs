@@ -16,6 +16,7 @@ public static class CommonVariables
     public static int Gold { get; set; } // Gold
     public static int FishNumber { get; set; } // Number of fish
     public static int CurrentPanel { get; set; } // Current scroll panel
+    public static int EquippedSkin { get; set; } // Current equipped skin
     public static int[][] CharacterShop { get; set; } = new int[CharacterCount][]; // Data of shop buys
     public static SystemLanguage GameLanguage { get; set; } = SystemLanguage.English;
 }

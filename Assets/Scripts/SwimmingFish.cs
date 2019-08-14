@@ -10,13 +10,14 @@ public class SwimmingFish : MonoBehaviour
     [SerializeField] private float speedSwimmingMax;
     [SerializeField] private float speedSwimmingMin;
     [SerializeField] private float board;
-    
+
     private bool _direction; // 0 - right, 1 - left
     private bool _fishActive = true;
     private float _speedSwimming;
 
     private void Start()
     {
+        GetComponentInChildren<Animator>().SetFloat("offset", Random.Range(0f, 1f));
         _speedSwimming = Random.Range(speedSwimmingMin, speedSwimmingMax);
         CommonVariables.FishNumber++;
         var randomPos = Random.Range(2, 9);

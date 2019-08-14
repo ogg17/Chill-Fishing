@@ -29,6 +29,8 @@ public class IceImageScript : MonoBehaviour
         if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
         {
             form.SetActive(true);
+            formImage.enabled = true;
+            characterImage.enabled = false;
             formImage.sprite = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentPanel]
                 .characterFormSprite;
             for (int i = 0; i < CommonVariables.MaxIcePieceCount; i++)
@@ -41,10 +43,39 @@ public class IceImageScript : MonoBehaviour
                 }
                 else icePieceImage[i].enabled = false;
             }
+
+            if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10] >= 1)
+            {
+                characterImage.enabled = true;
+                for (int i = 1; i <= CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
+                {
+                    if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10] <= i)
+                        icePieceImage[CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8] - i].enabled =
+                            false;
+                }
+            }
         }
         else
         {
             form.SetActive(false);
+            formImage.enabled = false;
+        }
+    }
+
+    public void AnimationIceCrush()
+    {
+        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
+        {
+            int count = 0;
+            for (int i = 0; i < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
+            {
+                if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
+            }
+
+            if (count == CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]) CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10]++;
+            if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10] ==
+                CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
+                CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] = 1;
         }
     }
 }

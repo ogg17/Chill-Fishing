@@ -25,4 +25,5 @@ public class EventController : MonoBehaviour
     public UnityEvent gameOver = new UnityEvent();
     public UnityEvent startApp = new UnityEvent();
     public UnityEvent closeApp = new UnityEvent();
+    public UnityEvent pickUpCoin = new UnityEvent();
 }

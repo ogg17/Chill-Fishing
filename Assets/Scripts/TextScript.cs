@@ -26,7 +26,7 @@ public class TextScript : MonoBehaviour
         _text.text = "Gold: " + CommonVariables.Gold;
     }
 
-    public void SetIcePieceCount()
+    public void SetIceShardCount()
     {
         if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
         {
@@ -61,6 +61,24 @@ public class TextScript : MonoBehaviour
         }
         else _text.text = "";
     }
-    
-    
+
+    public void SetPriceShard()
+    {
+        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
+        {
+            _text.text = (CommonVariables.GameLanguage == SystemLanguage.Russian
+                             ? "Купить осколок: "
+                             : "Buy shard: ") + CommonVariables.CharacterShop[CommonVariables.CurrentPanel][9];
+        }
+        else
+        {
+            if (CommonVariables.CurrentPanel == CommonVariables.EquippedSkin)
+                _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
+                    ? "Экипированно"
+                    : "Equipped";
+            else _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
+                ? "Экипировать"
+                : "Equip";
+        }
+    }
 }

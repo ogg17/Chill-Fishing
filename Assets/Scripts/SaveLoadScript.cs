@@ -9,8 +9,9 @@ public class SaveLoadScript : MonoBehaviour
     {
         for (var i = 0; i < CommonVariables.CharacterCount; i++)
         {
-            CommonVariables.CharacterShop[i] = new int[9];
+            CommonVariables.CharacterShop[i] = new int[11];
             CommonVariables.CharacterShop[i][8] = 5;
+            CommonVariables.CharacterShop[i][9] = 30;
         }
 
         CommonVariables.CharacterShop[0][7] = 1;

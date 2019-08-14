@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3998336509741675631}
   - component: {fileID: 3998336509741675634}
-  - component: {fileID: 3998336509741675632}
+  - component: {fileID: 2607487494644177298}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -82,23 +82,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &3998336509741675632
-Animation:
+--- !u!95 &2607487494644177298
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3998336509741675630}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 6eec851a373a19bd0a172a9f29446d91, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 6eec851a373a19bd0a172a9f29446d91, type: 2}
-  - {fileID: 0}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7195463b97136d419b14357d34d1174, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3998336510157457105
 GameObject:
   m_ObjectHideFlags: 0
