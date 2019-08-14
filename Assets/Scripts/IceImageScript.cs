@@ -47,11 +47,10 @@ public class IceImageScript : MonoBehaviour
             if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10] >= 1)
             {
                 characterImage.enabled = true;
-                for (int i = 1; i <= CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
+                for (int i = 0; i < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
                 {
-                    if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10] <= i)
-                        icePieceImage[CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8] - i].enabled =
-                            false;
+                    if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10] > i)
+                        icePieceImage[i].enabled = false;
                 }
             }
         }
@@ -59,6 +58,7 @@ public class IceImageScript : MonoBehaviour
         {
             form.SetActive(false);
             formImage.enabled = false;
+            characterImage.enabled = true;
         }
     }
 

@@ -15,7 +15,7 @@ public class CoinScript : MonoBehaviour
     {
         if (other.CompareTag("Hook"))
         {
-            CommonVariables.Gold+=100;
+            CommonVariables.Gold+=1000;
             EventController.GameEvents.pickUpCoin.Invoke();
             DestroyCoin();
         }

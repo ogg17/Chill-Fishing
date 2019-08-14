@@ -5,7 +5,7 @@ using UnityEngine;
 public static class CommonVariables
 {
     public const float InitializedTime = 0.1f;
-    public const int MaxFishNumber = 6;
+    public const int MaxFishNumber = 4;
     public const int CharacterCount = 30;
     public const int MaxIcePieceCount = 7;
     public const int PacksCount = 10;
