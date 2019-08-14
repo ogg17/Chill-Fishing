@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Персонажи.docx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceM.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceM.mat.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish1Point.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish1Point.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish2Point.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish2Point.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish3Point.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish3Point.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,22 +64,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnCoin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharachterSkinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterSkinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs" />
       </list>
     </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="455" />
-    <option name="y" value="-22" />
-    <option name="width" value="1278" />
-    <option name="height" value="688" />
   </component>
   <component name="ProjectId" id="1PQevUKaFhDIbnoyoymhxSO8jQw" />
   <component name="ProjectLevelVcsManager">
@@ -158,7 +149,7 @@
       <workItem from="1565708477141" duration="4287000" />
       <workItem from="1565774226513" duration="7869000" />
       <workItem from="1565796956363" duration="9129000" />
-      <workItem from="1565810982144" duration="4430000" />
+      <workItem from="1565810982144" duration="5869000" />
     </task>
     <servers />
   </component>

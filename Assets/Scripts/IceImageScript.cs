@@ -9,6 +9,7 @@ public class IceImageScript : MonoBehaviour
     [SerializeField] private Image[] icePieceImage = new Image[7];
     [SerializeField] private Image characterImage;
     [SerializeField] private GameObject form;
+    [SerializeField] private ParticleSystem iceParticle;
     [SerializeField] private Image formImage;
 
     private void Start()
@@ -72,7 +73,11 @@ public class IceImageScript : MonoBehaviour
                 if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
             }
 
-            if (count == CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]) CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10]++;
+            if (count == CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
+            {
+                CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10]++;
+                iceParticle.Play();
+            }
             if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10] ==
                 CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
                 CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] = 1;
