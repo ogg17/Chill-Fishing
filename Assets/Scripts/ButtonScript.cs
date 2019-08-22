@@ -17,11 +17,11 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     [SerializeField] private bool changingImage; // enable image change
     [SerializeField] private bool isPressedColor; // enable pressed color
     [SerializeField] private bool playingSound; // enable playing sound
-    [SerializeField] private bool toggleBool;
 
     [SerializeField] private UnityEvent click = new UnityEvent();
-    [SerializeField] private UnityBoolEvent toggle = new UnityBoolEvent();
-    
+    [SerializeField] private UnityEvent down = new UnityEvent();
+    [SerializeField] private UnityEvent up = new UnityEvent();
+
     private Image _imageButton;
     private Color _unpressedColor;
     
@@ -33,19 +33,19 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
-        toggleBool = !toggleBool;
         click.Invoke();
-        toggle.Invoke(toggleBool);
         if (changingImage) _imageButton.sprite = _imageButton.sprite == firstState ? secondState : firstState;
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
+        down.Invoke();
         _imageButton.color = isPressedColor ? pressedColor : _imageButton.color;
     }
 
     void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
     {
+        up.Invoke();
         _imageButton.color = isPressedColor ? _unpressedColor : _imageButton.color;
     }
 }

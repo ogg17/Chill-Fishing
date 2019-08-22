@@ -66,9 +66,22 @@ public class TextScript : MonoBehaviour
     {
         if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
         {
-            _text.text = (CommonVariables.GameLanguage == SystemLanguage.Russian
-                             ? "Купить осколок: "
-                             : "Buy shard: ") + CommonVariables.CharacterShop[CommonVariables.CurrentPanel][9];
+            int count = 0;
+            for (int i = 0; i < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
+            {
+                if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
+            }
+
+            if (count == CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
+            {
+                _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
+                    ? "Разбить"
+                    : "Smash";
+            }
+            else
+                _text.text = (CommonVariables.GameLanguage == SystemLanguage.Russian
+                     ? "Купить осколок: "
+                     : "Buy shard: ") + CommonVariables.CharacterShop[CommonVariables.CurrentPanel][9];
         }
         else
         {

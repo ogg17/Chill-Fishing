@@ -12,6 +12,7 @@
         <e p="Scripts" t="Include">
           <e p="BlurController.cs" t="Include" />
           <e p="ButtonScript.cs" t="Include" />
+          <e p="CharacterSkinEffect.cs" t="Include" />
           <e p="CharacterSkinScript.cs" t="Include" />
           <e p="CoinScript.cs" t="Include" />
           <e p="CommonVariables.cs" t="Include" />
@@ -21,7 +22,7 @@
           <e p="GameString.cs" t="Include" />
           <e p="HookMovement.cs" t="Include" />
           <e p="HorizontalSnapScroll.cs" t="Include" />
-          <e p="IceImageScript.cs" t="Include" />
+          <e p="IceScript.cs" t="Include" />
           <e p="ImageScript.cs" t="Include" />
           <e p="SaveLoadScript.cs" t="Include" />
           <e p="ScoreUIScript.cs" t="Include" />

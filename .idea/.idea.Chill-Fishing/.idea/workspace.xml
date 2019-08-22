@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceM.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceM.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterSkinEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IceScript.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Move.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Move.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +28,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IceScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.0.8/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Pixel-Fishing/Assets/Scripts/WidingFishingLine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Materials/Blur.shader" root0="FORCE_HIGHLIGHTING" />
@@ -36,10 +47,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterSkinScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterSkinEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreUIScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sprites/Персонажи.docx.meta" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -56,7 +67,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameString.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreUIScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnFish.cs" />
@@ -66,12 +76,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnCoin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharachterSkinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterSkinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/SpriteEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterSkinEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
       </list>
     </option>
   </component>
@@ -150,6 +164,8 @@
       <workItem from="1565774226513" duration="7869000" />
       <workItem from="1565796956363" duration="9129000" />
       <workItem from="1565810982144" duration="5869000" />
+      <workItem from="1565861388798" duration="4526000" />
+      <workItem from="1566465425832" duration="5965000" />
     </task>
     <servers />
   </component>
@@ -163,7 +179,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
