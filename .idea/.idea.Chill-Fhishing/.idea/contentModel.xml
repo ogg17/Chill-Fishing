@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_Chill-Fhishing.-726575858.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Materials" t="Include">
+          <e p="Blur.shader" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="BlurController.cs" t="Include" />
+          <e p="ButtonScript.cs" t="Include" />
+          <e p="CharacterSkinEffect.cs" t="Include" />
+          <e p="CharacterSkinScript.cs" t="Include" />
+          <e p="CoinScript.cs" t="Include" />
+          <e p="CommonVariables.cs" t="Include" />
+          <e p="EventController.cs" t="Include" />
+          <e p="GameMethods.cs" t="Include" />
+          <e p="GameSprites.cs" t="Include" />
+          <e p="GameString.cs" t="Include" />
+          <e p="HookMovement.cs" t="Include" />
+          <e p="HorizontalSnapScroll.cs" t="Include" />
+          <e p="IceScript.cs" t="Include" />
+          <e p="ImageScript.cs" t="Include" />
+          <e p="MusicPlayer.cs" t="Include" />
+          <e p="SaveLoadScript.cs" t="Include" />
+          <e p="ScoreUIScript.cs" t="Include" />
+          <e p="SpawnCoin.cs" t="Include" />
+          <e p="SpawnFish.cs" t="Include" />
+          <e p="SwimmingFish.cs" t="Include" />
+          <e p="TextScript.cs" t="Include" />
+          <e p="UnwindingFishingLine.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Chill-Fhishing.sln" t="IncludeFlat" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
