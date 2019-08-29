@@ -12,11 +12,15 @@ public class SpawnCoin : MonoBehaviour
     
     public void SpawningCoin()
     {
-        if (Random.Range(1, 101) <= +_probably)
+        if (CommonVariables.GamePlaying)
         {
-            var copyCoin = Instantiate(coin, new Vector3(0, CommonVariables.DepthHook - depthCoin, 0), transform.rotation);
-            _probably = 0;
+            if (Random.Range(1, 101) <= +_probably)
+            {
+                var copyCoin = Instantiate(coin, new Vector3(0, CommonVariables.DepthHook - depthCoin, 0),
+                    transform.rotation);
+                _probably = 0;
+            }
+            else _probably += stepProbably;
         }
-        else _probably += stepProbably;
     }
 }
