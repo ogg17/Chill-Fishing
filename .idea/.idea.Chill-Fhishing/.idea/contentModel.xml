@@ -25,6 +25,7 @@
           <e p="HorizontalSnapScroll.cs" t="Include" />
           <e p="IceScript.cs" t="Include" />
           <e p="ImageScript.cs" t="Include" />
+          <e p="MenuMotion.cs" t="Include" />
           <e p="MusicPlayer.cs" t="Include" />
           <e p="SaveLoadScript.cs" t="Include" />
           <e p="ScoreUIScript.cs" t="Include" />
