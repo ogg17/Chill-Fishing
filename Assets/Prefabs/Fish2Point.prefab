@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishRenderer: {fileID: 3886301698546039784}
-  speedSwimmingMax: 0.3
-  speedSwimmingMin: 0.2
+  speedSwimmingMax: 0.5
+  speedSwimmingMin: 0.3
   board: 1
 --- !u!61 &3886301698013841742
 BoxCollider2D:
