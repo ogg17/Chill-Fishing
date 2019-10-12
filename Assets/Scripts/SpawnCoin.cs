@@ -8,19 +8,19 @@ public class SpawnCoin : MonoBehaviour
     [SerializeField] private float depthCoin;
     [SerializeField] private GameObject coin;
     
-    private int _probably = 0;
+    private int probably = 0;
     
     public void SpawningCoin()
     {
         if (CommonVariables.GamePlaying)
         {
-            if (Random.Range(1, 101) <= +_probably)
+            if (Random.Range(1, 101) <= + probably)
             {
                 var copyCoin = Instantiate(coin, new Vector3(0, CommonVariables.DepthHook - depthCoin, 0),
                     transform.rotation);
-                _probably = 0;
+                probably = 0;
             }
-            else _probably += stepProbably;
+            else probably += stepProbably;
         }
     }
 }

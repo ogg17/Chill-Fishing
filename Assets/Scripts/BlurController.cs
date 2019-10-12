@@ -6,15 +6,15 @@ using UnityEngine.UI;
 
 public class BlurController : MonoBehaviour
 {
-    private Image _image;
+    private Image image;
 
     private void Start()
     {
-        _image = GetComponent<Image>();
+        image = GetComponent<Image>();
     }
 
     public void SetBlur()
     {
-        _image.enabled = !_image.enabled;
+        image.enabled = !image.enabled;
     }
 }

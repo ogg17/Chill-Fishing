@@ -22,30 +22,30 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     [SerializeField] private UnityEvent down = new UnityEvent();
     [SerializeField] private UnityEvent up = new UnityEvent();
 
-    private Image _imageButton;
-    private Color _unpressedColor;
+    private Image imageButton;
+    private Color unpressedColor;
     
     private void Start()
     {
-        _imageButton = GetComponent<Image>();
-        _unpressedColor = _imageButton.color;
+        imageButton = GetComponent<Image>();
+        unpressedColor = imageButton.color;
     }
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
         click.Invoke();
-        if (changingImage) _imageButton.sprite = _imageButton.sprite == firstState ? secondState : firstState;
+        if (changingImage) imageButton.sprite = imageButton.sprite == firstState ? secondState : firstState;
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
         down.Invoke();
-        _imageButton.color = isPressedColor ? pressedColor : _imageButton.color;
+        imageButton.color = isPressedColor ? pressedColor : imageButton.color;
     }
 
     void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
     {
         up.Invoke();
-        _imageButton.color = isPressedColor ? _unpressedColor : _imageButton.color;
+        imageButton.color = isPressedColor ? unpressedColor : imageButton.color;
     }
 }

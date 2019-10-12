@@ -14,7 +14,7 @@ public static class CommonVariables
     public static float DepthHook { get; set; } = 1f; // Hook movement base
     public static int Score { get; set; } // Score game
     public static int Gold { get; set; } = 1000; // Gold
-    public static int FishNumber { get; set; } // Number of fish
+    // public static int FishNumber { get; set; } // Number of fish
     public static int CurrentPanel { get; set; } // Current scroll panel
     public static int EquippedSkin { get; set; } // Current equipped skin
     public static int[][] CharacterShop { get; set; } = new int[CharacterCount][]; // Data of shop buys

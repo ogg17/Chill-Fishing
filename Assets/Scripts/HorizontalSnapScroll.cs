@@ -27,26 +27,26 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
     private float[] _panelPos = new float[CommonVariables.CharacterCount];
     private Image[] _panelsImage = new Image[CommonVariables.CharacterCount];
     //private Text[] _packTexts = new Text[CommonVariables.PacksCount];
-    private RectTransform _contentTransform;
-    private Vector2 _contentPos = Vector2.zero;
-    private readonly Vector3 _normalPanelScale = new Vector3(1, 1, 1);
+    private RectTransform contentTransform;
+    private Vector2 contentPos = Vector2.zero;
+    private readonly Vector3 normalPanelScale = new Vector3(1, 1, 1);
 
     private void Awake()
     {
-        _contentTransform = GetComponent<ScrollRect>().content.GetComponent<RectTransform>();
+        contentTransform = GetComponent<ScrollRect>().content.GetComponent<RectTransform>();
 
         var panelWight = panel.GetComponent<RectTransform>().sizeDelta.x;
-        _contentTransform.sizeDelta= new Vector2(165 + (panelWight + spacePanel) * (CommonVariables.CharacterCount - 1), _contentTransform.sizeDelta.y);
+        contentTransform.sizeDelta= new Vector2(165 + (panelWight + spacePanel) * (CommonVariables.CharacterCount - 1), contentTransform.sizeDelta.y);
         for (var i = 0; i < CommonVariables.CharacterCount; i++)
         {
-            _panels[i] = Instantiate(panel, _contentTransform.transform, false);
+            _panels[i] = Instantiate(panel, contentTransform.transform, false);
             _panelsImage[i] = _panels[i].GetComponent<Image>();
             _panelPos[i] = ((panelWight + spacePanel) * i) + ((i / 3) * 3);
             _panels[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(_panelPos[i] + 67.5f, 0);
 
             if (i % 3 == 1)
             {
-                _packNames[i / 3] = Instantiate(packNames, _contentTransform, false);
+                _packNames[i / 3] = Instantiate(packNames, contentTransform, false);
                 _packNames[i / 3].GetComponent<RectTransform>().anchoredPosition =
                     new Vector2(_panelPos[i] + 67.5f, packNamesPose);
             }
@@ -66,7 +66,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
         changedPanel.Invoke();
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         var distance = float.MaxValue;
         var currentPanel = 0;
@@ -86,7 +86,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
             }
             else
             {
-                _panels[i].transform.localScale = _normalPanelScale;
+                _panels[i].transform.localScale = normalPanelScale;
                 _panelsImage[i].color = colorUnActivePanel;
             }
         }
@@ -99,8 +99,8 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
         }
         
         if (_isScroll) return;
-        _contentPos.x = Mathf.SmoothStep(_contentTransform.anchoredPosition.x, -_panelPos[currentPanel], speedStep * Time.deltaTime);
-        _contentTransform.anchoredPosition = _contentPos;
+        contentPos.x = Mathf.SmoothStep(contentTransform.anchoredPosition.x, -_panelPos[currentPanel], speedStep * Time.deltaTime);
+        contentTransform.anchoredPosition = contentPos;
     }
 
     public void UpdateImagePanel()

@@ -8,7 +8,7 @@ public class GameMethods : MonoBehaviour
     {
         CommonVariables.GamePlaying = false;
         CommonVariables.Score = 0;
-        CommonVariables.FishNumber = 0;
+        // CommonVariables.FishNumber = 0;
     }
 
     public void GameStart()

@@ -15,37 +15,43 @@ public class SwimmingFish : MonoBehaviour
     private bool _fishActive = true;
     private float _speedSwimming;
 
+    private Animator animator;
+
     private void Start()
     {
-        GetComponentInChildren<Animator>().SetFloat("offset", Random.Range(0f, 1f));
+        UpdateFish();
+        StartCoroutine(Initialized());
+        animator = GetComponentInChildren<Animator>();
+    }
+
+    private void UpdateFish()
+    {
+        animator.SetFloat("offset", Random.Range(0f, 1f));
         _speedSwimming = Random.Range(speedSwimmingMin, speedSwimmingMax);
-        CommonVariables.FishNumber++;
         var randomPos = Random.Range(2, 9);
         transform.position = Random.Range(0, 2) == 0 ? 
             new Vector3(-board, CommonVariables.DepthHook - 0.2f * randomPos, 0) : 
             new Vector3(board, CommonVariables.DepthHook - 0.2f * randomPos, 0);
-        
-        StartCoroutine(Initialized());
     }
 
     private IEnumerator Initialized()
     {
         yield return new WaitForSeconds(CommonVariables.InitializedTime);
-        EventController.GameEvents.gameOver.AddListener(DestroyFish);
+        EventController.GameEvents.gameOver.AddListener(UpdateFish);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        transform.Translate(new Vector3(_direction?-_speedSwimming:_speedSwimming, 0,0));
+        transform.Translate(new Vector3(Time.deltaTime * (_direction ? -_speedSwimming : _speedSwimming), 0, 0));
 
         if (transform.position.y > CommonVariables.DepthHook)
         {
             if (_fishActive)
             {
                 _fishActive = false;
-                CommonVariables.FishNumber--;
+                // CommonVariables.FishNumber--;
             }
-            if (transform.position.y > CommonVariables.DepthHook + 1.7f) DestroyFish();
+            if (transform.position.y > CommonVariables.DepthHook + 1.7f) UpdateFish();
         }
 
         if (transform.position.x > board)

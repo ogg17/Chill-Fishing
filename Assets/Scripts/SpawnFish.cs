@@ -8,9 +8,9 @@ public class SpawnFish : MonoBehaviour
 {
     [SerializeField] private GameObject[] fish = new GameObject[1];
 
-    private void FixedUpdate()
+    private void Start()
     {
-        if (CommonVariables.GamePlaying && CommonVariables.FishNumber < CommonVariables.MaxFishNumber)
+        for(int i = 0; i < CommonVariables.MaxFishNumber; i++)
         {
             Instantiate(fish[Random.Range(0, fish.Length)]);
         }

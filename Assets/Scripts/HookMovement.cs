@@ -8,11 +8,11 @@ public class HookMovement : MonoBehaviour
     [SerializeField] private float stepMovement = 0.02f;
     [SerializeField] private float speedMovement = 0.05f;
 
-    private Rigidbody2D _rigidbody2D;
+    private Rigidbody2D rigidbody2d;
 
     private void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
     public void ReloadMovement()
@@ -25,10 +25,10 @@ public class HookMovement : MonoBehaviour
         if (CommonVariables.GamePlaying) CommonVariables.DepthHook -= stepMovement;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        var position = _rigidbody2D.position;
-        _rigidbody2D.position = Vector2.Lerp(position, new Vector2(position.x, CommonVariables.DepthHook), speedMovement);
+        var position = rigidbody2d.position;
+        rigidbody2d.position = Vector2.Lerp(position, new Vector2(position.x, CommonVariables.DepthHook), speedMovement);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

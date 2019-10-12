@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishRenderer: {fileID: 3886301698546039784}
-  speedSwimmingMax: 0.015
-  speedSwimmingMin: 0.01
+  speedSwimmingMax: 0.3
+  speedSwimmingMin: 0.2
   board: 1
 --- !u!61 &3886301698013841742
 BoxCollider2D:
@@ -154,7 +154,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
