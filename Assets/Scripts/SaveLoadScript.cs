@@ -7,16 +7,17 @@ public class SaveLoadScript : MonoBehaviour
 {
     private void Awake()
     {
-        for (var i = 0; i < CommonVariables.CharacterCount; i++)
+        for (var i = 0; i < CommonVariables.PacksCount; i++)
         {
-            CommonVariables.CharacterShop[i] = new int[11];
-            CommonVariables.CharacterShop[i][8] = 5;
-            CommonVariables.CharacterShop[i][9] = 30;
+            for (var j = 0; j < CommonVariables.CharacterPacks[i]; j++)
+            {
+                CommonVariables.CharacterShops.Add(new CharacterShop());
+            }
         }
 
-        CommonVariables.CharacterShop[0][7] = 1;
-        CommonVariables.CharacterShop[8][8] = 3;
-        CommonVariables.CharacterShop[9][8] = 3;
+        CommonVariables.CharacterShops[0].BuyCharacter = true;
+        CommonVariables.CharacterShops[8].ShardCount = 3;
+        CommonVariables.CharacterShops[9].ShardCount = 3;
 
         //CommonVariables.GameLanguage = Application.systemLanguage == SystemLanguage.Russian 
          //   ? SystemLanguage.Russian : SystemLanguage.English;

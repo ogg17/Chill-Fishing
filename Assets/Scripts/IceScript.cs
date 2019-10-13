@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class IceScript : MonoBehaviour
@@ -13,7 +14,7 @@ public class IceScript : MonoBehaviour
     [SerializeField] private GameObject adButton;
     [SerializeField] private ParticleSystem iceParticle;
     [SerializeField] private ParticleSystem backParticle;
-    [SerializeField] private Color unactiveColor;
+    [SerializeField] private Color unActiveColor;
     [SerializeField] private Image formImage;
 
     private void Start()
@@ -31,7 +32,7 @@ public class IceScript : MonoBehaviour
     {
         characterImage.sprite = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentPanel]
             .characterShopSprite;
-        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
         {
             form.SetActive(true);
             formImage.enabled = true;
@@ -40,7 +41,7 @@ public class IceScript : MonoBehaviour
                 .characterFormSprite;
             for (int i = 0; i < CommonVariables.MaxIcePieceCount; i++)
             {
-                if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1)
+                if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[i] == true)
                 {
                     icePieceImage[i].enabled = true;
                     icePieceImage[i].sprite = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentPanel]
@@ -49,12 +50,12 @@ public class IceScript : MonoBehaviour
                 else icePieceImage[i].enabled = false;
             }
 
-            if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10] >= 1)
+            if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].CrushShardCount >= 1)
             {
                 characterImage.enabled = true;
-                for (int i = 0; i < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
+                for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount; i++)
                 {
-                    if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10] > i)
+                    if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].CrushShardCount > i)
                         icePieceImage[i].enabled = false;
                 }
             }
@@ -69,22 +70,22 @@ public class IceScript : MonoBehaviour
 
     public void AnimationIceCrush()
     {
-        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
         {
             int count = 0;
-            for (int i = 0; i < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
+            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount; i++)
             {
-                if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
+                if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[i] == true) count++;
             }
 
-            if (count == CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
+            if (count == CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount)
             {
-                CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10]++;
+                CommonVariables.CharacterShops[CommonVariables.CurrentPanel].CrushShardCount++;
                 iceParticle.Play();
             }
-            if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][10] ==
-                CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
-                CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] = 1;
+            if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].CrushShardCount ==
+                CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount)
+                CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter = true;
         }
     }
 
@@ -92,27 +93,27 @@ public class IceScript : MonoBehaviour
     {
         var backParticleMain = backParticle.main;
         var backParticleEmission = backParticle.emission;
-        
-        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
+
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
         {
             int count = 0;
-            for (int i = 0; i < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
+            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount; i++)
             {
-                if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
+                if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[i] == true) count++;
             }
 
-            if (count == CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8] - 1)
+            if (count == CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount - 1)
                 adButton.SetActive(true);
             else
                 adButton.SetActive(false);
 
-            if (count == CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
+            if (count == CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount)
                 characterAnimation.enabled = true;
             else
                 characterAnimation.enabled = false;
             
             backParticleEmission.rateOverTime = new ParticleSystem.MinMaxCurve(10f);
-            backParticleMain.startColor = unactiveColor;
+            backParticleMain.startColor = unActiveColor;
         }
         else
         {

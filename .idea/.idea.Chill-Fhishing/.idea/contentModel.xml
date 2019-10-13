@@ -6,10 +6,6 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Materials" t="Include">
-          <e p="Blur.cs" t="Include" />
-          <e p="Blur.shader" t="Include" />
-        </e>
         <e p="Scripts" t="Include">
           <e p="BlurController.cs" t="Include" />
           <e p="ButtonScript.cs" t="Include" />

@@ -6,120 +6,159 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+public class PackPanels
+{
+    public List<GameObject> Panels { get; set; } = new List<GameObject>(3);
+    public List<float> PanelPos { get; set; } = new List<float>(3);
+    public List<Image> PanelsImage { get; set; } = new List<Image>(3);
+    public GameObject TextPack { get; set; } = new GameObject();
+}
+
 public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHandler
 {
     public UnityEvent changedPanel;
     
-    [SerializeField] private GameObject panel;
-    [SerializeField] private GameObject packNames;
+    [SerializeField] private GameObject defaultPanel;
+    [SerializeField] private GameObject packText;
     [SerializeField] private Sprite lockedPanelImage;
     [SerializeField] private int spacePanel = 2;
     [SerializeField] private float speedStep;
     [SerializeField] private float packNamesPose;
+    [SerializeField] private float inertiaMin = 0.01f;
     [SerializeField] private Color colorUnActivePanel;
     [SerializeField] private Color colorActivePanel;
+    [SerializeField] private Vector3 scaleActivePanel;
     
-    [SerializeField] private Vector3 scalePanel;
+    private bool isScroll;
+    private int currentPack;
+    private int currentPanel;
 
-    private GameObject[] _panels = new GameObject[CommonVariables.CharacterCount];
-    private GameObject[] _packNames = new GameObject[CommonVariables.PacksCount];
-    private bool _isScroll;
-    private float[] _panelPos = new float[CommonVariables.CharacterCount];
-    private Image[] _panelsImage = new Image[CommonVariables.CharacterCount];
-    //private Text[] _packTexts = new Text[CommonVariables.PacksCount];
+    private PackPanels[] packsPanels = new PackPanels[CommonVariables.PacksCount];
     private RectTransform contentTransform;
+    private ScrollRect scrollRect;
     private Vector2 contentPos = Vector2.zero;
-    private readonly Vector3 normalPanelScale = new Vector3(1, 1, 1);
+    private readonly Vector3 scaleUnActivePanel = new Vector3(1, 1, 1);
 
-    private void Awake()
+    private void Start()
     {
-        contentTransform = GetComponent<ScrollRect>().content.GetComponent<RectTransform>();
-
-        var panelWight = panel.GetComponent<RectTransform>().sizeDelta.x;
-        contentTransform.sizeDelta= new Vector2(165 + (panelWight + spacePanel) * (CommonVariables.CharacterCount - 1), contentTransform.sizeDelta.y);
-        for (var i = 0; i < CommonVariables.CharacterCount; i++)
+        scrollRect = GetComponent<ScrollRect>();
+        contentTransform = scrollRect.content.GetComponent<RectTransform>();
+        var panelWight = defaultPanel.GetComponent<RectTransform>().sizeDelta.x;
+        var indexCounter = 0;
+        for (var i = 0; i < packsPanels.Length; i++)
         {
-            _panels[i] = Instantiate(panel, contentTransform.transform, false);
-            _panelsImage[i] = _panels[i].GetComponent<Image>();
-            _panelPos[i] = ((panelWight + spacePanel) * i) + ((i / 3) * 3);
-            _panels[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(_panelPos[i] + 67.5f, 0);
-
-            if (i % 3 == 1)
+            packsPanels[i] = new PackPanels();
+            for (var j = 0; j < CommonVariables.CharacterPacks[i]; j++)
             {
-                _packNames[i / 3] = Instantiate(packNames, contentTransform, false);
-                _packNames[i / 3].GetComponent<RectTransform>().anchoredPosition =
-                    new Vector2(_panelPos[i] + 67.5f, packNamesPose);
-            }
+                
+                packsPanels[i].Panels.Add(Instantiate(defaultPanel, contentTransform.transform, false));
+                packsPanels[i].PanelsImage.Add(packsPanels[i].Panels[j].GetComponent<Image>());
+                packsPanels[i].PanelPos.Add((panelWight + spacePanel) * indexCounter + i * spacePanel);
+                Debug.Log(packsPanels[i].PanelPos[j]);
+                packsPanels[i].Panels[j].GetComponent<RectTransform>().anchoredPosition =
+                    new Vector2(packsPanels[i].PanelPos[j] + 67.5f, 0);
+                indexCounter++;
+            } 
+            packsPanels[i].TextPack = Instantiate(packText, contentTransform, false); 
+            packsPanels[i].TextPack.GetComponent<RectTransform>().anchoredPosition = 
+                new Vector2(packsPanels[i].PanelPos[1] + 67.5f, packNamesPose);
         }
 
+        contentTransform.sizeDelta = new Vector2(135 + (panelWight + spacePanel) * (indexCounter - 1) + 
+                                                 spacePanel * (packsPanels.Length - 1), contentTransform.sizeDelta.y);
+        
+        InvokeRepeating("UpdatePanel",0,0.1f);
         StartCoroutine(Initialized());
     }
 
     private IEnumerator Initialized()
     {
         yield return new WaitForSeconds(CommonVariables.InitializedTime);
-        for (int i = 0; i < CommonVariables.PacksCount; i++)
+        
+        for (var i = 0; i < packsPanels.Length; i++)
         {
-            _packNames[i].GetComponent<Text>().text = GameString.gameString.packs[i].english;
+            packsPanels[i].TextPack.GetComponent<Text>().text = GameString.gameString.packs[i].english;
         }
+
         UpdateImagePanel();
         changedPanel.Invoke();
     }
 
-    private void Update()
+    private void UpdatePanel()
     {
         var distance = float.MaxValue;
-        var currentPanel = 0;
-
-        for (var i = 0; i < CommonVariables.CharacterCount; i++)
+        var indexCounter = 0;
+        var currentIndex = 0;
+        for (var i = 0; i < packsPanels.Length; i++)
         {
-            if (Math.Abs(_panels[i].transform.position.x) < distance)
+            for (var j = 0; j < CommonVariables.CharacterPacks[i]; j++)
             {
-                distance = Math.Abs(_panels[i].transform.position.x);
-                currentPanel = i;
-            }
+                var absPosPanels = Mathf.Abs(packsPanels[i].Panels[j].transform.position.x);
+                if (absPosPanels < distance)
+                {
+                    distance = absPosPanels;
+                    currentPack = i;
+                    currentPanel = j;
+                    currentIndex = indexCounter;
+                }
 
-            if (i == CommonVariables.CurrentPanel)
-            {
-                _panels[i].transform.localScale = scalePanel;
-                _panelsImage[i].color = colorActivePanel;
-            }
-            else
-            {
-                _panels[i].transform.localScale = normalPanelScale;
-                _panelsImage[i].color = colorUnActivePanel;
+                if (indexCounter == CommonVariables.CurrentPanel)
+                {
+                    packsPanels[i].Panels[j].transform.localScale = scaleActivePanel;
+                    packsPanels[i].PanelsImage[j].color = colorActivePanel;
+                }
+                else
+                {
+                    packsPanels[i].Panels[j].transform.localScale = scaleUnActivePanel;
+                    packsPanels[i].PanelsImage[j].color = colorUnActivePanel;
+                }
+                indexCounter++;
             }
         }
 
-        if (CommonVariables.CurrentPanel != currentPanel)
+        if (CommonVariables.CurrentPanel != currentIndex)
         {
-            CommonVariables.CurrentPanel = currentPanel;
+            CommonVariables.CurrentPanel = currentIndex;
             UpdateImagePanel();
             changedPanel.Invoke();
         }
-        
-        if (_isScroll) return;
-        contentPos.x = Mathf.SmoothStep(contentTransform.anchoredPosition.x, -_panelPos[currentPanel], speedStep * Time.deltaTime);
+    }
+
+    private void LateUpdate()
+    {
+        if(isScroll) return;
+        if (Mathf.Abs(scrollRect.velocity.x) > inertiaMin)
+        {
+            return;
+        }
+        scrollRect.velocity = Vector2.zero;
+        contentPos.x = Mathf.SmoothStep(contentTransform.anchoredPosition.x, -packsPanels[currentPack].PanelPos[currentPanel],
+            speedStep * Time.deltaTime);
         contentTransform.anchoredPosition = contentPos;
     }
 
     public void UpdateImagePanel()
     {
-        for (var i = 0; i < CommonVariables.CharacterCount; i++)
+        var indexCounter = 0;
+        for (var i = 0; i < packsPanels.Length; i++)
         {
-            if (CommonVariables.CharacterShop[i][7] == 1)
-                _panelsImage[i].sprite = GameSprites.gameSprites.characterSprites[i].scrollPanelSprite;
-            else _panelsImage[i].sprite = lockedPanelImage;
+            for (var j = 0; j < CommonVariables.CharacterPacks[i]; j++)
+            {
+                if (CommonVariables.CharacterShops[indexCounter].BuyCharacter == true)
+                    packsPanels[i].PanelsImage[j].sprite = GameSprites.gameSprites.characterSprites[indexCounter].scrollPanelSprite;
+                else packsPanels[i].PanelsImage[j].sprite = lockedPanelImage;
+                indexCounter++;
+            }
         }
     }
 
     void IEndDragHandler.OnEndDrag(PointerEventData eventData)
     {
-        _isScroll = false;
+        isScroll = false;
     }
 
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
     {
-        _isScroll = true;
+        isScroll = true;
     }
 }

@@ -28,21 +28,21 @@ public class TextScript : MonoBehaviour
 
     public void SetIceShardCount()
     {
-        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
         {
             int count = 0;
-            for (int i = 0; i < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
+            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount; i++)
             {
-                if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
+                if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[i] == true) count++;
             }
-            _text.text = count + "/" + CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8];
+            _text.text = count + "/" + CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount;
         }
         else _text.text = "";
     }
 
     public void SetNameCharacter()
     {
-        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 1)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == true)
         {
             _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian 
                 ? GameString.gameString.names[CommonVariables.CurrentPanel].russian 
@@ -53,7 +53,7 @@ public class TextScript : MonoBehaviour
 
     public void SetPhraseCharacter()
     {
-        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 1)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == true)
         {
             _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian 
                 ? GameString.gameString.phrase[CommonVariables.CurrentPanel].russian 
@@ -64,15 +64,15 @@ public class TextScript : MonoBehaviour
 
     public void SetPriceShard()
     {
-        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
         {
             int count = 0;
-            for (int i = 0; i < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
+            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount; i++)
             {
-                if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
+                if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[i] == true) count++;
             }
 
-            if (count == CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
+            if (count == CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount)
             {
                 _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
                     ? "Разбить"
@@ -81,7 +81,7 @@ public class TextScript : MonoBehaviour
             else
                 _text.text = (CommonVariables.GameLanguage == SystemLanguage.Russian
                      ? "Купить осколок: "
-                     : "Buy shard: ") + CommonVariables.CharacterShop[CommonVariables.CurrentPanel][9];
+                     : "Buy shard: ") + CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardPrice;
         }
         else
         {

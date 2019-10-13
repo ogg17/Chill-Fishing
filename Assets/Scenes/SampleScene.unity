@@ -731,6 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987ed8041b76742b8852d30e6c5885ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateInterval: 0.5
 --- !u!1 &145256040
 GameObject:
   m_ObjectHideFlags: 0
@@ -6977,7 +6978,7 @@ MonoBehaviour:
   adButton: {fileID: 1774349938}
   iceParticle: {fileID: 199931763}
   backParticle: {fileID: 1279870112}
-  unactiveColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0.5647059}
+  unActiveColor: {r: 0, g: 0, b: 0, a: 0}
   formImage: {fileID: 584330265}
 --- !u!1 &347008884
 GameObject:
@@ -14998,17 +14999,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  panel: {fileID: 7511303835686590922, guid: edfd0b523fb862e46bf24ab1c46d52b9, type: 3}
-  packNames: {fileID: 6547789525069503085, guid: 6556572c6f36f0540aeee8c07c8bae48,
+  defaultPanel: {fileID: 7511303835686590922, guid: edfd0b523fb862e46bf24ab1c46d52b9,
+    type: 3}
+  packText: {fileID: 6547789525069503085, guid: 6556572c6f36f0540aeee8c07c8bae48,
     type: 3}
   lockedPanelImage: {fileID: -8120599417235959758, guid: ffc425bd435afc795b25e72005ad6300,
     type: 3}
   spacePanel: 4
   speedStep: 25
   packNamesPose: 15
+  inertiaMin: 0.1
   colorUnActivePanel: {r: 1, g: 1, b: 1, a: 0.5019608}
   colorActivePanel: {r: 1, g: 1, b: 1, a: 1}
-  scalePanel: {x: 1.2, y: 1.2, z: 1}
+  scaleActivePanel: {x: 0, y: 0, z: 0}
 --- !u!114 &1214541285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15710,7 +15713,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.41037738, g: 0.7306645, b: 1, a: 0.6627451}
+      maxColor: {r: 0.41037738, g: 0.7306645, b: 1, a: 0.7058824}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -24498,7 +24501,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.75
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

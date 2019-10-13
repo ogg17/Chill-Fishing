@@ -10,15 +10,15 @@ public class CharacterSkinEffect : MonoBehaviour
 
     public void StartEffect()
     {
-        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
         {
             int count = 0;
-            for (int i = 0; i < CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8]; i++)
+            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount; i++)
             {
-                if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][i] == 1) count++;
+                if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[i] == true) count++;
             }
 
-            if (count == CommonVariables.CharacterShop[CommonVariables.CurrentPanel][8])
+            if (count == CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount)
             {
                 transform.localPosition = new Vector2(Random.Range(-positionClick, positionClick),
                     Random.Range(-positionClick, positionClick));
@@ -30,7 +30,7 @@ public class CharacterSkinEffect : MonoBehaviour
 
     public void EndEffect()
     {
-        if (CommonVariables.CharacterShop[CommonVariables.CurrentPanel][7] == 0)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
         {
             transform.localPosition = Vector3.zero;
             transform.localScale = new Vector3(1, 1, 1);
