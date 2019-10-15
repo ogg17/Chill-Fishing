@@ -22,6 +22,7 @@ public class SwimmingFish : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         UpdateFish();
+        InvokeRepeating("InvokeFish", 0, 0.1f);
         StartCoroutine(Initialized());
     }
     private void UpdateFish()
@@ -45,10 +46,9 @@ public class SwimmingFish : MonoBehaviour
         EventController.GameEvents.gameOver.AddListener(ReloadFish);
     }
 
-    private void Update()
+    private void Update() => transform.Translate(new Vector3(Time.deltaTime * (_direction ? -_speedSwimming : _speedSwimming), 0, 0));
+    private void InvokeFish()
     {
-        transform.Translate(new Vector3(Time.deltaTime * (_direction ? -_speedSwimming : _speedSwimming), 0, 0));
-
         if (transform.position.y > CommonVariables.DepthHook)
         {
             if (_fishActive)
