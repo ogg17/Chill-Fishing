@@ -48,7 +48,7 @@ public class TextScript : MonoBehaviour
                 ? GameString.gameString.names[CommonVariables.CurrentPanel].russian 
                 : GameString.gameString.names[CommonVariables.CurrentPanel].english;
         }
-        else _text.text = "";
+        else _text.text = "???";
     }
 
     public void SetPhraseCharacter()

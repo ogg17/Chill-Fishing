@@ -8,15 +8,17 @@ public class ScoreUIScript : MonoBehaviour
     [SerializeField] private Vector2 firstState;
     [SerializeField] private Vector2 secondState;
     
-    private RectTransform _rectTransform;
+    private RectTransform rectTransform;
 
     private void Start()
     {
-        _rectTransform = GetComponent<RectTransform>();
+        rectTransform = GetComponent<RectTransform>();
     }
 
-    public void ChangeImageState()
+    public void ChangeImageStateFirst()
     {
-        _rectTransform.sizeDelta = _rectTransform.sizeDelta == firstState ? secondState : firstState;
+        rectTransform.sizeDelta = firstState;
     }
+
+    public void ChangeImageStateSecond() => rectTransform.sizeDelta = secondState;
 }

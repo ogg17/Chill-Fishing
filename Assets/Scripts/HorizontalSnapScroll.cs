@@ -54,7 +54,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                 packsPanels[i].Panels.Add(Instantiate(defaultPanel, contentTransform.transform, false));
                 packsPanels[i].PanelsImage.Add(packsPanels[i].Panels[j].GetComponent<Image>());
                 packsPanels[i].PanelPos.Add((panelWight + spacePanel) * indexCounter + i * spacePanel);
-                Debug.Log(packsPanels[i].PanelPos[j]);
+               // Debug.Log(packsPanels[i].PanelPos[j]);
                 packsPanels[i].Panels[j].GetComponent<RectTransform>().anchoredPosition =
                     new Vector2(packsPanels[i].PanelPos[j] + 65f, 0);
                 indexCounter++;
