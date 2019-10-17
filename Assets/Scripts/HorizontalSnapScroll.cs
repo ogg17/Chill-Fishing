@@ -56,15 +56,15 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                 packsPanels[i].PanelPos.Add((panelWight + spacePanel) * indexCounter + i * spacePanel);
                 Debug.Log(packsPanels[i].PanelPos[j]);
                 packsPanels[i].Panels[j].GetComponent<RectTransform>().anchoredPosition =
-                    new Vector2(packsPanels[i].PanelPos[j] + 67.5f, 0);
+                    new Vector2(packsPanels[i].PanelPos[j] + 65f, 0);
                 indexCounter++;
             } 
             packsPanels[i].TextPack = Instantiate(packText, contentTransform, false); 
             packsPanels[i].TextPack.GetComponent<RectTransform>().anchoredPosition = 
-                new Vector2(packsPanels[i].PanelPos[1] + 67.5f, packNamesPose);
+                new Vector2(packsPanels[i].PanelPos[1] + 65f, packNamesPose);
         }
 
-        contentTransform.sizeDelta = new Vector2(135 + (panelWight + spacePanel) * (indexCounter - 1) + 
+        contentTransform.sizeDelta = new Vector2(130 + (panelWight + spacePanel) * (indexCounter - 1) + 
                                                  spacePanel * (packsPanels.Length - 1), contentTransform.sizeDelta.y);
         
         InvokeRepeating("UpdatePanel",0,0.1f);
