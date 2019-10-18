@@ -14,8 +14,8 @@ public class ImageScript : MonoBehaviour
     }
     public void SetColorBackgroundCharacter()
     {
-        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == true)
-            _image.color = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentPanel].characterBackgroundShopColor;
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
+            _image.color = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentIndexPanel].characterBackgroundShopColor;
         else _image.color = Color.gray;
     }
     

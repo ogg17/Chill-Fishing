@@ -5,7 +5,17 @@ public class CharacterShop
 {
     public bool[] IceShards { get; set; } = new bool[7];
     public bool BuyCharacter { get; set; } = false;
-    public int ShardCount { get; set; } = 5;
+    private int shardCount = 5;
+    public int ShardCount
+    {
+        get { return shardCount; }
+        set
+        {
+            if (shardCount > 7) shardCount = 7;
+            else shardCount = value;
+        }
+    }
+
     public int CrushShardCount { get; set; } = 0;
     public int ShardPrice { get; set; } = 30;
 }
@@ -21,9 +31,12 @@ public static class CommonVariables
     public static float DepthHook { get; set; } = 1f; // Hook movement base
     public static int Score { get; set; } // Score game
     public static int Gold { get; set; } = 1000; // Gold
-    public static int CurrentPanel { get; set; } // Current scroll panel
+    public static int CurrentIndexPanel { get; set; } // Current scroll index panel
+    public static int CurrentPanel { get; set; } // Current panel in pack
+    public static int CurrentPack { get; set; } // Current pack in skin menu
     public static int EquippedSkin { get; set; } // Current equipped skin
     public static List<CharacterShop> CharacterShops { get; set; } = new List<CharacterShop>(); // Data of shop buys
     public static SystemLanguage GameLanguage { get; set; } = SystemLanguage.English;
     public static int[] CharacterPacks { get; set; } = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+    public static bool OnClickPanel { get; set; } = false; // Clicked on panel in skin menu
 }

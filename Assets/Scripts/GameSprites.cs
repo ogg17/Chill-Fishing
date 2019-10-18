@@ -19,7 +19,6 @@ public class GameSprites : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
     public CharacterSprites[] characterSprites = new CharacterSprites[CommonVariables.CharacterCount];
 }
 
@@ -32,4 +31,10 @@ public class CharacterSprites
     public Sprite characterFormSprite;
     public Color characterBackgroundShopColor;
     public Sprite[] icePieceSprites = new Sprite[3];
+}
+
+[System.Serializable]
+public class PacksSprites
+{
+    public CharacterSprites[] characters = new CharacterSprites[3];
 }

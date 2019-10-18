@@ -10,15 +10,15 @@ public class CharacterSkinEffect : MonoBehaviour
 
     public void StartEffect()
     {
-        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == false)
         {
             int count = 0;
-            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount; i++)
+            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount; i++)
             {
-                if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[i] == true) count++;
+                if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].IceShards[i] == true) count++;
             }
 
-            if (count == CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount)
+            if (count == CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount)
             {
                 transform.localPosition = new Vector2(Random.Range(-positionClick, positionClick),
                     Random.Range(-positionClick, positionClick));
@@ -30,7 +30,7 @@ public class CharacterSkinEffect : MonoBehaviour
 
     public void EndEffect()
     {
-        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == false)
         {
             transform.localPosition = Vector3.zero;
             transform.localScale = new Vector3(1, 1, 1);

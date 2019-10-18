@@ -32,34 +32,31 @@ public class GameMethods : MonoBehaviour
 
     public void BuyIcePiece()
     {
-        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == false)
         {
             var count = 0;
-            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount; i++)
+            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount; i++)
             {
-                if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[i] == true) count++;
+                if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].IceShards[i] == true) count++;
             }
 
-            if (count < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount && CommonVariables.Gold >=
-                CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardPrice)
+            if (count < CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount && CommonVariables.Gold >=
+                CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardPrice)
             {
-                CommonVariables.Gold -= CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardPrice;
+                CommonVariables.Gold -= CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardPrice;
                 var exit = false;
                 while (!exit)
                 {
-                    int randomNum = Random.Range(0, CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount);
-                    if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[randomNum] == false)
+                    int randomNum = Random.Range(0, CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount);
+                    if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].IceShards[randomNum] == false)
                     {
-                        CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[randomNum] = true;
+                        CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].IceShards[randomNum] = true;
                         exit = true;
                     }
                 }
-                CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardPrice += 10;
+                CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardPrice += 10;
             }
         }
-        else
-        {
-            CommonVariables.EquippedSkin = CommonVariables.CurrentPanel;
-        }
+        else CommonVariables.EquippedSkin = CommonVariables.CurrentIndexPanel;
     }
 }

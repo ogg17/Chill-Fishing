@@ -28,51 +28,51 @@ public class TextScript : MonoBehaviour
 
     public void SetIceShardCount()
     {
-        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == false)
         {
             int count = 0;
-            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount; i++)
+            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount; i++)
             {
-                if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[i] == true) count++;
+                if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].IceShards[i] == true) count++;
             }
-            _text.text = count + "/" + CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount;
+            _text.text = count + "/" + CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount;
         }
         else _text.text = "";
     }
 
     public void SetNameCharacter()
     {
-        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == true)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
         {
             _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian 
-                ? GameString.gameString.names[CommonVariables.CurrentPanel].russian 
-                : GameString.gameString.names[CommonVariables.CurrentPanel].english;
+                ? GameString.gameString.names[CommonVariables.CurrentIndexPanel].russian 
+                : GameString.gameString.names[CommonVariables.CurrentIndexPanel].english;
         }
         else _text.text = "???";
     }
 
     public void SetPhraseCharacter()
     {
-        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == true)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
         {
             _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian 
-                ? GameString.gameString.phrase[CommonVariables.CurrentPanel].russian 
-                : GameString.gameString.phrase[CommonVariables.CurrentPanel].english;
+                ? GameString.gameString.phrase[CommonVariables.CurrentIndexPanel].russian 
+                : GameString.gameString.phrase[CommonVariables.CurrentIndexPanel].english;
         }
         else _text.text = "";
     }
 
     public void SetPriceShard()
     {
-        if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].BuyCharacter == false)
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == false)
         {
             int count = 0;
-            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount; i++)
+            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount; i++)
             {
-                if (CommonVariables.CharacterShops[CommonVariables.CurrentPanel].IceShards[i] == true) count++;
+                if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].IceShards[i] == true) count++;
             }
 
-            if (count == CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardCount)
+            if (count == CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount)
             {
                 _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
                     ? "Разбить"
@@ -81,11 +81,11 @@ public class TextScript : MonoBehaviour
             else
                 _text.text = (CommonVariables.GameLanguage == SystemLanguage.Russian
                      ? "Купить осколок: "
-                     : "Buy shard: ") + CommonVariables.CharacterShops[CommonVariables.CurrentPanel].ShardPrice;
+                     : "Buy shard: ") + CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardPrice;
         }
         else
         {
-            if (CommonVariables.CurrentPanel == CommonVariables.EquippedSkin)
+            if (CommonVariables.CurrentIndexPanel == CommonVariables.EquippedSkin)
                 _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
                     ? "Экипированно"
                     : "Equipped";

@@ -57,6 +57,10 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                // Debug.Log(packsPanels[i].PanelPos[j]);
                 packsPanels[i].Panels[j].GetComponent<RectTransform>().anchoredPosition =
                     new Vector2(packsPanels[i].PanelPos[j] + 65f, 0);
+                var panelTouch = packsPanels[i].Panels[j].GetComponent<PanelTouch>();
+                panelTouch.CurentPanelIndex = indexCounter;
+                panelTouch.CurentPack = i;
+                panelTouch.CurentPanel = j;
                 indexCounter++;
             } 
             packsPanels[i].TextPack = Instantiate(packText, contentTransform, false); 
@@ -102,7 +106,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                     currentIndex = indexCounter;
                 }
 
-                if (indexCounter == CommonVariables.CurrentPanel)
+                if (indexCounter == CommonVariables.CurrentIndexPanel)
                 {
                     packsPanels[i].Panels[j].transform.localScale = scaleActivePanel;
                     packsPanels[i].PanelsImage[j].color = colorActivePanel;
@@ -116,10 +120,16 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
             }
         }
 
-        if (CommonVariables.CurrentPanel != currentIndex)
+        if (CommonVariables.CurrentIndexPanel != currentIndex && !CommonVariables.OnClickPanel)
         {
-            CommonVariables.CurrentPanel = currentIndex;
-            UpdateImagePanel();
+            CommonVariables.CurrentIndexPanel = currentIndex;
+            CommonVariables.CurrentPanel = currentPanel;
+            CommonVariables.CurrentPack = currentPack;
+            //UpdateImagePanel();
+            changedPanel.Invoke();
+        }else if (CommonVariables.OnClickPanel && CommonVariables.CurrentIndexPanel == currentIndex)
+        {
+            CommonVariables.OnClickPanel = false;
             changedPanel.Invoke();
         }
     }
@@ -132,8 +142,8 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
             return;
         }
         scrollRect.velocity = Vector2.zero;
-        contentPos.x = Mathf.SmoothStep(contentTransform.anchoredPosition.x, -packsPanels[currentPack].PanelPos[currentPanel],
-            speedStep * Time.deltaTime);
+        contentPos.x = Mathf.SmoothStep(contentTransform.anchoredPosition.x, 
+            -packsPanels[CommonVariables.CurrentPack].PanelPos[CommonVariables.CurrentPanel],speedStep * Time.deltaTime);
         contentTransform.anchoredPosition = contentPos;
     }
 
