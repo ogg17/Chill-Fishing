@@ -9,6 +9,8 @@ public class SwimmingFish : MonoBehaviour
     [SerializeField] private SpriteRenderer fishRenderer;
     [SerializeField] private float speedSwimmingMax;
     [SerializeField] private float speedSwimmingMin;
+    [SerializeField] private float scaleMax = 1.3f;
+    [SerializeField] private float scaleMin = 0.7f;
     [SerializeField] private float board;
 
     private bool _direction; // 0 - right, 1 - left
@@ -33,6 +35,8 @@ public class SwimmingFish : MonoBehaviour
         transform.position = Random.Range(0, 2) == 0 ? 
             new Vector3(-board, CommonVariables.DepthHook - 0.2f * randomPos, 0) : 
             new Vector3(board, CommonVariables.DepthHook - 0.2f * randomPos, 0);
+        var randomScale = Random.Range(scaleMin, scaleMax);
+        transform.localScale = new Vector3(randomScale, randomScale, 1);
     }
 
     private void ReloadFish()

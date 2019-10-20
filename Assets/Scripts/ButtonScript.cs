@@ -11,10 +11,7 @@ public class UnityBoolEvent : UnityEvent<bool>
 }
 public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeField] private Color pressedColor;
-    [SerializeField] private Sprite firstState;
-    [SerializeField] private Sprite secondState;
-    [SerializeField] private bool changingImage; // enable image change
+    [SerializeField] private Color pressedColor; // enable image change
     [SerializeField] private bool isPressedColor; // enable pressed color
     [SerializeField] private bool playingSound; // enable playing sound
 
@@ -34,7 +31,6 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
         click.Invoke();
-        if (changingImage) imageButton.sprite = imageButton.sprite == firstState ? secondState : firstState;
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)

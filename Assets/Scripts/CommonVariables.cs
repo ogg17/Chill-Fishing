@@ -15,7 +15,6 @@ public class CharacterShop
             else shardCount = value;
         }
     }
-
     public int CrushShardCount { get; set; } = 0;
     public int ShardPrice { get; set; } = 30;
 }
@@ -39,4 +38,7 @@ public static class CommonVariables
     public static SystemLanguage GameLanguage { get; set; } = SystemLanguage.English;
     public static int[] CharacterPacks { get; set; } = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
     public static bool OnClickPanel { get; set; } = false; // Clicked on panel in skin menu
+    public static bool OnMusic { get; set; } = true; // on/off music
+    public static bool OnSound { get; set; } = true; // on/off Sound
+    public static bool OnVibration { get; set; } = true; // on/off Vibration
 }

@@ -49,6 +49,8 @@ MonoBehaviour:
   fishRenderer: {fileID: 3886301698546039784}
   speedSwimmingMax: 0.5
   speedSwimmingMin: 0.3
+  scaleMax: 0.8
+  scaleMin: 1.6
   board: 1
 --- !u!61 &3886301698013841742
 BoxCollider2D:

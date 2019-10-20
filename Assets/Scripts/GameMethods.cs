@@ -8,6 +8,7 @@ public class GameMethods : MonoBehaviour
     {
         CommonVariables.GamePlaying = false;
         CommonVariables.Score = 0;
+        if(CommonVariables.OnVibration) Handheld.Vibrate();
         // CommonVariables.FishNumber = 0;
     }
 
@@ -58,5 +59,27 @@ public class GameMethods : MonoBehaviour
             }
         }
         else CommonVariables.EquippedSkin = CommonVariables.CurrentIndexPanel;
+    }
+
+    public void SetLanguage()
+    {
+        if (CommonVariables.GameLanguage == SystemLanguage.English)
+            CommonVariables.GameLanguage = SystemLanguage.Russian;
+        else CommonVariables.GameLanguage = SystemLanguage.English;
+    }
+
+    public void SetMusic()
+    {
+        CommonVariables.OnMusic = !CommonVariables.OnMusic;
+    }
+
+    public void SetSound()
+    {
+        CommonVariables.OnSound = !CommonVariables.OnSound;
+    }
+
+    public void SetVibration()
+    {
+        CommonVariables.OnVibration = !CommonVariables.OnVibration;
     }
 }

@@ -74,6 +74,9 @@ TextureImporter:
   - first:
       213: -1342121545503931816
     second: coin4
+  - first:
+      213: -4877508662446349883
+    second: "\u0418\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441_0"
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -666,6 +669,27 @@ TextureImporter:
       bones: []
       spriteID: b6c8eaf4324297472b0afc4b1ad80780
       internalID: -1342121545503931816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0418\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441_0"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 483
+        width: 15
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56783f4b166bb491bbb79fbc502fa4d3
+      internalID: -4877508662446349883
       vertices: []
       indices: 
       edges: []

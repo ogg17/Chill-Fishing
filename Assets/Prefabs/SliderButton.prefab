@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: 0}
+  m_AnchoredPosition: {x: 4, y: 0}
   m_SizeDelta: {x: 8, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2133725792465925337
@@ -89,8 +89,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enabledWindow: 0
-  startValue: {x: -4, y: 0}
-  endValue: {x: 3, y: 0}
+  startValue: {x: 4, y: 0}
+  endValue: {x: -4, y: 0}
   speed: 0.3
 --- !u!1 &2133725792887332899
 GameObject:
@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 2133725792887332924}
   - component: {fileID: 2133725792887332926}
   - component: {fileID: 2133725792887332925}
+  - component: {fileID: 5933880784905690525}
   m_Layer: 5
   m_Name: Slide
   m_TagString: Untagged
@@ -168,6 +169,22 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &5933880784905690525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133725792887332899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5936df5d147fd40a5de48cd0ac789c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstStateImage: {fileID: -3223460243355471290, guid: 684c4e38cbe04c7ce9e870108a6547cb,
+    type: 3}
+  secondStateImage: {fileID: -8713003663797953654, guid: 684c4e38cbe04c7ce9e870108a6547cb,
+    type: 3}
 --- !u!1 &2133725792948566698
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +215,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2133725792602863360}
+  - {fileID: 5134930047402257666}
   - {fileID: 2133725792887332924}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -259,9 +276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressedColor: {r: 0, g: 0, b: 0, a: 1}
-  firstState: {fileID: 0}
-  secondState: {fileID: 0}
-  changingImage: 0
   isPressedColor: 1
   playingSound: 1
   click:
@@ -269,6 +283,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2133725792465925343}
         m_MethodName: MoveWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5933880784905690525}
+        m_MethodName: SetStateImage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -434,7 +459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6556572c6f36f0540aeee8c07c8bae48, type: 3}
---- !u!224 &2133725792602863360 stripped
+--- !u!224 &5134930047402257666 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6547789525069503084, guid: 6556572c6f36f0540aeee8c07c8bae48,
     type: 3}

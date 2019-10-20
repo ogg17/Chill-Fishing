@@ -94,4 +94,9 @@ public class TextScript : MonoBehaviour
                 : "Equip";
         }
     }
+
+    public void SetLanguageText()
+    {
+        _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian ? "Русский" : "English";
+    }
 }
