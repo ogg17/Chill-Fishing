@@ -6,20 +6,56 @@ using Random = UnityEngine.Random;
 
 public class CoinScript : MonoBehaviour
 {
+    [SerializeField] private int stepProbably = 1;
+    [SerializeField] private float depthCoin = 1.6f;
+    
+    private int probably = 1;
+    private int cost = 1;
+    private Vector2 coinPos;
+
     private void Start()
     {
-        EventController.GameEvents.gameOver.AddListener(DestroyCoin);
+        StartCoroutine(Initialized());
+        SpawningCoin();
+    }
+
+    private IEnumerator Initialized()
+    {
+        yield return new WaitForSeconds(CommonVariables.InitializedTime);
+        EventController.GameEvents.gameOver.AddListener(ZeroCoin);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Hook"))
         {
-            CommonVariables.Gold+=1000;
+            CommonVariables.Gold += cost;
+            cost++;
+            CommonVariables.CoinPos = 2;
             EventController.GameEvents.pickUpCoin.Invoke();
-            DestroyCoin();
+            SpawningCoin();
+        }
+    }
+    private void SpawningCoin()
+    {
+        var setPos = true;
+        while (setPos)
+        {
+            if (Random.Range(1, 101) <= probably)
+            {
+                var coinPosY = CommonVariables.DepthHook - probably * 0.2f - depthCoin;
+                coinPos.y = coinPosY;
+                transform.position = coinPos;
+                CommonVariables.CoinPos = coinPosY;
+                setPos = false;
+            }
+            else probably += stepProbably;
         }
     }
 
-    public void DestroyCoin() => Destroy(gameObject);
+    private void ZeroCoin()
+    {
+        cost = 1;
+        SpawningCoin();
+    }
 }

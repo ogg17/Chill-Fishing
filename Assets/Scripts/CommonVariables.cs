@@ -21,13 +21,13 @@ public class CharacterShop
 public static class CommonVariables
 {
     public const float InitializedTime = 0.1f;
-    public const int MaxFishNumber = 8;
     public const int CharacterCount = 30;
     public const int MaxIcePieceCount = 7;
     public const int PacksCount = 10;
 
     public static bool GamePlaying { get; set; } = false; // Playing game
     public static float DepthHook { get; set; } = 1f; // Hook movement base
+    public static float CoinPos { get; set; } = 2f; // Current  position coin
     public static int Score { get; set; } // Score game
     public static int Gold { get; set; } = 1000; // Gold
     public static int CurrentIndexPanel { get; set; } // Current scroll index panel

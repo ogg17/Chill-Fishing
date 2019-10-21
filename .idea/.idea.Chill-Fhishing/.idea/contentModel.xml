@@ -27,11 +27,11 @@
           <e p="PanelTouch.cs" t="Include" />
           <e p="SaveLoadScript.cs" t="Include" />
           <e p="ScoreUIScript.cs" t="Include" />
-          <e p="SpawnCoin.cs" t="Include" />
           <e p="SpawnFish.cs" t="Include" />
           <e p="SwimmingFish.cs" t="Include" />
           <e p="TextScript.cs" t="Include" />
           <e p="UnwindingFishingLine.cs" t="Include" />
+          <e p="UpdateCoinText.cs" t="Include" />
         </e>
       </e>
       <e p="Chill-Fhishing.sln" t="IncludeFlat" />
