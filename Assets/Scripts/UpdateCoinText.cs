@@ -17,16 +17,12 @@ public class UpdateCoinText : MonoBehaviour
         yield return new WaitForSeconds(CommonVariables.InitializedTime);
         EventController.GameEvents.gameOver.AddListener(ZeroText);
     }
-    
+
     public void UpdateText()
     {
-        var updated = true;
-        while(updated)
+        if(CommonVariables.GamePlaying)
             if (CommonVariables.DepthHook - CommonVariables.CoinPos >= 0)
-            {
                 text.text = ((CommonVariables.DepthHook - CommonVariables.CoinPos) * 5).ToString("F0") + "m";
-                updated = false;
-            }
             else text.text = "0m";
     }
     private void ZeroText() => text.text = "";

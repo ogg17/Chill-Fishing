@@ -32,8 +32,8 @@ public class CoinScript : MonoBehaviour
             CommonVariables.Gold += cost;
             cost++;
             CommonVariables.CoinPos = 2;
-            EventController.GameEvents.pickUpCoin.Invoke();
             SpawningCoin();
+            EventController.GameEvents.pickUpCoin.Invoke();
         }
     }
     private void SpawningCoin()
