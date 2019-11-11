@@ -25,6 +25,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
     [SerializeField] private float speedStep;
     [SerializeField] private float packNamesPose;
     [SerializeField] private float inertiaMin = 0.01f;
+    [SerializeField] private float panelOffsetY = 2f;
     [SerializeField] private Color colorUnActivePanel;
     [SerializeField] private Color colorActivePanel;
     [SerializeField] private Vector3 scaleActivePanel;
@@ -37,6 +38,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
     private RectTransform contentTransform;
     private ScrollRect scrollRect;
     private Vector2 contentPos = Vector2.zero;
+    private Vector3 variableScale = Vector3.zero;
     private readonly Vector3 scaleUnActivePanel = new Vector3(1, 1, 1);
 
     private void Start()
@@ -56,7 +58,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                 packsPanels[i].PanelPos.Add((panelWight + spacePanel) * indexCounter + i * spacePanel);
                // Debug.Log(packsPanels[i].PanelPos[j]);
                 packsPanels[i].Panels[j].GetComponent<RectTransform>().anchoredPosition =
-                    new Vector2(packsPanels[i].PanelPos[j] + 65f, 0);
+                    new Vector2(packsPanels[i].PanelPos[j] + 65f, panelOffsetY);
                 var panelTouch = packsPanels[i].Panels[j].GetComponent<PanelTouch>();
                 panelTouch.CurentPanelIndex = indexCounter;
                 panelTouch.CurentPack = i;
@@ -70,6 +72,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
 
         contentTransform.sizeDelta = new Vector2(130 + (panelWight + spacePanel) * (indexCounter - 1) + 
                                                  spacePanel * (packsPanels.Length - 1), contentTransform.sizeDelta.y);
+        contentPos.y = contentTransform.anchoredPosition.y;
         
         InvokeRepeating("UpdatePanel",0,0.1f);
         StartCoroutine(Initialized());
@@ -115,7 +118,11 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                 }
                 else
                 {
-                    packsPanels[i].Panels[j].transform.localScale = scaleUnActivePanel;
+                    variableScale = scaleUnActivePanel;
+                    variableScale.x = Mathf.Lerp(variableScale.x, 
+                        Mathf.Clamp(Mathf.Abs((packsPanels[i].Panels[j].transform.position.x * 
+                                  scrollRect.velocity.x))+1000,1000,2000)/1000, 1);
+                    packsPanels[i].Panels[j].transform.localScale = variableScale;
                     packsPanels[i].PanelsImage[j].color = colorUnActivePanel;
                 }
                 indexCounter++;
@@ -138,6 +145,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
 
     private void LateUpdate()
     {
+        //Debug.Log(Input.touches[0].deltaPosition);
         if(isScroll) return;
         if (Mathf.Abs(scrollRect.velocity.x) > inertiaMin)
         {

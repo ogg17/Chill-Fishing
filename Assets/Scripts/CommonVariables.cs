@@ -29,7 +29,7 @@ public static class CommonVariables
     public static float DepthHook { get; set; } = 1f; // Hook movement base
     public static float CoinPos { get; set; } = 2f; // Current  position coin
     public static int Score { get; set; } // Score game
-    public static int Gold { get; set; } = 1000; // Gold
+    public static int Gold { get; set; } = 10000; // Gold
     public static int CurrentIndexPanel { get; set; } // Current scroll index panel
     public static int CurrentPanel { get; set; } // Current panel in pack
     public static int CurrentPack { get; set; } // Current pack in skin menu

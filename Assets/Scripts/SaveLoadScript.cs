@@ -34,10 +34,18 @@ public class SaveLoadScript : MonoBehaviour
         //CommonVariables.GameLanguage = Application.systemLanguage == SystemLanguage.Russian 
          //   ? SystemLanguage.Russian : SystemLanguage.English;
     }
-    private void Save()
+    private void Start()
     {
-        
+        StartCoroutine(Initialized());
     }
+
+    private IEnumerator Initialized()
+    {
+        yield return new WaitForSeconds(CommonVariables.InitializedTime);
+        EventController.GameEvents.startApp.Invoke();
+    }
+    
+    private void Save(){}
     private void OnApplicationQuit() => Save();
 
     private void OnApplicationPause(bool pauseStatus)

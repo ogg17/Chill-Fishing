@@ -151,7 +151,7 @@ MonoBehaviour:
   speedSwimmingMin: 0.4
   scaleMax: 1
   scaleMin: 0.5
-  board: 1
+  board: 1.2
 --- !u!61 &3998336510157457108
 BoxCollider2D:
   m_ObjectHideFlags: 0

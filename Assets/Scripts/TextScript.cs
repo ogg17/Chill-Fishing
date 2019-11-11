@@ -65,9 +65,11 @@ public class TextScript : MonoBehaviour
                 while (check)
                 {
                     string newPhrase = GameString.gameString.stringPacksRus[CommonVariables.CurrentPack]
-                        .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.Range(0, 3)];
+                        .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.
+                            Range(0, GameString.gameString.stringPacksRus[CommonVariables.CurrentPack]
+                                .characters[CommonVariables.CurrentPanel].phrase.Length)];
                     if (newPhrase != _text.text || _text.text == ""){
-                        _text.text = newPhrase;
+                        _text.text = "\"" + newPhrase + "\"";
                         check = false;
                     }
                 }
@@ -80,7 +82,7 @@ public class TextScript : MonoBehaviour
                     string newPhrase = GameString.gameString.stringPacksEng[CommonVariables.CurrentPack]
                         .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.Range(0, 3)];
                     if (newPhrase != _text.text || _text.text == ""){
-                        _text.text = newPhrase;
+                        _text.text = "\"" + newPhrase + "\"";
                         check = false;
                     }
                 }
@@ -128,16 +130,16 @@ public class TextScript : MonoBehaviour
         {
             if (CommonVariables.CurrentIndexPanel == CommonVariables.EquippedSkin)
                 _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
-                    ? "Экипированно"
+                    ? "Выбранно"
                     : "Equipped";
             else _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
-                ? "Экипировать"
+                ? "Выбрать"
                 : "Equip";
         }
     }
 
     public void SetLanguageText()
     {
-        _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian ? "Русский" : "English";
+        _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian ? "Язык:Русский" : "Language:English";
     }
 }

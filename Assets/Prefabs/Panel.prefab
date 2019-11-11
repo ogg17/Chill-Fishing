@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2831523646439023723}
   - component: {fileID: 3687345745146273900}
   - component: {fileID: 1335767264918680918}
+  - component: {fileID: -2914039258887641706}
+  - component: {fileID: 2775496252409841376}
   m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
@@ -88,3 +90,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f2e3019c3eb43efaac4144e9486d10f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2914039258887641706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511303835686590922}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a6b7143c68a9995ab4434f424dcc9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressedColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
+  isPressedColor: 1
+  playingSound: 0
+  click:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  down:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  up:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2775496252409841376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511303835686590922}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5936df5d147fd40a5de48cd0ac789c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstStateImage: {fileID: 6935002494137593618, guid: 684c4e38cbe04c7ce9e870108a6547cb,
+    type: 3}
+  secondStateImage: {fileID: 0}
