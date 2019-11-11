@@ -20,7 +20,8 @@ public class EventController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
+    public UnityEvent stepGame = new UnityEvent();
     public UnityEvent startGame = new UnityEvent();
     public UnityEvent gameOver = new UnityEvent();
     public UnityEvent startApp = new UnityEvent();

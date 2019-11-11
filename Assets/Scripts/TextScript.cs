@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class TextScript : MonoBehaviour
 {
@@ -44,9 +46,11 @@ public class TextScript : MonoBehaviour
     {
         if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
         {
-            _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian 
-                ? GameString.gameString.names[CommonVariables.CurrentIndexPanel].russian 
-                : GameString.gameString.names[CommonVariables.CurrentIndexPanel].english;
+            if (CommonVariables.GameLanguage == SystemLanguage.Russian)
+                _text.text = GameString.gameString.stringPacksRus[CommonVariables.CurrentPack].
+                characters[CommonVariables.CurrentPanel].name;
+            else _text.text = GameString.gameString.stringPacksEng[CommonVariables.CurrentPack].
+                characters[CommonVariables.CurrentPanel].name;
         }
         else _text.text = "???";
     }
@@ -55,9 +59,46 @@ public class TextScript : MonoBehaviour
     {
         if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
         {
-            _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian 
-                ? GameString.gameString.phrase[CommonVariables.CurrentIndexPanel].russian 
-                : GameString.gameString.phrase[CommonVariables.CurrentIndexPanel].english;
+            if (CommonVariables.GameLanguage == SystemLanguage.Russian)
+            {
+                bool check = true;
+                while (check)
+                {
+                    string newPhrase = GameString.gameString.stringPacksRus[CommonVariables.CurrentPack]
+                        .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.Range(0, 3)];
+                    if (newPhrase != _text.text || _text.text == ""){
+                        _text.text = newPhrase;
+                        check = false;
+                    }
+                }
+            }
+            else
+            {
+                bool check = true;
+                while (check)
+                {
+                    string newPhrase = GameString.gameString.stringPacksEng[CommonVariables.CurrentPack]
+                        .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.Range(0, 3)];
+                    if (newPhrase != _text.text || _text.text == ""){
+                        _text.text = newPhrase;
+                        check = false;
+                    }
+                }
+            }
+        }
+        else _text.text = "";
+    }
+
+    public void SetCharacteristicCharacter()
+    {
+        if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
+        {
+            if (CommonVariables.GameLanguage == SystemLanguage.Russian)
+                _text.text = GameString.gameString.stringPacksRus[CommonVariables.CurrentPack]
+                    .characters[CommonVariables.CurrentPanel].characteristic;
+            else
+                _text.text = GameString.gameString.stringPacksEng[CommonVariables.CurrentPack]
+                    .characters[CommonVariables.CurrentPanel].characteristic;
         }
         else _text.text = "";
     }

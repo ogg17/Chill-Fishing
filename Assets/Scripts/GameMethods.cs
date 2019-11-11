@@ -20,6 +20,7 @@ public class GameMethods : MonoBehaviour
     public void GameStep()
     {
         if (CommonVariables.GamePlaying) CommonVariables.Score++;
+        EventController.GameEvents.stepGame.Invoke();
     }
 
     public void GameStartInvoke()

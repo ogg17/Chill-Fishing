@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class GameString : MonoBehaviour
@@ -18,15 +19,21 @@ public class GameString : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-    public StringLang[] names = new StringLang[CommonVariables.CharacterCount];
-    public StringLang[] phrase = new StringLang[CommonVariables.CharacterCount];
-    public StringLang[] packs = new StringLang[CommonVariables.PacksCount];
+
+    public StringPack[] stringPacksRus = new StringPack[10];
+    public StringPack[] stringPacksEng = new StringPack[10];
 }
 
 [System.Serializable]
-public class StringLang
+public class StringPack
 {
-    public String russian;
-    public String english;
+    public string packName;
+    public Character[] characters = new Character[3];
+}
+[System.Serializable]
+public class Character
+{
+    public string name;
+    public string characteristic;
+    public string[] phrase = new string[3];
 }
