@@ -68,7 +68,7 @@ public class TextScript : MonoBehaviour
                         .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.
                             Range(0, GameString.gameString.stringPacksRus[CommonVariables.CurrentPack]
                                 .characters[CommonVariables.CurrentPanel].phrase.Length)];
-                    if (newPhrase != _text.text || _text.text == ""){
+                    if ("\""+ newPhrase + "\"" != _text.text){
                         _text.text = "\"" + newPhrase + "\"";
                         check = false;
                     }
@@ -81,7 +81,7 @@ public class TextScript : MonoBehaviour
                 {
                     string newPhrase = GameString.gameString.stringPacksEng[CommonVariables.CurrentPack]
                         .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.Range(0, 3)];
-                    if (newPhrase != _text.text || _text.text == ""){
+                    if ("\""+ newPhrase + "\"" != _text.text){
                         _text.text = "\"" + newPhrase + "\"";
                         check = false;
                     }

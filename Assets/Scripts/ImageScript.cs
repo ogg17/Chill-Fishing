@@ -9,6 +9,7 @@ public class ImageScript : MonoBehaviour
 
     [SerializeField] private Sprite firstStateImage;
     [SerializeField] private Sprite secondStateImage;
+    [SerializeField] private Color offsetColor;
 
     private Image image;
 
@@ -19,8 +20,9 @@ public class ImageScript : MonoBehaviour
     public void SetColorBackgroundCharacter()
     {
         if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
-            image.color = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentIndexPanel].characterBackgroundShopColor;
-        else image.color = Color.gray;
+            image.color = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentIndexPanel].
+                characterBackgroundShopColor - offsetColor;
+        else image.color = Color.gray - offsetColor;
     }
 
     public void SetStateImage()

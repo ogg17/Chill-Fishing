@@ -83,4 +83,9 @@ public class GameMethods : MonoBehaviour
     {
         CommonVariables.OnVibration = !CommonVariables.OnVibration;
     }
+    
+    public void invokeChangedPanels()
+    {
+        EventController.GameEvents.updatePanel.Invoke();
+    }
 }

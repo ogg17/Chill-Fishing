@@ -13,7 +13,6 @@ public class IceScript : MonoBehaviour
     [SerializeField] private GameObject form;
     [SerializeField] private GameObject adButton;
     [SerializeField] private ParticleSystem iceParticle;
-    [SerializeField] private ParticleSystem backParticle;
     [SerializeField] private Color unActiveColor;
     [SerializeField] private Image formImage;
 
@@ -94,8 +93,8 @@ public class IceScript : MonoBehaviour
 
     public void ShowAdButton()
     {
-        var backParticleMain = backParticle.main;
-        var backParticleEmission = backParticle.emission;
+       // var backParticleMain = backParticle.main;
+       // var backParticleEmission = backParticle.emission;
 
         if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == false)
         {
@@ -115,20 +114,20 @@ public class IceScript : MonoBehaviour
             else
                 characterAnimation.enabled = false;
             
-            backParticleEmission.rateOverTime = new ParticleSystem.MinMaxCurve(10f);
-            backParticleMain.startColor = 
-                CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter?
-                    GameSprites.gameSprites.characterSprites[CommonVariables.CurrentIndexPanel].characterBackgroundShopColor:
-                Color.grey;
+           // backParticleEmission.rateOverTime = new ParticleSystem.MinMaxCurve(10f);
+           // backParticleMain.startColor = 
+            //    CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter?
+            //        GameSprites.gameSprites.characterSprites[CommonVariables.CurrentIndexPanel].characterBackgroundShopColor:
+            //    Color.grey;
         }
         else
         {
             adButton.SetActive(false);
             characterAnimation.enabled = false;
             
-            backParticleEmission.rateOverTime = new ParticleSystem.MinMaxCurve(50f);
-            backParticleMain.startColor = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentIndexPanel]
-                .characterBackgroundShopColor;
+           // backParticleEmission.rateOverTime = new ParticleSystem.MinMaxCurve(50f);
+           // backParticleMain.startColor = GameSprites.gameSprites.characterSprites[CommonVariables.CurrentIndexPanel]
+           //     .characterBackgroundShopColor;
         }
     }
 }

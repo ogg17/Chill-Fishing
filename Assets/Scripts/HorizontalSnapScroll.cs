@@ -16,7 +16,7 @@ public class PackPanels
 
 public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHandler
 {
-    public UnityEvent changedPanel;
+    public UnityEvent changedPanel = new UnityEvent();
     
     [SerializeField] private GameObject defaultPanel;
     [SerializeField] private GameObject packText;
@@ -90,7 +90,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
         }
 
         UpdateImagePanel();
-        changedPanel.Invoke();
+        EventController.GameEvents.updatePanel.Invoke();
     }
 
     private void UpdatePanel()
@@ -121,7 +121,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                     variableScale = scaleUnActivePanel;
                     variableScale.x = Mathf.Lerp(variableScale.x, 
                         Mathf.Clamp(Mathf.Abs((packsPanels[i].Panels[j].transform.position.x * 
-                                  scrollRect.velocity.x))+1000,1000,2000)/1000, 1);
+                                  scrollRect.velocity.x))+1000,1000,2000)/1000, 1*Time.deltaTime);
                     packsPanels[i].Panels[j].transform.localScale = variableScale;
                     packsPanels[i].PanelsImage[j].color = colorUnActivePanel;
                 }
@@ -152,7 +152,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
             return;
         }
         scrollRect.velocity = Vector2.zero;
-        contentPos.x = Mathf.SmoothStep(contentTransform.anchoredPosition.x, 
+        contentPos.x = Mathf.Lerp(contentTransform.anchoredPosition.x, 
             -packsPanels[CommonVariables.CurrentPack].PanelPos[CommonVariables.CurrentPanel],speedStep * Time.deltaTime);
         contentTransform.anchoredPosition = contentPos;
     }

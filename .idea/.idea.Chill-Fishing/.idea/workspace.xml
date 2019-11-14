@@ -56,7 +56,6 @@
         <option value="$PROJECT_DIR$/Assets/unity-ui-extensions/Scripts/Layout/HorizontalScrollSnap.cs" />
         <option value="$PROJECT_DIR$/Assets/unity-ui-extensions/Scripts/Layout/ScrollSnapBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSprites.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreUIScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnFish.cs" />
@@ -65,23 +64,24 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnCoin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharachterSkinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterSkinScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/SpriteEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/ExampleString.json" />
         <option value="$PROJECT_DIR$/Assets/StringsRUS.json" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameString.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterSkinEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuMotion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
       </list>
     </option>
   </component>
@@ -174,7 +174,8 @@
       <workItem from="1573309700179" duration="50000" />
       <workItem from="1573309853351" duration="2732000" />
       <workItem from="1573321883562" duration="10176000" />
-      <workItem from="1573486499018" duration="10508000" />
+      <workItem from="1573486499018" duration="19765000" />
+      <workItem from="1573726011210" duration="2085000" />
     </task>
     <servers />
   </component>

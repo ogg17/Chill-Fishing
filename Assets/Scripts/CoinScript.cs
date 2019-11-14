@@ -38,19 +38,12 @@ public class CoinScript : MonoBehaviour
     }
     private void SpawningCoin()
     {
-        var setPos = true;
-        while (setPos)
-        {
-            if (Random.Range(1, 101) <= probably)
-            {
-                var coinPosY = CommonVariables.DepthHook - probably * 0.2f - depthCoin;
-                coinPos.y = coinPosY;
-                transform.position = coinPos;
-                CommonVariables.CoinPos = coinPosY;
-                setPos = false;
-            }
-            else probably += stepProbably;
-        }
+        var x = Random.Range(0.04f, 1f);
+        probably = Mathf.RoundToInt(Mathf.Sqrt(x) * 50);
+        var coinPosY = CommonVariables.DepthHook - probably * 0.2f;
+        coinPos.y = coinPosY;
+        transform.position = coinPos;
+        CommonVariables.CoinPos = coinPosY;
     }
 
     private void ZeroCoin()
