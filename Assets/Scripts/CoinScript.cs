@@ -30,6 +30,7 @@ public class CoinScript : MonoBehaviour
         if (other.CompareTag("Hook"))
         {
             CommonVariables.Gold += cost;
+            CommonVariables.GoldSession += cost;
             cost++;
             CommonVariables.CoinPos = 2;
             SpawningCoin();

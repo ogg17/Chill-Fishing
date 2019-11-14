@@ -7,14 +7,14 @@ public class GameMethods : MonoBehaviour
     public void GameOver()
     {
         CommonVariables.GamePlaying = false;
-        CommonVariables.Score = 0;
         if(CommonVariables.OnVibration) Handheld.Vibrate();
-        // CommonVariables.FishNumber = 0;
+        if (CommonVariables.Record < CommonVariables.Score) CommonVariables.Record = CommonVariables.Score;
     }
 
     public void GameStart()
     {
-        
+        CommonVariables.GoldSession = 0;
+        CommonVariables.Score = 0;
     }
 
     public void GameStep()

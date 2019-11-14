@@ -142,4 +142,19 @@ public class TextScript : MonoBehaviour
     {
         _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian ? "Язык:Русский" : "Language:English";
     }
+
+    public void SetEndGameText()
+    {
+        if (_text != null)
+            _text.text = "-Золото:" + CommonVariables.GoldSession + "\n-Рекорд:" +
+                         CommonVariables.Record + "\n-Счёт:" + CommonVariables.Score;
+        else StartCoroutine(setEndTextEnumerator());
+    }
+
+    public IEnumerator setEndTextEnumerator()
+    {
+        yield return new WaitForSeconds(CommonVariables.InitializedTime);
+        _text.text = "-Золото:" + CommonVariables.GoldSession + "\n-Рекорд:" +
+                     CommonVariables.Record + "\n-Счёт:" + CommonVariables.Score;
+    }
 }

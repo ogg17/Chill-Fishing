@@ -20,7 +20,7 @@ public class HookMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x, CommonVariables.DepthHook), speedMovement);
+        transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x, CommonVariables.DepthHook), speedMovement * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
