@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
+using ComVar = CommonVariables;
 
 public class TextScript : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class TextScript : MonoBehaviour
         if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == false)
         {
             int count = 0;
-            for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount; i++)
+            for (int i = 0; i < ComVar.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount; i++)
             {
                 if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].IceShards[i] == true) count++;
             }

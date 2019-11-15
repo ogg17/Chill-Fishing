@@ -13,11 +13,13 @@
           <e p="CharacterSkinScript.cs" t="Include" />
           <e p="CoinScript.cs" t="Include" />
           <e p="CommonVariables.cs" t="Include" />
+          <e p="DisappearTextScript.cs" t="Include" />
           <e p="EventController.cs" t="Include" />
           <e p="FpsCounter.cs" t="Include" />
           <e p="GameMethods.cs" t="Include" />
           <e p="GameSprites.cs" t="Include" />
           <e p="GameString.cs" t="Include" />
+          <e p="GiftScript.cs" t="Include" />
           <e p="HookMovement.cs" t="Include" />
           <e p="HorizontalSnapScroll.cs" t="Include" />
           <e p="IceScript.cs" t="Include" />
@@ -28,6 +30,7 @@
           <e p="SaveLoadScript.cs" t="Include" />
           <e p="ScoreUIScript.cs" t="Include" />
           <e p="SpawnFish.cs" t="Include" />
+          <e p="SpriteScript.cs" t="Include" />
           <e p="SwimmingFish.cs" t="Include" />
           <e p="TextScript.cs" t="Include" />
           <e p="UnwindingFishingLine.cs" t="Include" />

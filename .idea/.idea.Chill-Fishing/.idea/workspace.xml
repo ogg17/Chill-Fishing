@@ -27,10 +27,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BlurController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DisappearTextScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IceScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TextScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.lightweight@5.7.2/Runtime/LightweightRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
@@ -45,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSprites.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterSkinEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpriteScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -78,10 +81,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DisappeareTextScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DisappearTextScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpriteScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
       </list>
     </option>
   </component>
@@ -175,7 +182,7 @@
       <workItem from="1573309853351" duration="2732000" />
       <workItem from="1573321883562" duration="10176000" />
       <workItem from="1573486499018" duration="19765000" />
-      <workItem from="1573726011210" duration="5634000" />
+      <workItem from="1573726011210" duration="13596000" />
     </task>
     <servers />
   </component>
