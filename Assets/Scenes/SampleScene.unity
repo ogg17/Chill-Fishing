@@ -605,7 +605,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 6935002494137593618, guid: 684c4e38cbe04c7ce9e870108a6547cb,
+  m_Sprite: {fileID: -1708539529714707359, guid: 684c4e38cbe04c7ce9e870108a6547cb,
     type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstStateImage: {fileID: 0}
   secondStateImage: {fileID: 0}
-  offsetColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0}
+  offsetColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0}
 --- !u!1 &163747100
 GameObject:
   m_ObjectHideFlags: 0
@@ -7360,7 +7360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 125
+  m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 135, y: 240}
   m_ScreenMatchMode: 0
@@ -7381,7 +7381,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 8.8
-  m_PixelPerfect: 1
+  m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -13387,7 +13387,7 @@ PrefabInstance:
     - target: {fileID: 6547789525069503084, guid: 6556572c6f36f0540aeee8c07c8bae48,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -26.5
+      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 6547789525069503084, guid: 6556572c6f36f0540aeee8c07c8bae48,
         type: 3}
@@ -20326,7 +20326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 120, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214541283
@@ -20345,16 +20345,16 @@ MonoBehaviour:
     type: 3}
   packText: {fileID: 6547789525069503085, guid: 5810fab19303ca645ab36b7c54727a42,
     type: 3}
-  lockedPanelImage: {fileID: 1841375054691723708, guid: 684c4e38cbe04c7ce9e870108a6547cb,
+  lockedPanelImage: {fileID: 922160102723400492, guid: 684c4e38cbe04c7ce9e870108a6547cb,
     type: 3}
-  spacePanel: 4
+  spacePanel: 6
   speedStep: 10
-  packNamesPose: 20
+  packNamesPose: -21
   inertiaMin: 50
   panelOffsetY: 1
-  colorUnActivePanel: {r: 1, g: 1, b: 1, a: 0.5019608}
+  colorUnActivePanel: {r: 0, g: 0, b: 0, a: 0.19607843}
   colorActivePanel: {r: 1, g: 1, b: 1, a: 1}
-  scaleActivePanel: {x: 1, y: 1, z: 1}
+  scaleActivePanel: {x: 1.22, y: 1.22, z: 1}
 --- !u!114 &1214541285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34208,7 +34208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1859625410
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35865,6 +35865,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: DisappeareText
       objectReference: {fileID: 0}
+    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: color.g
+      value: 0.99944556
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: disappearSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3121027994792718962, guid: 75f4e848dd6f2064d8d013a77a1057f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36014,26 +36034,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
-        type: 3}
-      propertyPath: color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
-        type: 3}
-      propertyPath: color.g
-      value: 0.99944556
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
-        type: 3}
-      propertyPath: color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
-        type: 3}
-      propertyPath: disappearSpeed
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75f4e848dd6f2064d8d013a77a1057f4, type: 3}

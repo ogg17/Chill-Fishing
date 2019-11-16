@@ -88,8 +88,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DisappearTextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpriteScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParticleScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
       </list>
     </option>
   </component>
@@ -184,6 +185,7 @@
       <workItem from="1573321883562" duration="10176000" />
       <workItem from="1573486499018" duration="19765000" />
       <workItem from="1573726011210" duration="15813000" />
+      <workItem from="1573923087097" duration="5234000" />
     </task>
     <servers />
   </component>

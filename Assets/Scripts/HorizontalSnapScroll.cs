@@ -9,8 +9,10 @@ using UnityEngine.UI;
 public class PackPanels
 {
     public List<GameObject> Panels { get; set; } = new List<GameObject>(3);
+    public List<RectTransform> PanelsRect { get; set; } = new List<RectTransform>(3);
     public List<float> PanelPos { get; set; } = new List<float>(3);
     public List<Image> PanelsImage { get; set; } = new List<Image>(3);
+    public List<Image> CharacImage { get; set; } = new List<Image>(3); 
     public GameObject TextPack { get; set; } = new GameObject();
 }
 
@@ -28,6 +30,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
     [SerializeField] private float panelOffsetY = 2f;
     [SerializeField] private Color colorUnActivePanel;
     [SerializeField] private Color colorActivePanel;
+    [SerializeField] private Color offsetColorPanel;
     [SerializeField] private Vector3 scaleActivePanel;
     
     private bool isScroll;
@@ -39,6 +42,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
     private ScrollRect scrollRect;
     private Vector2 contentPos = Vector2.zero;
     private Vector3 variableScale = Vector3.zero;
+    private Vector2 panelPos = Vector2.zero;
     private readonly Vector3 scaleUnActivePanel = new Vector3(1, 1, 1);
 
     private void Start()
@@ -50,22 +54,25 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
         for (var i = 0; i < packsPanels.Length; i++)
         {
             packsPanels[i] = new PackPanels();
+            packsPanels[i].TextPack = Instantiate(packText, contentTransform, false); 
             for (var j = 0; j < CommonVariables.CharacterPacks[i]; j++)
             {
                 
                 packsPanels[i].Panels.Add(Instantiate(defaultPanel, contentTransform.transform, false));
                 packsPanels[i].PanelsImage.Add(packsPanels[i].Panels[j].GetComponent<Image>());
                 packsPanels[i].PanelPos.Add((panelWight + spacePanel) * indexCounter + i * spacePanel);
-               // Debug.Log(packsPanels[i].PanelPos[j]);
-                packsPanels[i].Panels[j].GetComponent<RectTransform>().anchoredPosition =
-                    new Vector2(packsPanels[i].PanelPos[j] + 65f, panelOffsetY);
+                packsPanels[i].PanelsRect.Add(packsPanels[i].Panels[j].GetComponent<RectTransform>());
+                
+                panelPos = new Vector2(packsPanels[i].PanelPos[j] + 65f, panelOffsetY);
+                packsPanels[i].PanelsRect[j].anchoredPosition = panelPos;
                 var panelTouch = packsPanels[i].Panels[j].GetComponent<PanelTouch>();
+                packsPanels[i].CharacImage.Add(panelTouch.characImage);
+                
                 panelTouch.CurentPanelIndex = indexCounter;
                 panelTouch.CurentPack = i;
                 panelTouch.CurentPanel = j;
                 indexCounter++;
-            } 
-            packsPanels[i].TextPack = Instantiate(packText, contentTransform, false); 
+            }
             packsPanels[i].TextPack.GetComponent<RectTransform>().anchoredPosition = 
                 new Vector2(packsPanels[i].PanelPos[1] + 65f, packNamesPose);
         }
@@ -114,7 +121,16 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                 if (indexCounter == CommonVariables.CurrentIndexPanel)
                 {
                     packsPanels[i].Panels[j].transform.localScale = scaleActivePanel;
-                    packsPanels[i].PanelsImage[j].color = colorActivePanel;
+                    panelPos.x = packsPanels[i].PanelPos[j] + 65;
+                    panelPos.y = panelOffsetY + 1;
+                    packsPanels[i].PanelsRect[j].anchoredPosition = panelPos;
+                    if (CommonVariables.CharacterShops[indexCounter].BuyCharacter == true)
+                    {
+                        packsPanels[i].PanelsImage[j].color = GameSprites.gameSprites.characterSprites[indexCounter]
+                            .characterBackgroundShopColor - offsetColorPanel;
+                        packsPanels[i].CharacImage[j].color = Color.white;
+                    }
+                    else packsPanels[i].PanelsImage[j].color = Color.grey - offsetColorPanel;
                 }
                 else
                 {
@@ -123,7 +139,18 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                         Mathf.Clamp(Mathf.Abs((packsPanels[i].Panels[j].transform.position.x * 
                                   scrollRect.velocity.x))+1000,1000,2000)/1000, 1*Time.deltaTime);
                     packsPanels[i].Panels[j].transform.localScale = variableScale;
-                    packsPanels[i].PanelsImage[j].color = colorUnActivePanel;
+                    panelPos.y = panelOffsetY;
+                    panelPos.x = packsPanels[i].PanelPos[j] + 65;
+                    packsPanels[i].PanelsRect[j].anchoredPosition = panelPos;
+
+                    if (CommonVariables.CharacterShops[indexCounter].BuyCharacter == true)
+                    {
+                        packsPanels[i].PanelsImage[j].color =
+                            GameSprites.gameSprites.characterSprites[indexCounter].characterBackgroundShopColor -
+                            colorUnActivePanel - offsetColorPanel;
+                        packsPanels[i].CharacImage[j].color = Color.white - colorUnActivePanel;
+                    }
+                    else packsPanels[i].PanelsImage[j].color = Color.grey - colorUnActivePanel - offsetColorPanel;
                 }
                 indexCounter++;
             }
@@ -165,8 +192,9 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
             for (var j = 0; j < CommonVariables.CharacterPacks[i]; j++)
             {
                 if (CommonVariables.CharacterShops[indexCounter].BuyCharacter == true)
-                    packsPanels[i].PanelsImage[j].sprite = GameSprites.gameSprites.characterSprites[indexCounter].scrollPanelSprite;
-                else packsPanels[i].PanelsImage[j].sprite = lockedPanelImage;
+                    packsPanels[i].CharacImage[j].sprite =
+                        GameSprites.gameSprites.characterSprites[indexCounter].characterShopSprite;
+                else packsPanels[i].CharacImage[j].sprite = lockedPanelImage;
                 indexCounter++;
             }
         }
