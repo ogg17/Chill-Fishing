@@ -16,7 +16,7 @@ public class PackPanels
 
 public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHandler
 {
-    public UnityEvent changedPanel = new UnityEvent();
+    //public UnityEvent changedPanel = new UnityEvent();
     
     [SerializeField] private GameObject defaultPanel;
     [SerializeField] private GameObject packText;
@@ -135,11 +135,11 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
             CommonVariables.CurrentPanel = currentPanel;
             CommonVariables.CurrentPack = currentPack;
             //UpdateImagePanel();
-            changedPanel.Invoke();
+            EventController.GameEvents.updatePanel.Invoke();
         }else if (CommonVariables.OnClickPanel && CommonVariables.CurrentIndexPanel == currentIndex)
         {
             CommonVariables.OnClickPanel = false;
-            changedPanel.Invoke();
+            EventController.GameEvents.updatePanel.Invoke();
         }
     }
 

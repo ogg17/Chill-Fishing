@@ -24,7 +24,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuMotion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnFish.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreUIScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BlurController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DisappearTextScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -36,6 +35,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TextScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.lightweight@5.7.2/Runtime/LightweightRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParticleScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" root0="FORCE_HIGHLIGHTING" />
@@ -77,7 +77,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuMotion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" />
@@ -89,6 +88,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DisappearTextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpriteScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ParticleScript.cs" />
       </list>
     </option>
   </component>
@@ -182,7 +183,7 @@
       <workItem from="1573309853351" duration="2732000" />
       <workItem from="1573321883562" duration="10176000" />
       <workItem from="1573486499018" duration="19765000" />
-      <workItem from="1573726011210" duration="13596000" />
+      <workItem from="1573726011210" duration="15813000" />
     </task>
     <servers />
   </component>
