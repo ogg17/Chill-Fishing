@@ -43,5 +43,5 @@ public static class CommonVariables
     public static bool OnClickPanel { get; set; } = false; // Clicked on panel in skin menu
     public static bool OnMusic { get; set; } = true; // on/off music
     public static bool OnSound { get; set; } = true; // on/off Sound
-    public static bool OnVibration { get; set; } = true; // on/off Vibration
+    public static bool OnVibration { get; set; } = false; // on/off Vibration
 }
