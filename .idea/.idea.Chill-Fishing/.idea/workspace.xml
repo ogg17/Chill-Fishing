@@ -35,6 +35,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TextScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.lightweight@5.7.2/Runtime/LightweightRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParticleScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" root0="FORCE_HIGHLIGHTING" />
@@ -48,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterSkinEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpriteScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SeaweedScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -61,7 +63,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSprites.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreUIScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnFish.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnCoin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharachterSkinScript.cs" />
@@ -79,7 +80,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" />
@@ -91,6 +91,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SeaweedScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
       </list>
     </option>
   </component>
@@ -186,6 +190,7 @@
       <workItem from="1573486499018" duration="19765000" />
       <workItem from="1573726011210" duration="15813000" />
       <workItem from="1573923087097" duration="7493000" />
+      <workItem from="1574102833027" duration="4660000" />
     </task>
     <servers />
   </component>

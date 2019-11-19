@@ -7,6 +7,13 @@ public class HookMovement : MonoBehaviour
 {
     [SerializeField] private float stepMovement = 0.02f;
     [SerializeField] private float speedMovement = 0.05f;
+    
+    private Vector2 pos = Vector2.zero;
+
+    private void Start()
+    {
+        pos.x = transform.position.x;
+    }
 
     public void ReloadMovement()
     {
@@ -20,7 +27,8 @@ public class HookMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x, CommonVariables.DepthHook), speedMovement * Time.deltaTime);
+        pos.y = CommonVariables.DepthHook;
+        transform.position = Vector2.Lerp(transform.position, pos, speedMovement * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

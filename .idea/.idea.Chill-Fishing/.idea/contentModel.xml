@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="ButtonScript.cs" t="Include" />
+          <e p="CameraScript.cs" t="Include" />
           <e p="CharacterSkinEffect.cs" t="Include" />
           <e p="CharacterSkinScript.cs" t="Include" />
           <e p="CoinScript.cs" t="Include" />
@@ -29,6 +30,8 @@
           <e p="ParticleScript.cs" t="Include" />
           <e p="SaveLoadScript.cs" t="Include" />
           <e p="ScoreUIScript.cs" t="Include" />
+          <e p="SeaweedGenerator.cs" t="Include" />
+          <e p="SeaweedScript.cs" t="Include" />
           <e p="SpawnFish.cs" t="Include" />
           <e p="SpriteScript.cs" t="Include" />
           <e p="SwimmingFish.cs" t="Include" />

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UnwindingFishingLine : MonoBehaviour
 {
-    [SerializeField] private Transform hookPosition;
+    [SerializeField] private int speedMovement = 8;
     
     private LineRenderer _lineRenderer;
 
@@ -16,7 +16,8 @@ public class UnwindingFishingLine : MonoBehaviour
 
     private void Update()
     {
-        var position = new Vector3(0,hookPosition.position.y,0);
-        _lineRenderer.SetPosition(1, position);
+        var position = new Vector3(0,CommonVariables.DepthHook,0);
+        _lineRenderer.SetPosition(1, 
+            Vector3.Lerp(_lineRenderer.GetPosition(1), position, speedMovement * Time.deltaTime));
     }
 }
