@@ -15,22 +15,32 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     [SerializeField] private bool isPressedColor; // enable pressed color
     [SerializeField] private bool playingSound; // enable playing sound
 
-    [SerializeField] private UnityEvent click = new UnityEvent();
+    [SerializeField] protected UnityEvent click = new UnityEvent();
     [SerializeField] private UnityEvent down = new UnityEvent();
     [SerializeField] private UnityEvent up = new UnityEvent();
 
+    [SerializeField] private int timeInterval = 0;
+
     private Image imageButton;
     private Color unpressedColor;
+    protected DateTime clickTime;
     
+    protected TimeSpan clickTimeSpan = TimeSpan.Zero;
     private void Start()
     {
         imageButton = GetComponent<Image>();
         unpressedColor = imageButton.color;
+        clickTimeSpan = new TimeSpan(0,0,0,0,timeInterval);
+        clickTime = DateTime.Now;
     }
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
-        click.Invoke();
+        if (DateTime.Now > clickTime + clickTimeSpan)
+        {
+            clickTime = DateTime.Now;
+            click.Invoke();
+        }
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)

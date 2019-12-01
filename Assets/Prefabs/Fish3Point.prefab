@@ -69,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5094504825842778383, guid: 8a38dff4a7d843889a40f6219d805786,
+  m_Sprite: {fileID: -6366078697462144916, guid: 244d501659877b54eb40adf068c3ecdf,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -147,10 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishRenderer: {fileID: 3998336509741675634}
-  speedSwimmingMax: 1
-  speedSwimmingMin: 0.4
-  scaleMax: 1
-  scaleMin: 0.5
+  speedSwimmingMax: 1.65
+  speedSwimmingMin: 1
+  scaleMax: 1.35
+  scaleMin: 0.8
   board: 1.2
 --- !u!61 &3998336510157457108
 BoxCollider2D:

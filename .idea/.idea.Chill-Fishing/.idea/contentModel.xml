@@ -16,6 +16,7 @@
           <e p="DisappearTextScript.cs" t="Include" />
           <e p="EventController.cs" t="Include" />
           <e p="FpsCounter.cs" t="Include" />
+          <e p="GameButtonsScript.cs" t="Include" />
           <e p="GameMethods.cs" t="Include" />
           <e p="GameSprites.cs" t="Include" />
           <e p="GameString.cs" t="Include" />

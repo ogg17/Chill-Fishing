@@ -12,11 +12,20 @@ public class GiftScript : MonoBehaviour
     [SerializeField] private GameObject cloudZzz;
     [SerializeField] private ParticleSystem goldParticle;
     [SerializeField] private ParticleSystem cloudParticle;
+    [SerializeField] private int timeInterval = 10;
 
     private DateTime timeGive;
+    private TimeSpan updateGiftTime = TimeSpan.Zero;
+    private bool isGet;
+
+    private void Start()
+    {
+        updateGiftTime = new TimeSpan(0, 0, timeInterval);
+    }
 
     public void GiveGift()
     {
+        isGet = true;
         goldParticle.Play();
         cloudParticle.Play();
         gift.SetActive(false);
@@ -28,11 +37,12 @@ public class GiftScript : MonoBehaviour
     }
     public void UpdateGift()
     {
-        if (DateTime.Now > timeGive + new TimeSpan(0, 0, 10))
+        if (isGet && DateTime.Now > timeGive + updateGiftTime)
         {
             gift.SetActive(true);
             cloudZzz.SetActive(false);
             penguin.SetStateImage();
+            isGet = false;
         }
     }
 }

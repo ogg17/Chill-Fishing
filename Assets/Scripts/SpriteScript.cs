@@ -6,9 +6,10 @@ public class SpriteScript : MonoBehaviour
 {
     [SerializeField] private Sprite firstStateImage;
     [SerializeField] private Sprite secondStateImage;
-    [SerializeField] private Color offsetColor;
+   // [SerializeField] private Color offsetColor;
 
     private SpriteRenderer image;
+    private bool firstState;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class SpriteScript : MonoBehaviour
     
     public void SetStateImage()
     {
-        if (image.sprite == firstStateImage) image.sprite = secondStateImage;
-        else image.sprite = firstStateImage;
+        if (firstState) {image.sprite = secondStateImage; firstState = false;}
+        else {image.sprite = firstStateImage; firstState = true;}
     }
 }

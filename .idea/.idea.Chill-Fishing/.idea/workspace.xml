@@ -23,8 +23,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuMotion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnFish.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2FF8A0EE-2FC1-4048-88F2-39AE705E399D/ca/1e087795/TimeSpan.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreUIScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SeaweedGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DisappearTextScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" root0="FORCE_HIGHLIGHTING" />
@@ -40,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameButtonsScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameString.cs" root0="FORCE_HIGHLIGHTING" />
@@ -69,7 +72,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterSkinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/SpriteEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceImageScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/ExampleString.json" />
         <option value="$PROJECT_DIR$/Assets/StringsRUS.json" />
@@ -77,16 +79,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterSkinEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuMotion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DisappeareTextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DisappearTextScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpriteScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParticleScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
@@ -95,6 +93,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpriteScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameButtonsScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
       </list>
     </option>
   </component>
@@ -191,6 +195,9 @@
       <workItem from="1573726011210" duration="15813000" />
       <workItem from="1573923087097" duration="7493000" />
       <workItem from="1574102833027" duration="4660000" />
+      <workItem from="1574188637831" duration="93000" />
+      <workItem from="1574423545732" duration="10772000" />
+      <workItem from="1575216241395" duration="4713000" />
     </task>
     <servers />
   </component>

@@ -12,6 +12,7 @@ public class ImageScript : MonoBehaviour
     [SerializeField] private Color offsetColor;
 
     private Image image;
+    private bool firstState;
 
     private void Start()
     {
@@ -27,8 +28,8 @@ public class ImageScript : MonoBehaviour
 
     public void SetStateImage()
     {
-        if (image.sprite == firstStateImage) image.sprite = secondStateImage;
-        else image.sprite = firstStateImage;
+        if (firstState) {image.sprite = secondStateImage; firstState = false;}
+        else {image.sprite = firstStateImage; firstState = true;}
     }
     
 }
