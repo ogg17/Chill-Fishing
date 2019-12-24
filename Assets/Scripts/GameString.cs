@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Serialization;
-using File = UnityEngine.Windows.File;
 
 public class GameString : MonoBehaviour
 {

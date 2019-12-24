@@ -31,5 +31,17 @@ public class ImageScript : MonoBehaviour
         if (firstState) {image.sprite = secondStateImage; firstState = false;}
         else {image.sprite = firstStateImage; firstState = true;}
     }
+
+    public void SetFirstState()
+    {
+        image.sprite = firstStateImage;
+        firstState = false;
+    }
+
+    public void SetSecondState()
+    {
+        image.sprite = secondStateImage;
+        firstState = true;
+    }
     
 }

@@ -29,7 +29,7 @@ public class GiftScript : MonoBehaviour
         goldParticle.Play();
         cloudParticle.Play();
         gift.SetActive(false);
-        penguin.SetStateImage();
+        penguin.SetFirstState();
         cloudZzz.SetActive(true);
         CommonVariables.GoldGift = Random.Range(10, 51);
         CommonVariables.Gold += CommonVariables.GoldGift;
@@ -39,9 +39,10 @@ public class GiftScript : MonoBehaviour
     {
         if (isGet && DateTime.Now > timeGive + updateGiftTime)
         {
+            Debug.Log("kek");
             gift.SetActive(true);
             cloudZzz.SetActive(false);
-            penguin.SetStateImage();
+            penguin.SetSecondState();
             isGet = false;
         }
     }

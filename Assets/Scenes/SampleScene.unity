@@ -6225,7 +6225,7 @@ MonoBehaviour:
   cloudZzz: {fileID: 1619905241}
   goldParticle: {fileID: 1530602741}
   cloudParticle: {fileID: 1511831441}
-  timeInterval: 10
+  timeInterval: 1
 --- !u!1 &270317334
 GameObject:
   m_ObjectHideFlags: 0
@@ -6313,9 +6313,9 @@ MonoBehaviour:
   click:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 253450145}
+        m_MethodName: UpdateGift
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18326,6 +18326,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea26e78b878871b498edc829debc9a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &698058106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 698058107}
+  - component: {fileID: 698058108}
+  m_Layer: 0
+  m_Name: GameAds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &698058107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698058106}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1368314661}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &698058108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698058106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f6058b87d00404988f30d9a5dab35a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placementId: rewardedVideo
 --- !u!1 &720270070
 GameObject:
   m_ObjectHideFlags: 0
@@ -18937,17 +18981,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 253450145}
-        m_MethodName: UpdateGift
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 739087471}
         m_MethodName: SetActive
         m_Mode: 6
@@ -18959,17 +18992,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 835826207}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   startApp:
@@ -18977,6 +18999,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1922086762}
         m_MethodName: SetGoldText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661838095}
+        m_MethodName: SetCharacterSkin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26251,6 +26284,7 @@ Transform:
   - {fileID: 1613457184}
   - {fileID: 1392791765}
   - {fileID: 322017295}
+  - {fileID: 698058107}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27041,7 +27075,7 @@ MonoBehaviour:
   - {fileID: 8427778365139075138, guid: 72ad358641147d82e8dfd42d4cacb3b2, type: 3}
   - {fileID: 3886301698013841739, guid: 1ab338ee69787fa5a8b20ccdf60fea36, type: 3}
   - {fileID: 3998336510157457105, guid: 74183b1a1df0874938c9dc52f31d6720, type: 3}
-  maxFish: 1
+  maxFish: 5
 --- !u!1 &1421072429
 GameObject:
   m_ObjectHideFlags: 0
@@ -38439,7 +38473,18 @@ MonoBehaviour:
   playingSound: 1
   click:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 698058108}
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   down:
@@ -40075,7 +40120,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 3747034915633186755, guid: 684c4e38cbe04c7ce9e870108a6547cb,
+  m_Sprite: {fileID: -3369968491757792572, guid: 244d501659877b54eb40adf068c3ecdf,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
