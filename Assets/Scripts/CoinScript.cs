@@ -36,7 +36,8 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
         {
             core.SetActive(true);
             coinPos.y = CommonVariables.DepthHook - 3f;
-            coinPos.x = Random.Range(0, 2) == 0 ? -0.7f : 0.7f;
+            float randomX = Random.Range(0.6f, 1f);
+            coinPos.x = Random.Range(0, 2) == 0 ? -0.68f*randomX : 0.68f*randomX;
             move.x = 0;
             transform.position = coinPos;
             pickUp = false;

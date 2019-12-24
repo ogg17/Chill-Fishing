@@ -7,38 +7,45 @@ public class SaveLoadScript : MonoBehaviour
 {
     private void Awake()
     {
-        for (var i = 0; i < CommonVariables.PacksCount; i++)
-        {
-            for (var j = 0; j < CommonVariables.CharacterPacks[i]; j++)
-            {
-                CommonVariables.CharacterShops.Add(new CharacterShop());
-            }
-        }
-
-        CommonVariables.CharacterShops[0].BuyCharacter = true;
-        
-        CommonVariables.CharacterShops[12].ShardCount = 3;
-        CommonVariables.CharacterShops[13].ShardCount = 3;
-        CommonVariables.CharacterShops[14].ShardCount = 3;
-        
-        CommonVariables.CharacterShops[18].ShardCount = 3;
-        CommonVariables.CharacterShops[19].ShardCount = 3;
-        CommonVariables.CharacterShops[20].ShardCount = 3;
-        
-        CommonVariables.CharacterShops[21].ShardCount = 3;
-        CommonVariables.CharacterShops[23].ShardCount = 3;
-        
-        CommonVariables.CharacterShops[27].ShardCount = 7;
-        CommonVariables.CharacterShops[29].ShardCount = 7;
+        //PlayerPrefs.DeleteAll();
 
         //CommonVariables.GameLanguage = Application.systemLanguage == SystemLanguage.Russian 
          //   ? SystemLanguage.Russian : SystemLanguage.English;
     }
     private void Start()
     {
-        CommonVariables tmp = JsonUtility.FromJson<CommonVariables>(PlayerPrefs.GetString("Save"));
-        tmp.LoadVariables();
+        if (PlayerPrefs.HasKey("Save"))
+        {
+            CommonVariables tmp = JsonUtility.FromJson<CommonVariables>(PlayerPrefs.GetString("Save"));
+            tmp.LoadVariables();
+        }
+        else
+        {
+            for (var i = 0; i < CommonVariables.PacksCount; i++)
+            {
+                for (var j = 0; j < CommonVariables.CharacterPacks[i]; j++)
+                {
+                    CommonVariables.CharacterShops.Add(new CharacterShop());
+                }
+            }
+
+            CommonVariables.CharacterShops[0].BuyCharacter = true;
         
+            CommonVariables.CharacterShops[12].ShardCount = 3;
+            CommonVariables.CharacterShops[13].ShardCount = 3;
+            CommonVariables.CharacterShops[14].ShardCount = 3;
+        
+            CommonVariables.CharacterShops[18].ShardCount = 3;
+            CommonVariables.CharacterShops[19].ShardCount = 3;
+            CommonVariables.CharacterShops[20].ShardCount = 3;
+        
+            CommonVariables.CharacterShops[21].ShardCount = 3;
+            CommonVariables.CharacterShops[23].ShardCount = 3;
+        
+            CommonVariables.CharacterShops[27].ShardCount = 7;
+            CommonVariables.CharacterShops[29].ShardCount = 7;
+        }
+
         StartCoroutine(Initialized());
     }
 

@@ -13,7 +13,7 @@ public class CharacterShop
 [System.Serializable]
 public class CommonVariables
 {
-    public const float InitializedTime = 0.01f;
+    public const float InitializedTime = 0.005f;
     public const int CharacterCount = 30;
     public const int MaxIcePieceCount = 7;
     public const int PacksCount = 10;
@@ -40,9 +40,9 @@ public class CommonVariables
     
     // non-static temp variables:
 
-    public int tmpGold;
-    public int tmpRecord;
-    public int tmpEqpSkin;
+    public int tmpGold = 0;
+    public int tmpRecord = 0;
+    public int tmpEqpSkin = 0;
     public List<CharacterShop> tmpCharacterShops = new List<CharacterShop>();
 
     public CommonVariables()
