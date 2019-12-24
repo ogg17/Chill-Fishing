@@ -13,7 +13,7 @@ public class CharacterShop
 [System.Serializable]
 public class CommonVariables
 {
-    public const float InitializedTime = 0.1f;
+    public const float InitializedTime = 0.01f;
     public const int CharacterCount = 30;
     public const int MaxIcePieceCount = 7;
     public const int PacksCount = 10;

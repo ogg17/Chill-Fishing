@@ -23,8 +23,14 @@ public class GiftScript : MonoBehaviour
         updateGiftTime = new TimeSpan(0, 0, timeInterval);
         timeGive = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day,
             DateTime.Now.Hour, PlayerPrefs.GetInt("timeM"), PlayerPrefs.GetInt("timeS"));
+        StartCoroutine(Initialized());
     }
-
+    
+    private IEnumerator Initialized()
+    {
+        yield return new WaitForSeconds(CommonVariables.InitializedTime);
+        UpdateGift();
+    }
     public void GiveGift()
     {
         isGet = true;

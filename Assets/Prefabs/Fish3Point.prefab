@@ -150,7 +150,7 @@ MonoBehaviour:
   speedSwimmingMax: 1.65
   speedSwimmingMin: 1
   scaleMax: 1.35
-  scaleMin: 0.8
+  scaleMin: 0.9
   board: 1.2
 --- !u!61 &3998336510157457108
 BoxCollider2D:
