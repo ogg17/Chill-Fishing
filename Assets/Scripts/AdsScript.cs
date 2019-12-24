@@ -9,7 +9,7 @@ public class AdsScript : MonoBehaviour
 
     void Start () {
         if (Monetization.isSupported) {
-            Monetization.Initialize("3409168", true);
+            Monetization.Initialize("3409168", false);
         }
     }
 
