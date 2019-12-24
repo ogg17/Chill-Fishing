@@ -49,14 +49,10 @@ public class SaveLoadScript : MonoBehaviour
     }
 
     private void Save()
-    { 
-        /*PlayerPrefs.SetInt("Gold", CommonVariables.Gold);
-        PlayerPrefs.SetInt("Record", CommonVariables.Record);
-        PlayerPrefs.SetInt("Gold", CommonVariables.Gold);*/
-        
+    {
         CommonVariables tmp = new CommonVariables();
         PlayerPrefs.SetString("Save", tmp.SaveVariables());
-        Debug.Log(JsonUtility.ToJson(tmp));
+        //Debug.Log(JsonUtility.ToJson(tmp));
         PlayerPrefs.Save();
     }
     private void OnApplicationQuit() => Save();

@@ -21,6 +21,8 @@ public class GiftScript : MonoBehaviour
     private void Start()
     {
         updateGiftTime = new TimeSpan(0, 0, timeInterval);
+        timeGive = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day,
+            DateTime.Now.Hour, PlayerPrefs.GetInt("timeM"), PlayerPrefs.GetInt("timeS"));
     }
 
     public void GiveGift()
@@ -37,13 +39,17 @@ public class GiftScript : MonoBehaviour
     }
     public void UpdateGift()
     {
-        if (isGet && DateTime.Now > timeGive + updateGiftTime)
+        if (DateTime.Now > timeGive + updateGiftTime)
         {
-            Debug.Log("kek");
             gift.SetActive(true);
             cloudZzz.SetActive(false);
             penguin.SetSecondState();
             isGet = false;
         }
     }
+    
+    private void Save(){ PlayerPrefs.SetInt("timeS", timeGive.Second);
+        PlayerPrefs.SetInt("timeM", timeGive.Minute);PlayerPrefs.Save();}
+    private void OnApplicationPause(bool pauseStatus){if (pauseStatus == true) Save();}
+    private void OnApplicationQuit() => Save();
 }

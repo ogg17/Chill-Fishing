@@ -6225,7 +6225,7 @@ MonoBehaviour:
   cloudZzz: {fileID: 1619905241}
   goldParticle: {fileID: 1530602741}
   cloudParticle: {fileID: 1511831441}
-  timeInterval: 1
+  timeInterval: 300
 --- !u!1 &270317334
 GameObject:
   m_ObjectHideFlags: 0

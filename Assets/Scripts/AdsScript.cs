@@ -1,37 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Monetization;
+using UnityEngine.Advertisements;
 
-public class AdsScript : MonoBehaviour
+public class AdsScript : MonoBehaviour, IUnityAdsListener
 {
     public string placementId = "rewardedVideo";
 
     void Start () {
-        if (Monetization.isSupported) {
-            Monetization.Initialize("3409168", false);
+        if (Advertisement.isSupported) {
+            Advertisement.AddListener(this);
+            Advertisement.Initialize("3409168", false);
         }
     }
 
     void ShowAd () {
-        ShowAdCallbacks options = new ShowAdCallbacks ();
-        options.finishCallback = HandleShowResult;
-        ShowAdPlacementContent ad = Monetization.GetPlacementContent (placementId) as ShowAdPlacementContent;
-        ad.Show (options);
+        if (Advertisement.IsReady())
+            Advertisement.Show("rewardedVideo");
     }
 
-    void HandleShowResult (ShowResult result) {
-        if (result == ShowResult.Finished) {
+    public void OnUnityAdsReady(string placementId){}
+    public void OnUnityAdsDidError(string message){}
+    public void OnUnityAdsDidStart(string placementId){}
+
+    public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
+    {
+        if (showResult == ShowResult.Finished && placementId == "rewardedVideo") {
             for (int i = 0; i < CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount; i++)
             {
                 if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].IceShards[i] == false) 
                     CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].IceShards[i] = true;
             }
             EventController.GameEvents.updatePanel.Invoke();
-        } else if (result == ShowResult.Skipped) {
-            Debug.LogWarning ("The player skipped the video - DO NOT REWARD!");
-        } else if (result == ShowResult.Failed) {
-            Debug.LogError ("Video failed to show");
         }
     }
 }
