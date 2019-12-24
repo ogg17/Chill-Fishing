@@ -22,11 +22,11 @@ public class TextScript : MonoBehaviour
     }
     public void SetScoreText()
     {
-        if (CommonVariables.GamePlaying) _text.text = "Score: " + CommonVariables.Score;
+        if (CommonVariables.GamePlaying) _text.text = GameString.gameString.uiScore + CommonVariables.Score;
     }
     public void SetGoldText()
     {
-        _text.text = "Gold: " + CommonVariables.Gold;
+        _text.text = GameString.gameString.uiGold + CommonVariables.Gold;
     }
 
     public void SetIceShardCount()
@@ -47,10 +47,7 @@ public class TextScript : MonoBehaviour
     {
         if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
         {
-            if (CommonVariables.GameLanguage == SystemLanguage.Russian)
-                _text.text = GameString.gameString.stringPacksRus[CommonVariables.CurrentPack].
-                characters[CommonVariables.CurrentPanel].name;
-            else _text.text = GameString.gameString.stringPacksEng[CommonVariables.CurrentPack].
+            _text.text = GameString.gameString.stringPacks.packs[CommonVariables.CurrentPack].
                 characters[CommonVariables.CurrentPanel].name;
         }
         else _text.text = "???";
@@ -60,32 +57,16 @@ public class TextScript : MonoBehaviour
     {
         if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
         {
-            if (CommonVariables.GameLanguage == SystemLanguage.Russian)
+            bool check = true;
+            while (check)
             {
-                bool check = true;
-                while (check)
-                {
-                    string newPhrase = GameString.gameString.stringPacksRus[CommonVariables.CurrentPack]
-                        .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.
-                            Range(0, GameString.gameString.stringPacksRus[CommonVariables.CurrentPack]
-                                .characters[CommonVariables.CurrentPanel].phrase.Length)];
-                    if ("\""+ newPhrase + "\"" != _text.text){
-                        _text.text = "\"" + newPhrase + "\"";
-                        check = false;
-                    }
-                }
-            }
-            else
-            {
-                bool check = true;
-                while (check)
-                {
-                    string newPhrase = GameString.gameString.stringPacksEng[CommonVariables.CurrentPack]
-                        .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.Range(0, 3)];
-                    if ("\""+ newPhrase + "\"" != _text.text){
-                        _text.text = "\"" + newPhrase + "\"";
-                        check = false;
-                    }
+                string newPhrase = GameString.gameString.stringPacks.packs[CommonVariables.CurrentPack]
+                    .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.
+                        Range(0, GameString.gameString.stringPacks.packs[CommonVariables.CurrentPack]
+                            .characters[CommonVariables.CurrentPanel].phrase.Length)];
+                if ("\""+ newPhrase + "\"" != _text.text){
+                    _text.text = "\"" + newPhrase + "\"";
+                    check = false;
                 }
             }
         }
@@ -96,12 +77,8 @@ public class TextScript : MonoBehaviour
     {
         if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
         {
-            if (CommonVariables.GameLanguage == SystemLanguage.Russian)
-                _text.text = GameString.gameString.stringPacksRus[CommonVariables.CurrentPack]
-                    .characters[CommonVariables.CurrentPanel].characteristic;
-            else
-                _text.text = GameString.gameString.stringPacksEng[CommonVariables.CurrentPack]
-                    .characters[CommonVariables.CurrentPanel].characteristic;
+            _text.text = GameString.gameString.stringPacks.packs[CommonVariables.CurrentPack]
+                .characters[CommonVariables.CurrentPanel].characteristic;
         }
         else _text.text = "";
     }
@@ -118,24 +95,18 @@ public class TextScript : MonoBehaviour
 
             if (count == CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount)
             {
-                _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
-                    ? "Разбить"
-                    : "Smash";
+                _text.text = GameString.gameString.bCharacterSmash;
             }
             else
-                _text.text = (CommonVariables.GameLanguage == SystemLanguage.Russian
-                     ? "Купить осколок: "
-                     : "Buy shard: ") + CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardPrice;
+                _text.text = GameString.gameString.bCharacterBuy + " " + 
+                             CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardPrice + "G";
         }
         else
         {
             if (CommonVariables.CurrentIndexPanel == CommonVariables.EquippedSkin)
-                _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
-                    ? "Выбранно"
-                    : "Equipped";
-            else _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian
-                ? "Выбрать"
-                : "Equip";
+                _text.text = GameString.gameString.bCharacterEquipped;
+            else
+                _text.text = GameString.gameString.bCharacterEquip;
         }
     }
 

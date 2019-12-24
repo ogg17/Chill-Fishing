@@ -18,6 +18,9 @@
                   <Item>
                     <option name="path" value="Assets/ExampleString.json" />
                   </Item>
+                  <Item>
+                    <option name="path" value="Assets/GameStrings.json" />
+                  </Item>
                 </list>
               </option>
             </SchemaInfo>

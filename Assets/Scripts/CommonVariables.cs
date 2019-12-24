@@ -1,24 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[System.Serializable]
 public class CharacterShop
 {
-    public bool[] IceShards { get; set; } = new bool[7];
-    public bool BuyCharacter { get; set; } = false;
-    private int shardCount = 5;
-    public int ShardCount
-    {
-        get { return shardCount; }
-        set
-        {
-            if (shardCount > 7) shardCount = 7;
-            else shardCount = value;
-        }
-    }
-    public int CrushShardCount { get; set; } = 0;
-    public int ShardPrice { get; set; } = 30;
+    public bool[] IceShards = new bool[7];
+    public bool BuyCharacter = false;
+    public int ShardCount = 5;
+    public int CrushShardCount = 0;
+    public int ShardPrice = 30;
 }
-public static class CommonVariables
+[System.Serializable]
+public class CommonVariables
 {
     public const float InitializedTime = 0.1f;
     public const int CharacterCount = 30;
@@ -32,7 +25,7 @@ public static class CommonVariables
     public static int Record { get; set; } // Record game
     public static int GoldSession { get; set; } // Gold count given in one session game
     public static int GoldGift { set; get; }
-    public static int Gold { get; set; } = 10000; // Gold
+    public static int Gold { get; set; } = 0; // Gold
     public static int CurrentIndexPanel { get; set; } // Current scroll index panel
     public static int CurrentPanel { get; set; } // Current panel in pack
     public static int CurrentPack { get; set; } // Current pack in skin menu
@@ -44,4 +37,32 @@ public static class CommonVariables
     public static bool OnMusic { get; set; } = true; // on/off music
     public static bool OnSound { get; set; } = true; // on/off Sound
     public static bool OnVibration { get; set; } = false; // on/off Vibration
+    
+    // non-static temp variables:
+
+    public int tmpGold;
+    public int tmpRecord;
+    public int tmpEqpSkin;
+    public List<CharacterShop> tmpCharacterShops = new List<CharacterShop>();
+
+    public CommonVariables()
+    {
+        tmpGold = Gold;
+        tmpRecord = Record;
+        tmpEqpSkin = EquippedSkin;
+        tmpCharacterShops = CharacterShops;
+    }
+
+    public string SaveVariables()
+    {
+        return JsonUtility.ToJson(this);
+    }
+
+    public void LoadVariables()
+    {
+        Gold = tmpGold;
+        Record = tmpRecord;
+        EquippedSkin = tmpEqpSkin;
+        CharacterShops = tmpCharacterShops;
+    }
 }

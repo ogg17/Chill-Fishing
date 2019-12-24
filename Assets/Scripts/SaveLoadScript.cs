@@ -36,6 +36,9 @@ public class SaveLoadScript : MonoBehaviour
     }
     private void Start()
     {
+        CommonVariables tmp = JsonUtility.FromJson<CommonVariables>(PlayerPrefs.GetString("Save"));
+        tmp.LoadVariables();
+        
         StartCoroutine(Initialized());
     }
 
@@ -44,8 +47,18 @@ public class SaveLoadScript : MonoBehaviour
         yield return new WaitForSeconds(CommonVariables.InitializedTime);
         EventController.GameEvents.startApp.Invoke();
     }
-    
-    private void Save(){}
+
+    private void Save()
+    { 
+        /*PlayerPrefs.SetInt("Gold", CommonVariables.Gold);
+        PlayerPrefs.SetInt("Record", CommonVariables.Record);
+        PlayerPrefs.SetInt("Gold", CommonVariables.Gold);*/
+        
+        CommonVariables tmp = new CommonVariables();
+        PlayerPrefs.SetString("Save", tmp.SaveVariables());
+        Debug.Log(JsonUtility.ToJson(tmp));
+        PlayerPrefs.Save();
+    }
     private void OnApplicationQuit() => Save();
 
     private void OnApplicationPause(bool pauseStatus)

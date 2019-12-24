@@ -91,9 +91,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
         
         for (var i = 0; i < packsPanels.Length; i++)
         {
-            if (CommonVariables.GameLanguage == SystemLanguage.Russian)
-                packsPanels[i].TextPack.GetComponent<Text>().text = GameString.gameString.stringPacksRus[i].packName;
-            else packsPanels[i].TextPack.GetComponent<Text>().text = GameString.gameString.stringPacksEng[i].packName;
+            packsPanels[i].TextPack.GetComponent<Text>().text = GameString.gameString.stringPacks.packs[i].packName;
         }
 
         UpdateImagePanel();

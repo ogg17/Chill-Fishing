@@ -1,0 +1,212 @@
+{"packs": 
+  [{"packName": {"english":"Fishermans", "russian":"Рыбаки"},
+    "characters":[
+    { "name":{"english":"", "russian":"Стив Ловец"},
+      "characteristic": {"english":"", "russian":"Опытный Рыбак"},
+      "phrase": [{"english":"", "russian":"С моим спасательным жилетом утонуть невозможно"},
+                {"english":"", "russian":"Здесь прохладно"},
+                {"english":"", "russian":"Рыбу ловить проще, чем не ловить её"}]},
+      
+    { "name":{"english":"", "russian":"Боб Бокула"},
+      "characteristic": {"english":"", "russian":"Старый рыбак"},
+      "phrase": [{"english":"", "russian":"Мне не хватило длины лески, и я сам полез за рыбой"},
+                {"english":"", "russian":"Моя удочка была из бамбука"},
+                {"english":"", "russian":"Рыба сама плывёт на крючок"}]},
+      
+    { "name":{"english":"", "russian":"Рон Удочка"},
+      "characteristic": {"english":"", "russian":"Начинающий рыбак"},
+      "phrase": [{"english":"", "russian":"Больше я не полезу в эту прорубь"},
+                {"english":"", "russian":"Мой сок превратился в лёд"},
+                {"english":"", "russian":"Никак не могу поймать рыбу"}]}
+    ]},
+
+    {"packName": {"english":"a", "russian":"Древнее племя"},
+      "characters":[
+        { "name":{"english":"", "russian":"Беван Воин"},
+          "characteristic": {"english":"", "russian":"Охотник на мамонтов"},
+          "phrase": [{"english":"", "russian":"Я залез на мамонта и провалился под лёд"},
+            {"english":"", "russian":"Пора точить копьё"},
+            {"english":"", "russian":"Охота и рыбалка очень похожи"}]},
+
+        { "name":{"english":"", "russian":"Реган Сильный"},
+          "characteristic": {"english":"", "russian":"Сильнейший вождь"},
+          "phrase": [{"english":"", "russian":"Дух воды забрал нашего воина, и я отправился за ним"},
+            {"english":"", "russian":"Я чувствую спокойствие"},
+            {"english":"", "russian":"Я знал, что великий дух спасёт наше племя"}]},
+
+        { "name":{"english":"", "russian":"Джодок Гром"},
+          "characteristic": {"english":"", "russian":"Великий шаман"},
+          "phrase": [{"english":"", "russian":"Я хотел себе новую маску из акулы"},
+            {"english":"", "russian":"Вся моя магия промокла"},
+            {"english":"", "russian":"Мой посох не подходит для ловли рыбы"}]}
+      ]},
+
+    {"packName": {"english":"", "russian":"Воинственные викинги"},
+      "characters":[
+        { "name":{"english":"", "russian":"Гуннар Стойкий"},
+          "characteristic": {"english":"", "russian":"Мастер двуручного меча"},
+          "phrase": [{"english":"", "russian":"Я тренировался с братом и победил"},
+            {"english":"", "russian":"У моего брата слишком легкие мечи"},
+            {"english":"", "russian":"Удочку нужно держать двумя рукам"}]},
+
+        { "name":{"english":"", "russian":"Астрид Стрела"},
+          "characteristic": {"english":"", "russian":"Ловкий лучник"},
+          "phrase": [{"english":"", "russian":"Я смотрела, как стрелы летят под водой"},
+            {"english":"", "russian":"Мои стрелы и лук ещё у меня"},
+            {"english":"", "russian":"Какая хорошая погода"}]},
+
+        { "name":{"english":"", "russian":"Айварс Ветер"},
+          "characteristic": {"english":"", "russian":"Быстрый мечник"},
+          "phrase": [{"english":"", "russian":"Я тренировался с братом и победил"},
+            {"english":"", "russian":"У меня в два раза больше мечей, чем у моего брата"},
+            {"english":"", "russian":"Здесь нужна вторая удочка"}]}
+      ]},
+
+    {"packName": {"english":"", "russian":"Средневековое королевство"},
+      "characters":[
+        { "name":{"english":"", "russian":"Яков Грустный"},
+          "characteristic": {"english":"", "russian":"Несмешной шут"},
+          "phrase": [{"english":"", "russian":"Я поскользнулся на банане и упал в воду"},
+            {"english":"", "russian":"Я здесь, мой король!"},
+            {"english":"", "russian":"Этот пингвин знает толк в веселье"}]},
+
+        { "name":{"english":"", "russian":"Карл Золотой"},
+          "characteristic": {"english":"", "russian":"Скромный король"},
+          "phrase": [{"english":"", "russian":"Не имеет значения, как я тут оказался"},
+            {"english":"", "russian":"Найдите моего шута и рыцаря!"},
+            {"english":"", "russian":"Это совсем не похоже на мой трон"}]},
+
+        { "name":{"english":"", "russian":"Ричард Плащ"},
+          "characteristic": {"english":"", "russian":"Железный рыцарь"},
+          "phrase": [{"english":"", "russian":"Король приказал достать шута, но моя броня потянула на дно"},
+            {"english":"", "russian":"Я должен защищать короля!"},
+            {"english":"", "russian":"Рыбам нравится этот меч, но он мой"}]}
+      ]},
+
+    {"packName": {"english":"", "russian":"Клан ниндзя"},
+      "characters":[
+        { "name":{"english":"", "russian":"Красный мастер"},
+          "characteristic": {"english":"", "russian":"Скрытый Сюрикен"},
+          "phrase": [{"english":"", "russian":"Мой сюрикен слишком большой!"},
+            {"english":"", "russian":"Я всегда хотел быть мечником"},
+            {"english":"", "russian":"Тихо! А то нас могут услышать"}]},
+
+        { "name":{"english":"", "russian":"Фиолетовый мастер"},
+          "characteristic": {"english":"", "russian":"Острый Меч"},
+          "phrase": [{"english":"", "russian":"Я хотел закалить мой меч во льдах, но он оказался слишком тяжелым"},
+            {"english":"", "russian":"На самомо деле изначально я должен был стать красным"},
+            {"english":"", "russian":"Нужно больше тренироваться или мастер разочаруется во мне"}]},
+
+        { "name":{"english":"", "russian":"Синий мастер"},
+          "characteristic": {"english":"", "russian":"Невидимые сабли"},
+          "phrase": [{"english":"", "russian":"Я практиковал технику пёрышка, но плохо изучил её"},
+            {"english":"", "russian":"Я думал стану фиолетовым, но мастер решил иначе"},
+            {"english":"", "russian":"Нужно быть тише воды, ниже воды... или как там было"}]}
+      ]},
+
+    {"packName": {"english":"", "russian":"Интеллигентная аристократия"},
+      "characters":[
+        { "name":{"english":"", "russian":"Мисс Поси"},
+          "characteristic": {"english":"", "russian":"Графиня"},
+          "phrase": [{"english":"", "russian":"Наш корабль был большой и роскошный"},
+            {"english":"", "russian":"Когда уже подадут обед?"},
+            {"english":"", "russian":"Золото очень холодное"}]},
+
+        { "name":{"english":"", "russian":"Мистер Редклиф"},
+          "characteristic": {"english":"", "russian":"Барон"},
+          "phrase": [{"english":"", "russian":"Корабль утонул, но мой цилиндр на мне"},
+            {"english":"", "russian":"Мои золотые часы показывают время обеда"},
+            {"english":"", "russian":"Нужно ловить золото? Легко"}]},
+
+        { "name":{"english":"", "russian":"Сэр Оллин"},
+          "characteristic": {"english":"", "russian":"Наследник графства"},
+          "phrase": [{"english":"", "russian":"Жалко корабль и мой цилиндр"},
+            {"english":"", "russian":"Где мисс Поси?"},
+            {"english":"", "russian":"Люблю рыбалку, но не люблю рыбу"}]}
+      ]},
+
+    {"packName": {"english":"", "russian":"Популярные службы доставки"},
+      "characters":[
+        { "name":{"english":"", "russian":"Дастин"},
+          "characteristic": {"english":"", "russian":"Доставщик еды"},
+          "phrase": [{"english":"", "russian":"Я хотел сократить путь по льду"},
+            {"english":"", "russian":"Еда ещё не остыла"},
+            {"english":"", "russian":"У меня полный рюкзак суши"}]},
+
+        { "name":{"english":"", "russian":"Пол"},
+          "characteristic": {"english":"", "russian":"Доставщик пиццы"},
+          "phrase": [{"english":"", "russian":"Кто заказывал пиццу?"},
+            {"english":"", "russian":"Надеюсь я не просрочил время доставки, а то придется отдать пиццу бесплатно"},
+            {"english":"", "russian":"Вроде бы я приехал по адрессу"}]},
+
+        { "name":{"english":"", "russian":"Мартин"},
+          "characteristic": {"english":"", "russian":"Почтальон"},
+          "phrase": [{"english":"", "russian":"Вам письмо. Или не Вам"},
+            {"english":"", "russian":"Надо было носить спасательный жилет"},
+            {"english":"", "russian":"В прогнозе погоды написано, что идёт снег"}]}
+      ]},
+
+    {"packName": {"english":"", "russian":"Современная мода"},
+      "characters":[
+        { "name":{"english":"", "russian":"Смит"},
+          "characteristic": {"english":"", "russian":"Телохранитель"},
+          "phrase": [{"english":"", "russian":"Я не раскрываю секретную информацию"},
+            {"english":"", "russian":"Вместо лески можно использовать эту пленку для фотоаппарата"},
+            {"english":"", "russian":"Рыцарь оказался интересным собеседником"}]},
+
+        { "name":{"english":"", "russian":"Дженнифер"},
+          "characteristic": {"english":"", "russian":"Известная кинозвезда"},
+          "phrase": [{"english":"", "russian":"Я снималась в фильме про затонувший корабль"},
+            {"english":"", "russian":"Хорошо, что здесь нет надоедливых папарацци"},
+            {"english":"", "russian":"Зачем рыбе так пахнуть рыбой?"}]},
+
+        { "name":{"english":"", "russian":"Лари"},
+          "characteristic": {"english":"", "russian":"Надоедливый папарацци"},
+          "phrase": [{"english":"", "russian":"Я успел добыть шикарный кадр под водой"},
+            {"english":"", "russian":"Кто-то украл мою пленку"},
+            {"english":"", "russian":"Теперь я лучший фотограф на этом леднике"}]}
+      ]},
+
+    {"packName": {"english":"", "russian":"Загадочные личности"},
+      "characters":[
+        { "name":{"english":"", "russian":"Джонси Дэйв"},
+          "characteristic": {"english":"", "russian":"Капитан мертвецов"},
+          "phrase": [{"english":"", "russian":"Часть команды – часть ледника"},
+            {"english":"", "russian":"Мне нужен капитан Джем"},
+            {"english":"", "russian":"Воды здесь солёные, а рыба невкусная"}]},
+
+        { "name":{"english":"", "russian":"Капитан Джем"},
+          "characteristic": {"english":"", "russian":"Искатель приключений"},
+          "phrase": [{"english":"", "russian":"Я променял свою удачу на ром"},
+            {"english":"", "russian":"Почему на крючке нет червяка?"},
+            {"english":"", "russian":"Мой компас показывает, что здесь есть золото"}]},
+
+        { "name":{"english":"", "russian":"Джей Тосон"},
+          "characteristic": {"english":"", "russian":"Вольный художник"},
+          "phrase": [{"english":"", "russian":"Там не хватило места на двоих"},
+            {"english":"", "russian":"Такой шанс выпадает раз в жизни"},
+            {"english":"", "russian":"Почему снег квадратный?"}]}
+      ]},
+
+    {"packName": {"english":"", "russian":"Мифические персонажи"},
+      "characters":[
+        { "name":{"english":"", "russian":"Йети"},
+          "characteristic": {"english":"", "russian":"Любитель морковки"},
+          "phrase": [{"english":"", "russian":"*Странный рык*"},
+            {"english":"", "russian":"*Хруст морковки*"},
+            {"english":"", "russian":"*Громкий хруст снега под ногами*"}]},
+
+        { "name":{"english":"", "russian":"Лепрекон"},
+          "characteristic": {"english":"", "russian":"Хранитель сокровища"},
+          "phrase": [{"english":"", "russian":"Когда я был здесь последний раз, то случайно рассыпал золото из горшочка"},
+            {"english":"", "russian":"Это случаем не моё золото у тебя в руках?"},
+            {"english":"", "russian":"Хм... Где же радуга?"}]},
+
+        { "name":{"english":"", "russian":"Тор"},
+          "characteristic": {"english":"", "russian":"Защитник Асгарда"},
+          "phrase": [{"english":"", "russian":"Где мой топор?"},
+            {"english":"", "russian":"Я должен правильнее выбирать точку приземления в следующий раз"},
+            {"english":"", "russian":"Это ведь не ловушка Локи?"}]}
+      ]}
+  ]
+}
