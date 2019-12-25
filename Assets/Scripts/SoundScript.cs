@@ -9,7 +9,8 @@ public enum SoundType
    Click,
    Bauble,
    Lose,
-   Blop
+   Blop,
+   Coin
 }
 
 public class SoundScript : MonoBehaviour
@@ -21,6 +22,8 @@ public class SoundScript : MonoBehaviour
    [SerializeField] private AudioClip lose;
    [SerializeField] private AudioClip blop;
    [SerializeField] private AudioClip crack;
+   [SerializeField] private AudioClip coin;
+   [SerializeField] private List<AudioClip> ice = new List<AudioClip>();
    private void Start()
    {
       soundPlayer = GetComponent<AudioSource>();
@@ -59,12 +62,28 @@ public class SoundScript : MonoBehaviour
             soundPlayer.volume = 0.7f; 
             soundPlayer.PlayOneShot(blop);
          }
+         else if (type == SoundType.Coin)
+         {
+            soundPlayer.volume = 0.4f;
+            soundPlayer.PlayOneShot(coin);
+         }
+      }
+   }
+   public void PlayCrack()
+   {
+      if (CommonVariables.OnSound)
+      {
+         soundPlayer.volume = 0.9f;
+         soundPlayer.PlayOneShot(crack);
       }
    }
 
-   public void PlayCrack()
+   public void PlayIce()
    {
-      soundPlayer.volume = 0.4f; 
-      soundPlayer.PlayOneShot(crack);
+      if (CommonVariables.OnSound)
+      {
+         soundPlayer.volume = 0.4f;
+         soundPlayer.PlayOneShot(ice[Random.Range(0, ice.Count)]);
+      }
    }
 }

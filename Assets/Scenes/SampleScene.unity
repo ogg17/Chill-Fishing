@@ -780,6 +780,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 0
+  soundType: 0
 --- !u!222 &163747104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6397,6 +6398,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 0
+  soundType: 0
 --- !u!222 &270317338
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12908,6 +12910,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 100
+  soundType: 0
 --- !u!114 &609087827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25758,6 +25761,11 @@ PrefabInstance:
       propertyPath: pressedColor.b
       value: 0.8773585
       objectReference: {fileID: 0}
+    - target: {fileID: 3893692455842557502, guid: 3033cfb7a946f43438e56dc5ec5b75ab,
+        type: 3}
+      propertyPath: soundType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3033cfb7a946f43438e56dc5ec5b75ab, type: 3}
 --- !u!224 &1246107132 stripped
@@ -26077,6 +26085,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 0
+  soundType: 0
 --- !u!222 &1257253608
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26513,6 +26522,11 @@ MonoBehaviour:
   lose: {fileID: 8300000, guid: 38a60fe5e1ed68e4294b58afc034f93e, type: 3}
   blop: {fileID: 8300000, guid: 91db7b79962a8864b93e2e779e0d5b3a, type: 3}
   crack: {fileID: 8300000, guid: a81ac7944b99c524483cb507ba23b258, type: 3}
+  coin: {fileID: 8300000, guid: 3c7a792baa1671c47b4fa4c5f3ac2b8f, type: 3}
+  ice:
+  - {fileID: 8300000, guid: bd2f8d0ff965d00499a56245c067b91e, type: 3}
+  - {fileID: 8300000, guid: 401b5c73a78daf84caf86f556fcb95e8, type: 3}
+  - {fileID: 8300000, guid: 3ba6e8b9ef938c64ca31f5882ba30559, type: 3}
 --- !u!1 &1350213027
 GameObject:
   m_ObjectHideFlags: 0
@@ -26642,6 +26656,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 0
+  soundType: 0
 --- !u!1 &1368314660
 GameObject:
   m_ObjectHideFlags: 0
@@ -26807,6 +26822,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 0
+  soundType: 0
 --- !u!222 &1368926874
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27701,6 +27717,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 100
+  soundType: 0
 --- !u!114 &1456941962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38901,6 +38918,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 0
+  soundType: 0
 --- !u!114 &1774349941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39092,6 +39110,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 0
+  soundType: 0
 --- !u!1 &1792660163
 GameObject:
   m_ObjectHideFlags: 0
@@ -39280,6 +39299,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 0
+  soundType: 0
 --- !u!114 &1806293247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39625,6 +39645,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 0
+  soundType: 0
 --- !u!222 &1824144354
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41147,6 +41168,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeInterval: 0
+  soundType: 0
 --- !u!222 &2092705543
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41750,9 +41772,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6185942774443622524, guid: dce8cca86ef560a47bbc0e4c3354b011,
         type: 3}
+      propertyPath: click.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185942774443622524, guid: dce8cca86ef560a47bbc0e4c3354b011,
+        type: 3}
       propertyPath: click.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 376663335}
+    - target: {fileID: 6185942774443622524, guid: dce8cca86ef560a47bbc0e4c3354b011,
+        type: 3}
+      propertyPath: click.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185942774443622524, guid: dce8cca86ef560a47bbc0e4c3354b011,
+        type: 3}
+      propertyPath: click.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185942774443622524, guid: dce8cca86ef560a47bbc0e4c3354b011,
+        type: 3}
+      propertyPath: click.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetVibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185942774443622524, guid: dce8cca86ef560a47bbc0e4c3354b011,
+        type: 3}
+      propertyPath: click.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7914735405920545338, guid: dce8cca86ef560a47bbc0e4c3354b011,
         type: 3}
       propertyPath: m_Text

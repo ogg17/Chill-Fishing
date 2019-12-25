@@ -181,9 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5936df5d147fd40a5de48cd0ac789c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstStateImage: {fileID: 1979480508004918450, guid: 244d501659877b54eb40adf068c3ecdf,
+  firstStateImage: {fileID: -1357527981758181522, guid: 244d501659877b54eb40adf068c3ecdf,
     type: 3}
-  secondStateImage: {fileID: -1357527981758181522, guid: 244d501659877b54eb40adf068c3ecdf,
+  secondStateImage: {fileID: 1979480508004918450, guid: 244d501659877b54eb40adf068c3ecdf,
     type: 3}
   offsetColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2133725792948566698

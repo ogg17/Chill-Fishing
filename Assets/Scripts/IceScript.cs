@@ -80,6 +80,7 @@ public class IceScript : MonoBehaviour
             if (count == CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].ShardCount)
             {
                 CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].CrushShardCount++;
+                SoundScript.sounds.PlayIce();
                 iceParticle.Play();
             }
 

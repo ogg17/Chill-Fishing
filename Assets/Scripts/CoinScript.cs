@@ -36,7 +36,7 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     }
     private void SpawningCoin()
     {
-        if (CommonVariables.GamePlaying && pickUp && Random.Range(0, 100) < 100)
+        if (CommonVariables.GamePlaying && pickUp && Random.Range(0, 100) < 10)
         {
             core.SetActive(true);
             coinPos.y = CommonVariables.DepthHook - 3f;

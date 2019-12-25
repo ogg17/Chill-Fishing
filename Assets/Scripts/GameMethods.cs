@@ -75,6 +75,7 @@ public class GameMethods : MonoBehaviour
     public void SetMusic()
     {
         CommonVariables.OnMusic = !CommonVariables.OnMusic;
+        
     }
 
     public void SetSound()

@@ -2,20 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sounds/tresk.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sounds/tresk.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sounds/coin.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sounds/coin.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sounds/ice0.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sounds/ice0.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sounds/ice1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sounds/ice1.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sounds/ice2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sounds/ice2.wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Seaweed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Seaweed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SliderOFF.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SliderOFF.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SliderON.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SliderON.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SeaweedScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SeaweedScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/АтласПерсонажи.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/АтласПерсонажи.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chill-Fishing доп. файлы/Графика/Атласы/АтласПерсонажи.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Chill-Fishing доп. файлы/Графика/Атласы/АтласПерсонажи.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/GiftIcon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/GiftIcon.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/icon.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +105,6 @@
         <option value="$PROJECT_DIR$/Assets/StringsRUS.json" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterSkinEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuMotion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DisappeareTextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParticleScript.cs" />
@@ -113,17 +121,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DisappearTextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SeaweedScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" />
       </list>
     </option>
   </component>
@@ -232,7 +241,7 @@
       <workItem from="1576166073236" duration="612000" />
       <workItem from="1577193265207" duration="12072000" />
       <workItem from="1577206794909" duration="7581000" />
-      <workItem from="1577273827386" duration="12491000" />
+      <workItem from="1577273827386" duration="15814000" />
     </task>
     <servers />
   </component>

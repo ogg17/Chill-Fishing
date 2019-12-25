@@ -20,6 +20,7 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     [SerializeField] private UnityEvent up = new UnityEvent();
 
     [SerializeField] private int timeInterval = 0;
+    [SerializeField] private SoundType soundType = SoundType.Click;
 
     private Image imageButton;
     private Color unpressedColor;
@@ -40,7 +41,7 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
         {
             clickTime = DateTime.Now;
             click.Invoke();
-            if(playingSound) SoundScript.sounds.PlaySound(SoundType.Click);
+            if(playingSound) SoundScript.sounds.PlaySound(soundType);
         }
     }
 

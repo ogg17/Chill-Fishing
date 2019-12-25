@@ -19,35 +19,43 @@ public class MusicPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_player.isPlaying)
+        if (CommonVariables.OnMusic)
         {
-            int ranClip = 0;
-            ranClip = Random.Range(0, music.Length);
-
-            _player.clip = music[ranClip];
-            _currentClip = ranClip;
-            _player.Play();
-        }
-
-        if (CommonVariables.OnUnderWater)
-        {
-            _player.volume = 0.8f;
-            reverbFilter.reverbPreset = AudioReverbPreset.Underwater;
-            if (!underwaterPlayer.isPlaying)
+            if (!_player.isPlaying)
             {
-                underwaterPlayer.Play();
-                SoundScript.sounds.PlaySound(SoundType.Blop);
+                int ranClip = 0;
+                ranClip = Random.Range(0, music.Length);
+
+                _player.clip = music[ranClip];
+                _currentClip = ranClip;
+                _player.Play();
+            }
+
+            if (CommonVariables.OnUnderWater)
+            {
+                _player.volume = 0.8f;
+                reverbFilter.reverbPreset = AudioReverbPreset.Underwater;
+                if (!underwaterPlayer.isPlaying)
+                {
+                    underwaterPlayer.Play();
+                    SoundScript.sounds.PlaySound(SoundType.Blop);
+                }
+            }
+            else
+            {
+                _player.volume = 1f;
+                reverbFilter.reverbPreset = AudioReverbPreset.Off;
+                if (underwaterPlayer.isPlaying)
+                {
+                    underwaterPlayer.Stop();
+                    SoundScript.sounds.PlaySound(SoundType.Blop);
+                }
             }
         }
         else
         {
-            _player.volume = 1f;
-            reverbFilter.reverbPreset = AudioReverbPreset.Off;
-            if (underwaterPlayer.isPlaying)
-            {
-                underwaterPlayer.Stop();
-                SoundScript.sounds.PlaySound(SoundType.Blop);
-            }
+            underwaterPlayer.Stop();
+            _player.Stop();
         }
     }
 }
