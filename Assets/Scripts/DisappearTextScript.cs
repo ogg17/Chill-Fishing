@@ -27,4 +27,10 @@ public class DisappearTextScript : MonoBehaviour
       text.text = "+" + CommonVariables.GoldGift;
       color.a = 1;
    }
+   
+   public void SetGoldText(int value)
+   {
+      text.text = "+" + value;
+      color.a = 1;
+   }
 }

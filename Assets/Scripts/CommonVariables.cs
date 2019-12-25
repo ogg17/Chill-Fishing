@@ -33,6 +33,7 @@ public class CommonVariables
     public static List<CharacterShop> CharacterShops { get; set; } = new List<CharacterShop>(); // Data of shop buys
     public static SystemLanguage GameLanguage { get; set; } = SystemLanguage.Russian;
     public static int[] CharacterPacks { get; set; } = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+    public static bool OnUnderWater = false;
     public static bool OnClickPanel { get; set; } = false; // Clicked on panel in skin menu
     public static bool OnMusic { get; set; } = true; // on/off music
     public static bool OnSound { get; set; } = true; // on/off Sound

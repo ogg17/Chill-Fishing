@@ -34,6 +34,7 @@
           <e p="ScoreUIScript.cs" t="Include" />
           <e p="SeaweedGenerator.cs" t="Include" />
           <e p="SeaweedScript.cs" t="Include" />
+          <e p="SoundScript.cs" t="Include" />
           <e p="SpawnFish.cs" t="Include" />
           <e p="SpriteScript.cs" t="Include" />
           <e p="SwimmingFish.cs" t="Include" />

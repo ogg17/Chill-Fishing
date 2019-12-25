@@ -37,5 +37,8 @@ public class CameraScript : MonoBehaviour
         transform.localPosition = Vector3.Lerp(transform.localPosition, pos, 10 * Time.deltaTime);
         
         if(transform.localPosition.y < CommonVariables.DepthHook - 1.5f) EventController.GameEvents.gameOver.Invoke();
+
+        if (transform.localPosition.y < -0.2f) CommonVariables.OnUnderWater = true;
+        else CommonVariables.OnUnderWater = false;
     }
 }

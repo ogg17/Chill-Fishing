@@ -6,9 +6,10 @@ public class GameMethods : MonoBehaviour
 {
     public void GameOver()
     {
+        if(CommonVariables.GamePlaying) SoundScript.sounds.PlaySound(SoundType.Blop);
         CommonVariables.GamePlaying = false;
         if(CommonVariables.OnVibration) Handheld.Vibrate();
-        if (CommonVariables.Record < CommonVariables.Score) CommonVariables.Record = CommonVariables.Score;
+        if(CommonVariables.Record < CommonVariables.Score) CommonVariables.Record = CommonVariables.Score;
     }
 
     public void GameStart()
@@ -21,6 +22,7 @@ public class GameMethods : MonoBehaviour
     {
         if (CommonVariables.GamePlaying) CommonVariables.Score++;
         EventController.GameEvents.stepGame.Invoke();
+       // SoundScript.sounds.PlaySound(SoundType.Lose);
     }
 
     public void GameStartInvoke()
@@ -29,6 +31,7 @@ public class GameMethods : MonoBehaviour
         {
             CommonVariables.GamePlaying = true;
             EventController.GameEvents.startGame.Invoke();
+            SoundScript.sounds.PlaySound(SoundType.Lose);
         }
     }
 

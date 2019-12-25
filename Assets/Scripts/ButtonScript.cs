@@ -40,6 +40,7 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
         {
             clickTime = DateTime.Now;
             click.Invoke();
+            if(playingSound) SoundScript.sounds.PlaySound(SoundType.Click);
         }
     }
 

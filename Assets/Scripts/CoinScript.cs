@@ -12,6 +12,7 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float speed = 0.5f;
     [SerializeField] private ParticleSystem baubles;
     [SerializeField] private GameObject core;
+    [SerializeField] private DisappearTextScript disText;
     
     private int cost = 1;
     private Vector3 coinPos = new Vector3(0, 0, -2);
@@ -74,6 +75,9 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
             CommonVariables.Gold += cost;
             CommonVariables.GoldSession += cost;
             EventController.GameEvents.pickUpCoin.Invoke();
+            disText.SetGoldText(cost);
+            cost++;
+            SoundScript.sounds.PlaySound(SoundType.Bauble);
         }
     }
 }
