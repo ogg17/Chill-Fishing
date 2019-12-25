@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameStrings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Фон.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Фон.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Фон.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Фон.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chill-Fishing доп. файлы/Графика/Атласы/АтласПерсонажи.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Chill-Fishing доп. файлы/Графика/Атласы/АтласПерсонажи.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chill-Fishing доп. файлы/Графика/Атласы/Фон.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Chill-Fishing доп. файлы/Графика/Атласы/Фон.psd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +223,7 @@
       <workItem from="1576166073236" duration="612000" />
       <workItem from="1577193265207" duration="12072000" />
       <workItem from="1577206794909" duration="7581000" />
-      <workItem from="1577273827386" duration="16474000" />
+      <workItem from="1577273827386" duration="17127000" />
     </task>
     <servers />
   </component>
