@@ -42,7 +42,7 @@ public class GiftScript : MonoBehaviour
         gift.SetActive(false);
         penguin.SetFirstState();
         cloudZzz.SetActive(true);
-        CommonVariables.GoldGift = Random.Range(10, 51);
+        CommonVariables.GoldGift = Random.Range(2, 16);
         CommonVariables.Gold += CommonVariables.GoldGift;
         timeGive = DateTime.Now;
     }
@@ -55,6 +55,7 @@ public class GiftScript : MonoBehaviour
             penguin.SetSecondState();
             isGet = false;
         }
+        Debug.Log(timeGive);
     }
     
     private void Save(){ 
