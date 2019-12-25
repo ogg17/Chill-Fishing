@@ -33,20 +33,20 @@ public class MusicPlayer : MonoBehaviour
 
             if (CommonVariables.OnUnderWater)
             {
-                _player.volume = 0.8f;
-                reverbFilter.reverbPreset = AudioReverbPreset.Underwater;
                 if (!underwaterPlayer.isPlaying)
                 {
+                    _player.volume = 0.8f;
+                    reverbFilter.reverbPreset = AudioReverbPreset.Underwater;
                     underwaterPlayer.Play();
                     SoundScript.sounds.PlaySound(SoundType.Blop);
                 }
             }
             else
             {
-                _player.volume = 1f;
-                reverbFilter.reverbPreset = AudioReverbPreset.Off;
                 if (underwaterPlayer.isPlaying)
                 {
+                    _player.volume = 1f;
+                    reverbFilter.reverbPreset = AudioReverbPreset.Off;
                     underwaterPlayer.Stop();
                     SoundScript.sounds.PlaySound(SoundType.Blop);
                 }

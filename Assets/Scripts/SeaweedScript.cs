@@ -61,7 +61,7 @@ public class SeaweedScript : MonoBehaviour
             {
                 if (n.Item2 == rand && n.Item1 == randY) 
                 {
-                    randY = Random.Range(6, 30);
+                    randY = Random.Range(12, 30);
                     chek = true;
                 }
             }

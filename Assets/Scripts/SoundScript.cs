@@ -44,17 +44,17 @@ public class SoundScript : MonoBehaviour
       {
          if (type == SoundType.Click)
          {
-            soundPlayer.volume = 0.4f; 
+            soundPlayer.volume = 0.2f; 
             soundPlayer.PlayOneShot(click);
          }
          else if (type == SoundType.Bauble)
          {
-            soundPlayer.volume = 0.8f; 
+            soundPlayer.volume = 0.7f; 
             soundPlayer.PlayOneShot(bubbles[Random.Range(0, bubbles.Count)]);
          }
          else if (type == SoundType.Lose)
          {
-            soundPlayer.volume = 0.8f; 
+            soundPlayer.volume = 0.9f; 
             soundPlayer.PlayOneShot(lose);
          }
          else if (type == SoundType.Blop)

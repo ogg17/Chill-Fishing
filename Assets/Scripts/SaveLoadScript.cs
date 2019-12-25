@@ -14,6 +14,8 @@ public class SaveLoadScript : MonoBehaviour
     }
     private void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+        
         if (PlayerPrefs.HasKey("Save"))
         {
             CommonVariables tmp = JsonUtility.FromJson<CommonVariables>(PlayerPrefs.GetString("Save"));

@@ -17,7 +17,7 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     
     private int cost = 1;
     private Vector3 coinPos = new Vector3(0, 0, -2);
-    private Vector3 move;
+    private Vector3 move = Vector3.zero;
     private bool pickUp = true;
     private Image image;
 
@@ -42,7 +42,6 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
             coinPos.y = CommonVariables.DepthHook - 3f;
             float randomX = Random.Range(0.6f, 1f);
             coinPos.x = Random.Range(0, 2) == 0 ? -0.68f*randomX : 0.68f*randomX;
-            move.x = 0;
             transform.position = coinPos;
             pickUp = false;
             image.raycastTarget = true;
