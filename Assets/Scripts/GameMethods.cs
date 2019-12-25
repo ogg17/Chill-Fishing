@@ -92,4 +92,9 @@ public class GameMethods : MonoBehaviour
     {
         EventController.GameEvents.updatePanel.Invoke();
     }
+
+    public void OpenPolicy()
+    {
+        Application.OpenURL("https://sites.google.com/view/chill-fishing-privacy-policy/");
+    }
 }

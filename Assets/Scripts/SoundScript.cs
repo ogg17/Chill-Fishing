@@ -54,7 +54,7 @@ public class SoundScript : MonoBehaviour
          }
          else if (type == SoundType.Lose)
          {
-            soundPlayer.volume = 0.7f; 
+            soundPlayer.volume = 0.8f; 
             soundPlayer.PlayOneShot(lose);
          }
          else if (type == SoundType.Blop)
@@ -73,7 +73,7 @@ public class SoundScript : MonoBehaviour
    {
       if (CommonVariables.OnSound)
       {
-         soundPlayer.volume = 0.9f;
+         soundPlayer.volume = 0.8f;
          soundPlayer.PlayOneShot(crack);
       }
    }
