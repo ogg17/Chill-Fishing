@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5a10621ea22f1f40b1880806cbcd20c
+guid: 7084584173d22654983b18e18d00ce93
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Karma
+  fontName: Troika
   fontNames:
-  - Karma
+  - Troika
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

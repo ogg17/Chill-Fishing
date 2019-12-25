@@ -28,6 +28,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
     [SerializeField] private float packNamesPose;
     [SerializeField] private float inertiaMin = 0.01f;
     [SerializeField] private float panelOffsetY = 2f;
+    [SerializeField] private float panelOffsetX = 60f;
     [SerializeField] private Color colorUnActivePanel;
     [SerializeField] private Color colorActivePanel;
     [SerializeField] private Color offsetColorPanel;
@@ -63,7 +64,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                 packsPanels[i].PanelPos.Add((panelWight + spacePanel) * indexCounter + i * spacePanel);
                 packsPanels[i].PanelsRect.Add(packsPanels[i].Panels[j].GetComponent<RectTransform>());
                 
-                panelPos = new Vector2(packsPanels[i].PanelPos[j] + 65f, panelOffsetY);
+                panelPos = new Vector2(packsPanels[i].PanelPos[j] + 60f, panelOffsetY);
                 packsPanels[i].PanelsRect[j].anchoredPosition = panelPos;
                 var panelTouch = packsPanels[i].Panels[j].GetComponent<PanelTouch>();
                 packsPanels[i].CharacImage.Add(panelTouch.characImage);
@@ -74,10 +75,10 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                 indexCounter++;
             }
             packsPanels[i].TextPack.GetComponent<RectTransform>().anchoredPosition = 
-                new Vector2(packsPanels[i].PanelPos[1] + 65f, packNamesPose);
+                new Vector2(packsPanels[i].PanelPos[1] + panelOffsetX, packNamesPose);
         }
 
-        contentTransform.sizeDelta = new Vector2(130 + (panelWight + spacePanel) * (indexCounter - 1) + 
+        contentTransform.sizeDelta = new Vector2(panelOffsetX*2 + (panelWight + spacePanel) * (indexCounter - 1) + 
                                                  spacePanel * (packsPanels.Length - 1), contentTransform.sizeDelta.y);
         contentPos.y = contentTransform.anchoredPosition.y;
         
@@ -119,7 +120,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                 if (indexCounter == CommonVariables.CurrentIndexPanel)
                 {
                     packsPanels[i].Panels[j].transform.localScale = scaleActivePanel;
-                    panelPos.x = packsPanels[i].PanelPos[j] + 65;
+                    panelPos.x = packsPanels[i].PanelPos[j] + panelOffsetX;
                     panelPos.y = panelOffsetY + 1;
                     packsPanels[i].PanelsRect[j].anchoredPosition = panelPos;
                     if (CommonVariables.CharacterShops[indexCounter].BuyCharacter == true)
@@ -138,7 +139,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
                                   scrollRect.velocity.x))+1000,1000,2000)/1000, 1*Time.deltaTime);
                     packsPanels[i].Panels[j].transform.localScale = variableScale;
                     panelPos.y = panelOffsetY;
-                    panelPos.x = packsPanels[i].PanelPos[j] + 65;
+                    panelPos.x = packsPanels[i].PanelPos[j] + panelOffsetX;
                     packsPanels[i].PanelsRect[j].anchoredPosition = panelPos;
 
                     if (CommonVariables.CharacterShops[indexCounter].BuyCharacter == true)

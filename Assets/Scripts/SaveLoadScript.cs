@@ -61,7 +61,6 @@ public class SaveLoadScript : MonoBehaviour
     {
         CommonVariables tmp = new CommonVariables();
         PlayerPrefs.SetString("Save", tmp.SaveVariables());
-        //Debug.Log(JsonUtility.ToJson(tmp));
         PlayerPrefs.Save();
     }
     private void OnApplicationQuit() => Save();

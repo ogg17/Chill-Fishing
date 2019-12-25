@@ -20,10 +20,11 @@ public class GiftScript : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
         updateGiftTime = new TimeSpan(0, timeInterval, 0);
         if (PlayerPrefs.HasKey("timeM"))
             timeGive = new DateTime(PlayerPrefs.GetInt("timeY"), PlayerPrefs.GetInt("timeMo"), 
-                PlayerPrefs.GetInt("timeD"), DateTime.Now.Hour, PlayerPrefs.GetInt("timeM"),
+                PlayerPrefs.GetInt("timeD"), PlayerPrefs.GetInt("timeH"), PlayerPrefs.GetInt("timeM"),
                 PlayerPrefs.GetInt("timeS"));
         
         StartCoroutine(Initialized());
@@ -55,7 +56,6 @@ public class GiftScript : MonoBehaviour
             penguin.SetSecondState();
             isGet = false;
         }
-        Debug.Log(timeGive);
     }
     
     private void Save(){ 
