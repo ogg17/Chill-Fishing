@@ -159,7 +159,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
             CommonVariables.CurrentIndexPanel = currentIndex;
             CommonVariables.CurrentPanel = currentPanel;
             CommonVariables.CurrentPack = currentPack;
-            //UpdateImagePanel();
+            SoundScript.sounds.PlayCrack();
             EventController.GameEvents.updatePanel.Invoke();
         }else if (CommonVariables.OnClickPanel && CommonVariables.CurrentIndexPanel == currentIndex)
         {

@@ -20,6 +20,7 @@ public class SoundScript : MonoBehaviour
    [SerializeField] private List<AudioClip> bubbles = new List<AudioClip>();
    [SerializeField] private AudioClip lose;
    [SerializeField] private AudioClip blop;
+   [SerializeField] private AudioClip crack;
    private void Start()
    {
       soundPlayer = GetComponent<AudioSource>();
@@ -59,5 +60,11 @@ public class SoundScript : MonoBehaviour
             soundPlayer.PlayOneShot(blop);
          }
       }
+   }
+
+   public void PlayCrack()
+   {
+      soundPlayer.volume = 0.4f; 
+      soundPlayer.PlayOneShot(crack);
    }
 }

@@ -25,7 +25,7 @@ public class CommonVariables
     public static int Record { get; set; } // Record game
     public static int GoldSession { get; set; } // Gold count given in one session game
     public static int GoldGift { set; get; }
-    public static int Gold { get; set; } = 0; // Gold
+    public static int Gold { get; set; } = 5000; // Gold
     public static int CurrentIndexPanel { get; set; } // Current scroll index panel
     public static int CurrentPanel { get; set; } // Current panel in pack
     public static int CurrentPack { get; set; } // Current pack in skin menu

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class CoinScript : MonoBehaviour, IPointerClickHandler
@@ -18,9 +19,11 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     private Vector3 coinPos = new Vector3(0, 0, -2);
     private Vector3 move;
     private bool pickUp = true;
+    private Image image;
 
     private void Start()
     {
+        image = GetComponent<Image>();
         StartCoroutine(Initialized());
         SpawningCoin();
     }
@@ -42,6 +45,7 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
             move.x = 0;
             transform.position = coinPos;
             pickUp = false;
+            image.raycastTarget = true;
         }
     }
 
@@ -78,6 +82,7 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
             disText.SetGoldText(cost);
             cost++;
             SoundScript.sounds.PlaySound(SoundType.Bauble);
+            image.raycastTarget = false;
         }
     }
 }

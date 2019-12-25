@@ -18,5 +18,6 @@ public class PanelTouch : MonoBehaviour, IPointerClickHandler
         CommonVariables.CurrentPanel = CurentPanel;
         CommonVariables.CurrentPack = CurentPack;
         CommonVariables.OnClickPanel = true;
+        SoundScript.sounds.PlayCrack();
     }
 }

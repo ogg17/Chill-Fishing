@@ -95,10 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minOffset: -0.1
   maxOffset: 0.1
-  rightBoard: 0.8
-  leftBoard: -0.8
-  minAngle: -15
-  maxAngle: 15
+  rightBoard: 0.9
+  leftBoard: -0.9
+  minAngle: -30
+  maxAngle: 30
 --- !u!1 &4476162086950876607
 GameObject:
   m_ObjectHideFlags: 0

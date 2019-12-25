@@ -12,7 +12,7 @@ public class GiftScript : MonoBehaviour
     [SerializeField] private GameObject cloudZzz;
     [SerializeField] private ParticleSystem goldParticle;
     [SerializeField] private ParticleSystem cloudParticle;
-    [SerializeField] private int timeInterval = 10;
+    [SerializeField] private int timeInterval = 5;
 
     private DateTime timeGive;
     private TimeSpan updateGiftTime = TimeSpan.Zero;
@@ -20,9 +20,12 @@ public class GiftScript : MonoBehaviour
 
     private void Start()
     {
-        updateGiftTime = new TimeSpan(0, 0, timeInterval);
-        timeGive = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day,
-            DateTime.Now.Hour, PlayerPrefs.GetInt("timeM"), PlayerPrefs.GetInt("timeS"));
+        updateGiftTime = new TimeSpan(0, timeInterval, 0);
+        if (PlayerPrefs.HasKey("timeM"))
+            timeGive = new DateTime(PlayerPrefs.GetInt("timeY"), PlayerPrefs.GetInt("timeMo"), 
+                PlayerPrefs.GetInt("timeD"), DateTime.Now.Hour, PlayerPrefs.GetInt("timeM"),
+                PlayerPrefs.GetInt("timeS"));
+        
         StartCoroutine(Initialized());
     }
     
@@ -54,8 +57,14 @@ public class GiftScript : MonoBehaviour
         }
     }
     
-    private void Save(){ PlayerPrefs.SetInt("timeS", timeGive.Second);
-        PlayerPrefs.SetInt("timeM", timeGive.Minute);PlayerPrefs.Save();}
+    private void Save(){ 
+        PlayerPrefs.SetInt("timeS", timeGive.Second);
+        PlayerPrefs.SetInt("timeM", timeGive.Minute);
+        PlayerPrefs.SetInt("timeH", timeGive.Hour);
+        PlayerPrefs.SetInt("timeD", timeGive.Day);
+        PlayerPrefs.SetInt("timeMo", timeGive.Month);
+        PlayerPrefs.SetInt("timeY", timeGive.Year);
+        PlayerPrefs.Save();}
     private void OnApplicationPause(bool pauseStatus){if (pauseStatus == true) Save();}
     private void OnApplicationQuit() => Save();
 }
