@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishRenderer: {fileID: 3998336509741675634}
-  speedSwimmingMax: 1.65
-  speedSwimmingMin: 1
+  speedSwimmingMax: 1
+  speedSwimmingMin: 0.4
   scaleMax: 1.35
   scaleMin: 0.9
   board: 1.2

@@ -57,6 +57,7 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
             if (transform.position.y > CommonVariables.DepthHook + 3f)// || transform.position.y < CommonVariables.DepthHook - 3.1f) 
             {
                 pickUp = true;
+                Debug.Log("kek");
             }
         }
     }
@@ -64,6 +65,8 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     private void ZeroCoin()
     {
         cost = 1;
+        image.raycastTarget = false;
+        core.SetActive(false);
         pickUp = true;
         SpawningCoin();
     }

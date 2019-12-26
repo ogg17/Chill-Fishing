@@ -31,7 +31,7 @@ public class SwimmingFish : MonoBehaviour
     {
         animator.SetFloat("offset", Random.Range(0f, 1f));
         _speedSwimming = Random.Range(speedSwimmingMin, speedSwimmingMax);
-        var randomPos = Random.Range(2, 9);
+        var randomPos = Random.Range(6, 25);
         transform.position = Random.Range(0, 2) == 0 ? 
             new Vector3(-board, CommonVariables.DepthHook - 0.2f * randomPos, 0) : 
             new Vector3(board, CommonVariables.DepthHook - 0.2f * randomPos, 0);

@@ -20,7 +20,6 @@ public class GiftScript : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
         updateGiftTime = new TimeSpan(0, timeInterval, 0);
         if (PlayerPrefs.HasKey("timeM"))
             timeGive = new DateTime(PlayerPrefs.GetInt("timeY"), PlayerPrefs.GetInt("timeMo"), 
