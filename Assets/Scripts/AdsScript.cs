@@ -10,7 +10,7 @@ public class AdsScript : MonoBehaviour, IUnityAdsListener
     void Start () {
         if (Advertisement.isSupported) {
             Advertisement.AddListener(this);
-            Advertisement.Initialize("3409168", false);
+            Advertisement.Initialize("3411348", false);
         }
     }
 

@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Music/Eternal_Structures.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sounds/Music/Eternal_Structures.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Music/Fairy_Meeting.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sounds/Music/Fairy_Meeting.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Music/Hello_6am.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sounds/Music/Hello_6am.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdsScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdsScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +97,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameString.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpriteScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AdsScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DisappearTextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" />
@@ -115,6 +112,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AdsScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
       </list>
     </option>
@@ -224,7 +222,7 @@
       <workItem from="1576166073236" duration="612000" />
       <workItem from="1577193265207" duration="12072000" />
       <workItem from="1577206794909" duration="7581000" />
-      <workItem from="1577273827386" duration="27153000" />
+      <workItem from="1577273827386" duration="30229000" />
     </task>
     <servers />
   </component>
