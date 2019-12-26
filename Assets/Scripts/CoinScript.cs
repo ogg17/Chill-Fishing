@@ -11,6 +11,7 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     [SerializeField] private int stepProbably = 1;
     [SerializeField] private float depthCoin = 1.6f;
     [SerializeField] private float speed = 0.5f;
+    [SerializeField] private int probably = 20;
     [SerializeField] private ParticleSystem baubles;
     [SerializeField] private GameObject core;
     [SerializeField] private DisappearTextScript disText;
@@ -36,7 +37,7 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     }
     private void SpawningCoin()
     {
-        if (CommonVariables.GamePlaying && pickUp && Random.Range(0, 100) < 10)
+        if (CommonVariables.GamePlaying && pickUp && Random.Range(0, 100) < probably)
         {
             core.SetActive(true);
             coinPos.y = CommonVariables.DepthHook - 3f;

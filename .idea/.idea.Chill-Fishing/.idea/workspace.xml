@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish3Point.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish3Point.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Music/Eternal_Structures.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sounds/Music/Eternal_Structures.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Music/Fairy_Meeting.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sounds/Music/Fairy_Meeting.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Music/Hello_6am.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sounds/Music/Hello_6am.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,10 +112,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
       </list>
     </option>
   </component>
@@ -225,7 +224,7 @@
       <workItem from="1576166073236" duration="612000" />
       <workItem from="1577193265207" duration="12072000" />
       <workItem from="1577206794909" duration="7581000" />
-      <workItem from="1577273827386" duration="24293000" />
+      <workItem from="1577273827386" duration="27153000" />
     </task>
     <servers />
   </component>
