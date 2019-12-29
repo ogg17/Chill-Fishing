@@ -46,16 +46,12 @@ public class CommonVariables
     public int tmpEqpSkin = 0;
     public List<CharacterShop> tmpCharacterShops = new List<CharacterShop>();
 
-    public CommonVariables()
+    public string SaveVariables()
     {
         tmpGold = Gold;
         tmpRecord = Record;
         tmpEqpSkin = EquippedSkin;
         tmpCharacterShops = CharacterShops;
-    }
-
-    public string SaveVariables()
-    {
         return JsonUtility.ToJson(this);
     }
 

@@ -15,13 +15,29 @@ public class SaveLoadScript : MonoBehaviour
     private void Start()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        
+        StartCoroutine(Initialized());
+    }
+
+    private IEnumerator Initialized()
+    {
+        yield return new WaitForSeconds(CommonVariables.InitializedTime);
+
+        bool error = false;
         if (PlayerPrefs.HasKey("Save"))
         {
             CommonVariables tmp = JsonUtility.FromJson<CommonVariables>(PlayerPrefs.GetString("Save"));
-            tmp.LoadVariables();
+            if (tmp.tmpCharacterShops == null)
+            {
+                error = true; 
+                Debug.Log("Error: in class: " + PlayerPrefs.GetString("Save"));
+            }
+            else
+            {
+                tmp.LoadVariables();
+                Debug.Log("Successful");
+            }
         }
-        else
+        if(error || !PlayerPrefs.HasKey("Save"))
         {
             for (var i = 0; i < CommonVariables.PacksCount; i++)
             {
@@ -47,13 +63,7 @@ public class SaveLoadScript : MonoBehaviour
             CommonVariables.CharacterShops[27].ShardCount = 7;
             CommonVariables.CharacterShops[29].ShardCount = 7;
         }
-
-        StartCoroutine(Initialized());
-    }
-
-    private IEnumerator Initialized()
-    {
-        yield return new WaitForSeconds(CommonVariables.InitializedTime);
+        
         EventController.GameEvents.startApp.Invoke();
     }
 

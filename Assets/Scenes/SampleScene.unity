@@ -45007,6 +45007,7 @@ MonoBehaviour:
   stepProbably: 1
   depthCoin: 1.6
   speed: 0.2
+  probably: 100
   baubles: {fileID: 405731413}
   core: {fileID: 1640354443}
   disText: {fileID: 1955688517}
