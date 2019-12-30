@@ -12,14 +12,16 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float depthCoin = 1.6f;
     [SerializeField] private float speed = 0.5f;
     [SerializeField] private int probably = 20;
+    [SerializeField] private float deepOffset = 3f;
     [SerializeField] private ParticleSystem baubles;
     [SerializeField] private GameObject core;
     [SerializeField] private DisappearTextScript disText;
+    [SerializeField] private int cost = 1;
     
-    private int cost = 1;
     private Vector3 coinPos = new Vector3(0, 0, -2);
     private Vector3 move = Vector3.zero;
     private bool pickUp = true;
+    private float forseSpeed;
     private Image image;
 
     private void Start()
@@ -39,8 +41,9 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     {
         if (CommonVariables.GamePlaying && pickUp && Random.Range(0, 100) < probably)
         {
+            forseSpeed = speed;
             core.SetActive(true);
-            coinPos.y = CommonVariables.DepthHook - 3f;
+            coinPos.y = CommonVariables.DepthHook - deepOffset*Random.Range(1, 2f);
             float randomX = Random.Range(0.6f, 1f);
             coinPos.x = Random.Range(0, 2) == 0 ? -0.68f*randomX : 0.68f*randomX;
             transform.position = coinPos;
@@ -53,19 +56,15 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     {
         if (!pickUp && CommonVariables.GamePlaying)
         {
-            move.y = speed * Time.deltaTime;
+            move.y = forseSpeed * Time.deltaTime;
             transform.Translate(move);
-            if (transform.position.y > CommonVariables.DepthHook + 3f)// || transform.position.y < CommonVariables.DepthHook - 3.1f) 
-            {
-                pickUp = true;
-                Debug.Log("kek");
-            }
+            if (transform.position.y > CommonVariables.DepthHook + deepOffset) pickUp = true;
+            //forseSpeed += 0.001f;
         }
     }
 
     private void ZeroCoin()
     {
-        cost = 1;
         image.raycastTarget = false;
         core.SetActive(false);
         pickUp = true;
@@ -83,7 +82,7 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
             CommonVariables.GoldSession += cost;
             EventController.GameEvents.pickUpCoin.Invoke();
             disText.SetGoldText(cost);
-            cost++;
+            //cost++;
             SoundScript.sounds.PlaySound(SoundType.Bauble);
             image.raycastTarget = false;
         }

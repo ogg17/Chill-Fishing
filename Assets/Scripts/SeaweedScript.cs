@@ -38,7 +38,6 @@ public class SeaweedScript : MonoBehaviour
         Vector3 rot = Vector3.zero;
 
         var rand = Random.Range(0, 2);
-        //var minRand = Random.Range(minOffset, maxOffset);
         if (rand == 0)
         {
             pos.x = leftBoard;
@@ -56,16 +55,16 @@ public class SeaweedScript : MonoBehaviour
         while (done)
         {
             iter++;
-            bool chek = false;
+            bool cheсk = false;
             foreach (var n in otherRands)
             {
                 if (n.Item2 == rand && n.Item1 == randY) 
                 {
                     randY = Random.Range(12, 30);
-                    chek = true;
+                    cheсk = true;
                 }
             }
-            if (chek == false) done = false;
+            if (!cheсk) done = false;
             if(iter > 1000) break;
         }
 
