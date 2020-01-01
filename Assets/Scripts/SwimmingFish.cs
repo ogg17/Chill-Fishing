@@ -50,7 +50,8 @@ public class SwimmingFish : MonoBehaviour
         EventController.GameEvents.gameOver.AddListener(ReloadFish);
     }
 
-    private void Update() => transform.Translate(new Vector3(Time.deltaTime * (_direction ? -_speedSwimming : _speedSwimming), 0, 0));
+    private void Update() => 
+        transform.Translate(new Vector3(Time.deltaTime * (_direction ? -_speedSwimming : _speedSwimming), 0, 0));
     private void InvokeFish()
     {
         if (transform.position.y > CommonVariables.DepthHook)

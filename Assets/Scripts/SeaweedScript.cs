@@ -77,7 +77,7 @@ public class SeaweedScript : MonoBehaviour
 
     public void RepeatWeed()
     {
-        if (transform.localPosition.y > CommonVariables.DepthHook + 3.4f)
+        if (transform.localPosition.y > CommonVariables.DepthHook + 0.8f + CommonVariables.CameraSize)
         {
             UpdateWeed();
         }

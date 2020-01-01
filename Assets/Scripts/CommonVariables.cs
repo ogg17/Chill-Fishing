@@ -21,6 +21,7 @@ public class CommonVariables
     public static bool GamePlaying { get; set; } = false; // Playing game
     public static float DepthHook { get; set; } = 1f; // Hook movement base
     public static float CoinPos { get; set; } = 2f; // Current  position coin
+    public static float CameraSize = 1.5f;
     public static int Score { get; set; } // Score game
     public static int Record { get; set; } // Record game
     public static int GoldSession { get; set; } // Gold count given in one session game
