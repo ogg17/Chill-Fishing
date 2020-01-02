@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3121027994792718962}
   - component: {fileID: 3121027994792718959}
   - component: {fileID: 5296336833708576658}
-  - component: {fileID: 8182606822543321107}
+  - component: {fileID: -4467541035247863297}
   m_Layer: 8
   m_Name: DisappeareText
   m_TagString: Untagged
@@ -79,8 +79,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
---- !u!114 &8182606822543321107
+  m_Text: +1
+--- !u!114 &-4467541035247863297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

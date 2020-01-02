@@ -4904,11 +4904,11 @@ MonoBehaviour:
   stepProbably: 1
   depthCoin: 1.6
   speed: 0.2
-  probably: 10
+  probably: 50
   deepOffset: 3
   baubles: {fileID: 2437217996034845294}
   core: {fileID: 2437217996141461680}
-  disText: {fileID: 5790724599287550673}
+  disText: {fileID: 7192996014454113085}
   cost: 1
 --- !u!1 &2437217996557366621
 GameObject:
@@ -5067,35 +5067,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2437217996248994923}
     m_Modifications:
-    - target: {fileID: 3121027994792718963, guid: 75f4e848dd6f2064d8d013a77a1057f4,
-        type: 3}
-      propertyPath: m_Name
-      value: DisappeareText
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
-        type: 3}
-      propertyPath: disappearSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
-        type: 3}
-      propertyPath: color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+    - target: {fileID: -4467541035247863297, guid: 75f4e848dd6f2064d8d013a77a1057f4,
         type: 3}
       propertyPath: color.r
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+    - target: {fileID: -4467541035247863297, guid: 75f4e848dd6f2064d8d013a77a1057f4,
         type: 3}
       propertyPath: color.g
-      value: 0.86026716
+      value: 0.9345744
       objectReference: {fileID: 0}
-    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+    - target: {fileID: -4467541035247863297, guid: 75f4e848dd6f2064d8d013a77a1057f4,
         type: 3}
       propertyPath: color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4467541035247863297, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: disappearSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121027994792718963, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: m_Name
+      value: DisappeareText
       objectReference: {fileID: 0}
     - target: {fileID: 3121027994792718962, guid: 75f4e848dd6f2064d8d013a77a1057f4,
         type: 3}
@@ -5227,6 +5222,31 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: disappearSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: color.g
+      value: 0.86026716
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75f4e848dd6f2064d8d013a77a1057f4, type: 3}
 --- !u!224 &757346590144596144 stripped
@@ -5235,9 +5255,9 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2437217996855802562}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5790724599287550673 stripped
+--- !u!114 &7192996014454113085 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8182606822543321107, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+  m_CorrespondingSourceObject: {fileID: -4467541035247863297, guid: 75f4e848dd6f2064d8d013a77a1057f4,
     type: 3}
   m_PrefabInstance: {fileID: 2437217996855802562}
   m_PrefabAsset: {fileID: 0}
