@@ -8,9 +8,7 @@ using Random = UnityEngine.Random;
 public enum SwimmingType
 {
     Standard,
-    Turn,
-    Transition,
-    Jerky
+    Transition
 }
 
 public class SwimmingFish : MonoBehaviour
@@ -67,18 +65,16 @@ public class SwimmingFish : MonoBehaviour
         else fishRenderer.sprite = paintFish[Random.Range(0, paintFish.Count)];
 
         timeMoving = Random.Range(20, 50);
-        swimmingType = (SwimmingType)Random.Range(0, 4);
+        swimmingType = (SwimmingType)Random.Range(0, 2);
         
         animator.SetFloat("offset", Random.Range(0f, 1f));
         speedSwimming = Random.Range(speedSwimmingMin, speedSwimmingMax);
-        speedSwimming /= 10;
         var randomPos = Random.Range(6, 25);
         transform.position = Random.Range(0, 2) == 0 ? 
             new Vector3(-board, CommonVariables.DepthHook - 0.2f * randomPos, 0) : 
             new Vector3(board, CommonVariables.DepthHook - 0.2f * randomPos, 0);
         var randomScale = Random.Range(scaleMin, scaleMax);
         transform.localScale = new Vector3(randomScale, randomScale, 1);
-        move = transform.position;
     }
 
     private void ReloadFish()
@@ -94,7 +90,8 @@ public class SwimmingFish : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, move, Time.deltaTime * 5);
+        move.x = direction ? -speedSwimming * Time.deltaTime : speedSwimming * Time.deltaTime;
+        transform.Translate(move);
     }
 
     private void InvokeFish()
@@ -130,25 +127,13 @@ public class SwimmingFish : MonoBehaviour
             }
         }
 
-        
         if (swimmingType == SwimmingType.Transition && timeNow >= timeMoving)
         {
             direction = !direction;
             fishRenderer.flipX = !fishRenderer.flipX;
             timeNow = 0;
         }
-        else if (swimmingType == SwimmingType.Turn && timeNow >= timeMoving * 2)
-        {
-            move.y += Random.Range(0, 2) == 0 ? 0.2f : -0.2f;
-            timeNow = 0;
-        }
-        else if (swimmingType == SwimmingType.Jerky && timeNow >= timeMoving / 5)
-        {
-            move.x += direction ? -speedSwimming*4 : speedSwimming*4;
-            timeNow = 0;
-        }
         timeNow++;
-        move.x += direction ? -speedSwimming : speedSwimming;
     }
 
     private void OnMouseDown()

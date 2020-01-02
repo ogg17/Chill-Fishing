@@ -28145,7 +28145,7 @@ MonoBehaviour:
   - {fileID: 8648516674910323578, guid: 74183b1a1df0874938c9dc52f31d6720, type: 3}
   - {fileID: 4312646549438969813, guid: 1ab338ee69787fa5a8b20ccdf60fea36, type: 3}
   - {fileID: 6318392534846410876, guid: bc784673137ea9e4aa212e62923ceb6a, type: 3}
-  maxFish: 8
+  maxFish: 6
 --- !u!1 &1421072429
 GameObject:
   m_ObjectHideFlags: 0
