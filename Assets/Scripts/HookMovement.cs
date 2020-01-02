@@ -30,9 +30,4 @@ public class HookMovement : MonoBehaviour
         pos.y = CommonVariables.DepthHook;
         transform.position = Vector2.Lerp(transform.position, pos, speedMovement * Time.deltaTime);
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Fish")) EventController.GameEvents.gameOver.Invoke();
-    }
 }
