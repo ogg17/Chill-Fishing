@@ -55,6 +55,11 @@ public class GiftScript : MonoBehaviour
             penguin.SetSecondState();
             isGet = false;
         }
+        else
+        {
+            gift.SetActive(false);
+            cloudZzz.SetActive(true);
+        }
     }
     
     private void Save(){ 

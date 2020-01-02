@@ -1,57 +1,83 @@
-﻿Shader "Zero/Test"{
-    Properties{
-        _MainTex("Texture", 2D) = "white"{}
+﻿Shader "Unlit/basic"
+{
+    Properties
+    {
+        _BlurAmount("Blur", Range(0.0001, 0.01)) = 0.0025
     }
-    
-    SubShader{
-        Pass { // some shaders require multiple passes
-            GLSLPROGRAM // here begins the part in Unity's GLSL
-    
-                #ifdef VERTEX // here begins the vertex shader
+    SubShader
+    {
+        Tags { "Queue"="Overlay" }
+        LOD 100
         
-                    #version 110
-            
-                    attribute vec2 vertex;
-                    attribute vec2 texCoord;
-                    
-                    varying vec2 vTexCoord;
-                    
-                    void main() {
-                        gl_Position = vec4(vertex, 0.0, 1.0);
-                        vTexCoord = texCoord;
-                    }
+        GrabPass
+        {
+            "_MainTex"
+        }
 
-                #endif // here ends the definition of the vertex shader
-        
-        
-                #ifdef FRAGMENT // here begins the fragment shader
-        
-                #version 110
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag         
 
-                    const int MAX_KOEFF_SIZE = 32; //максимальный размер ядра (массива коэффициентов)
-                    
-                    uniform sampler2D _MainTex; //размываемая текстура
-                    uniform int kSize; //размер ядра
-                    uniform float koeff[MAX_KOEFF_SIZE]; //коэффициенты
-                    uniform vec2 direction; //направление размытия с учетом радиуса размытия и aspect ratio, например (0.003, 0.0) - горизонтальное и (0.0, 0.002) - вертикальное
-                    
-                    varying vec2 vTexCoord; //текстурные координаты текущего фрагмента
-                    
-                    void main() {
-                        vec4 sum = vec4(0.0); //результирующий цвет
-                    
-                        vec2 startDir = -0.5*direction*float(kSize-1); //вычисляем начальную точку размытия
-                        for (int i=0; i<kSize; i++) //проходимся по всем коэффициентам
-                            sum += texture2D(_MainTex, vTexCoord + startDir + direction*float(i)) * koeff[i]; //суммируем выборки 
-                    
-                        gl_FragColor = sum;
-                    }
-        
-                #endif // here ends the definition of the fragment shader
-    
-             ENDGLSL // here ends the part in GLSL 
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+            };
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                float4 vertex : SV_POSITION;
+            };
+
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+            float _BlurAmount = 0.0025; 
+
+            v2f vert (appdata v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                return o;
+            }
+
+            fixed4 frag (v2f i) : COLOR
+            {
+                // sample the texture
+                half4 sum = 0.0; 
+                sum += tex2D(_MainTex, float2(i.uv.x - 5.0 * _BlurAmount, i.uv.y)) * 0.025;
+                sum += tex2D(_MainTex, float2(i.uv.x - 4.0 * _BlurAmount, i.uv.y)) * 0.05;
+                sum += tex2D(_MainTex, float2(i.uv.x - 3.0 * _BlurAmount, i.uv.y)) * 0.09;
+                sum += tex2D(_MainTex, float2(i.uv.x - 2.0 * _BlurAmount, i.uv.y)) * 0.12;
+                sum += tex2D(_MainTex, float2(i.uv.x - _BlurAmount, i.uv.y)) * 0.15;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y)) * 0.16;
+                sum += tex2D(_MainTex, float2(i.uv.x + _BlurAmount, i.uv.y)) * 0.15;
+                sum += tex2D(_MainTex, float2(i.uv.x + 2.0 * _BlurAmount, i.uv.y)) * 0.12;
+                sum += tex2D(_MainTex, float2(i.uv.x + 3.0 * _BlurAmount, i.uv.y)) * 0.09;
+                sum += tex2D(_MainTex, float2(i.uv.x + 4.0 * _BlurAmount, i.uv.y)) * 0.05;
+                sum += tex2D(_MainTex, float2(i.uv.x + 5.0 * _BlurAmount, i.uv.y)) * 0.025;
+                
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y - 5.0 * _BlurAmount)) * 0.025;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y - 4.0 * _BlurAmount)) * 0.05;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y - 3.0 * _BlurAmount)) * 0.09;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y - 2.0 * _BlurAmount)) * 0.12;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y - _BlurAmount)) * 0.15;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y)) * 0.16;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y + _BlurAmount)) * 0.15;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y + 2.0 * _BlurAmount)) * 0.12;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y + 3.0 * _BlurAmount)) * 0.09;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y + 4.0 * _BlurAmount)) * 0.05;
+                sum += tex2D(_MainTex, float2(i.uv.x, i.uv.y + 5.0 * _BlurAmount)) * 0.025;      
+                
+                sum *= 0.5;                       
+                return sum;
+            }
+            ENDCG
         }
     }
-    
-    Fallback Off
 }
