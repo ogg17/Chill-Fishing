@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SaveLoadScript : MonoBehaviour
 {
+    [SerializeField] private GameObject skinMenu;
+    [SerializeField] private GameObject loadScreen;
     private void Awake()
     {
         //PlayerPrefs.DeleteAll();
@@ -64,7 +66,17 @@ public class SaveLoadScript : MonoBehaviour
             CommonVariables.CharacterShops[29].ShardCount = 7;
         }
         
+        skinMenu.SetActive(true);
         EventController.GameEvents.startApp.Invoke();
+
+        StartCoroutine(StopInitialized());
+    }
+
+    private IEnumerator StopInitialized()
+    {
+        yield return new WaitForSeconds(0.5f);
+        skinMenu.SetActive(false);
+        loadScreen.SetActive(false);
     }
 
     private void Save()

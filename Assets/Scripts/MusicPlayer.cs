@@ -5,6 +5,7 @@ using UnityEngine;
 public class MusicPlayer : MonoBehaviour
 {
     private AudioSource _player;
+    private bool underwaterBloop = true;
     private AudioReverbFilter reverbFilter;
     private int _currentClip = -2;
     [SerializeField] AudioClip[] music = new AudioClip[10];
@@ -38,7 +39,11 @@ public class MusicPlayer : MonoBehaviour
                     _player.volume = 0.8f;
                     reverbFilter.reverbPreset = AudioReverbPreset.Underwater;
                     underwaterPlayer.Play();
-                    SoundScript.sounds.PlaySound(SoundType.Blop);
+                    if (underwaterBloop) 
+                    {
+                        SoundScript.sounds.PlaySound(SoundType.Blop);
+                        underwaterBloop = false;
+                    }
                 }
             }
             else
@@ -48,6 +53,7 @@ public class MusicPlayer : MonoBehaviour
                     _player.volume = 1f;
                     reverbFilter.reverbPreset = AudioReverbPreset.Off;
                     underwaterPlayer.Stop();
+                    underwaterBloop = true;
                     SoundScript.sounds.PlaySound(SoundType.Blop);
                 }
             }

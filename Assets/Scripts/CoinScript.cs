@@ -39,7 +39,7 @@ public class CoinScript : MonoBehaviour, IPointerClickHandler
     }
     private void SpawningCoin()
     {
-        if (CommonVariables.GamePlaying && pickUp && Random.Range(0, 100) < probably)
+        if (CommonVariables.GamePlaying && pickUp && Random.Range(0, 1000) < probably)
         {
             forseSpeed = speed;
             core.SetActive(true);

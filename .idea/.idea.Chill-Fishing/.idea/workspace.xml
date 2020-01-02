@@ -2,10 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/icePart.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Move.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Move.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/FishingLine.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/FishingLine.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/IceM.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/IceM.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Snow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Snow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/basic.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/basic.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/basic.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/basic.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/gold.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/gold.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon144.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon192.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon36.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon48.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon64.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon72.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/icon96.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/boke.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/boke.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/boke.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/boke.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Фон.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Фон.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,19 +134,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/GameStrings.json" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AdsScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Materials/basic.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SeaweedScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Materials/basic.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
       </list>
     </option>
   </component>
@@ -227,7 +256,7 @@
       <workItem from="1577193265207" duration="12072000" />
       <workItem from="1577206794909" duration="7581000" />
       <workItem from="1577273827386" duration="45607000" />
-      <workItem from="1577908474465" duration="3892000" />
+      <workItem from="1577908474465" duration="8026000" />
     </task>
     <servers />
   </component>
