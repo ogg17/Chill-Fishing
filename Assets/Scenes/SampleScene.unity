@@ -38847,6 +38847,47 @@ MonoBehaviour:
     - {fileID: -6747246234614665173, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
     - {fileID: 6822183634348511674, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
     - {fileID: -5800794218265781598, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+  - scrollPanelSprite: {fileID: 7975471419959639051, guid: d1880df5bd97139489c026995a27aab7,
+      type: 3}
+    characterShopSprite: {fileID: 96677861548533675, guid: 8a97f40d6409f6746ac4f310f7baa668,
+      type: 3}
+    characterGameSprite: {fileID: 8858365917085778956, guid: 8a97f40d6409f6746ac4f310f7baa668,
+      type: 3}
+    characterFormSprite: {fileID: 5581018075725908935, guid: 8a97f40d6409f6746ac4f310f7baa668,
+      type: 3}
+    characterBackgroundShopColor: {r: 0.60784316, g: 0.65882355, b: 0.13333334, a: 1}
+    icePieceSprites:
+    - {fileID: -785211441312000924, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+    - {fileID: 2674044848641108466, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+    - {fileID: 278183589789320879, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+    - {fileID: 8135195262750928007, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+    - {fileID: 3578229692135074485, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+  - scrollPanelSprite: {fileID: 7975471419959639051, guid: d1880df5bd97139489c026995a27aab7,
+      type: 3}
+    characterShopSprite: {fileID: -6609526143831668233, guid: 8a97f40d6409f6746ac4f310f7baa668,
+      type: 3}
+    characterGameSprite: {fileID: -9178179214128305951, guid: 8a97f40d6409f6746ac4f310f7baa668,
+      type: 3}
+    characterFormSprite: {fileID: -7976135064690114790, guid: 8a97f40d6409f6746ac4f310f7baa668,
+      type: 3}
+    characterBackgroundShopColor: {r: 0.60784316, g: 0.65882355, b: 0.13333334, a: 1}
+    icePieceSprites:
+    - {fileID: 6755848269439607581, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+    - {fileID: -6235239673447934664, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+    - {fileID: -4853690044770608351, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+  - scrollPanelSprite: {fileID: 7975471419959639051, guid: d1880df5bd97139489c026995a27aab7,
+      type: 3}
+    characterShopSprite: {fileID: 7835354489354095285, guid: 8a97f40d6409f6746ac4f310f7baa668,
+      type: 3}
+    characterGameSprite: {fileID: 5389566769393112416, guid: 8a97f40d6409f6746ac4f310f7baa668,
+      type: 3}
+    characterFormSprite: {fileID: -4897531866973045664, guid: 8a97f40d6409f6746ac4f310f7baa668,
+      type: 3}
+    characterBackgroundShopColor: {r: 0.60784316, g: 0.65882355, b: 0.13333334, a: 1}
+    icePieceSprites:
+    - {fileID: -6943928405988784932, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+    - {fileID: 8738709449695590158, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
+    - {fileID: -8268240057376270348, guid: 8a97f40d6409f6746ac4f310f7baa668, type: 3}
 --- !u!1 &1619905241
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,9 +14,9 @@ public class CharacterShop
 public class CommonVariables
 {
     public const float InitializedTime = 0.005f;
-    public const int CharacterCount = 30;
+    public const int CharacterCount = 33;
     public const int MaxIcePieceCount = 7;
-    public const int PacksCount = 10;
+    public const int PacksCount = 11;
 
     public static bool GamePlaying { get; set; } = false; // Playing game
     public static float DepthHook { get; set; } = 1f; // Hook movement base
@@ -33,7 +33,7 @@ public class CommonVariables
     public static int EquippedSkin { get; set; } // Current equipped skin
     public static List<CharacterShop> CharacterShops { get; set; } = new List<CharacterShop>(); // Data of shop buys
     public static SystemLanguage GameLanguage { get; set; } = SystemLanguage.Russian;
-    public static int[] CharacterPacks { get; set; } = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+    public static int[] CharacterPacks { get; set; } = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
     public static bool OnUnderWater = false;
     public static bool OnClickPanel { get; set; } = false; // Clicked on panel in skin menu
     public static bool OnMusic { get; set; } = true; // on/off music

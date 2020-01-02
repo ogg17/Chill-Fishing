@@ -153,7 +153,7 @@ public class SwimmingFish : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (isGold) 
+        if (isGold && CommonVariables.GamePlaying) 
         { 
             cost = Random.Range(minCost, maxCost);
             GoldFishChange();

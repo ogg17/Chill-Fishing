@@ -1,5 +1,5 @@
 {"packs": 
-  [{"packName": {"english":"Fishermans", "russian":"Рыбаки"},
+  [ {"packName": {"english":"Fishermans", "russian":"Рыбаки"},
     "characters":[
     { "name":{"english":"", "russian":"Стив Ловец"},
       "characteristic": {"english":"", "russian":"Опытный Рыбак"},
@@ -20,7 +20,7 @@
                 {"english":"", "russian":"Никак не могу поймать рыбу"}]}
     ]},
 
-    {"packName": {"english":"a", "russian":"Древнее племя"},
+      {"packName": {"english":"a", "russian":"Древнее племя"},
       "characters":[
         { "name":{"english":"", "russian":"Беван Воин"},
           "characteristic": {"english":"", "russian":"Охотник на мамонтов"},
@@ -41,7 +41,7 @@
             {"english":"", "russian":"Мой посох не подходит для ловли рыбы"}]}
       ]},
 
-    {"packName": {"english":"", "russian":"Воинственные викинги"},
+      {"packName": {"english":"", "russian":"Воинственные викинги"},
       "characters":[
         { "name":{"english":"", "russian":"Гуннар Стойкий"},
           "characteristic": {"english":"", "russian":"Мастер двуручного меча"},
@@ -62,7 +62,7 @@
             {"english":"", "russian":"Здесь нужна вторая удочка"}]}
       ]},
 
-    {"packName": {"english":"", "russian":"Средневековое королевство"},
+      {"packName": {"english":"", "russian":"Средневековое королевство"},
       "characters":[
         { "name":{"english":"", "russian":"Яков Грустный"},
           "characteristic": {"english":"", "russian":"Несмешной шут"},
@@ -83,7 +83,7 @@
             {"english":"", "russian":"Рыбам нравится этот меч, но он мой"}]}
       ]},
 
-    {"packName": {"english":"", "russian":"Клан ниндзя"},
+      {"packName": {"english":"", "russian":"Клан ниндзя"},
       "characters":[
         { "name":{"english":"", "russian":"Красный мастер"},
           "characteristic": {"english":"", "russian":"Скрытый Сюрикен"},
@@ -104,7 +104,7 @@
             {"english":"", "russian":"Нужно быть тише воды, ниже воды... или как там было"}]}
       ]},
 
-    {"packName": {"english":"", "russian":"Интеллигентная аристократия"},
+      {"packName": {"english":"", "russian":"Интеллигентная аристократия"},
       "characters":[
         { "name":{"english":"", "russian":"Мисс Поси"},
           "characteristic": {"english":"", "russian":"Графиня"},
@@ -125,7 +125,7 @@
             {"english":"", "russian":"Люблю рыбалку, но не люблю рыбу"}]}
       ]},
 
-    {"packName": {"english":"", "russian":"Популярные службы доставки"},
+      {"packName": {"english":"", "russian":"Популярные службы доставки"},
       "characters":[
         { "name":{"english":"", "russian":"Дастин"},
           "characteristic": {"english":"", "russian":"Доставщик еды"},
@@ -146,7 +146,7 @@
             {"english":"", "russian":"В прогнозе погоды написано, что идёт снег"}]}
       ]},
 
-    {"packName": {"english":"", "russian":"Современная мода"},
+      {"packName": {"english":"", "russian":"Современная мода"},
       "characters":[
         { "name":{"english":"", "russian":"Смит"},
           "characteristic": {"english":"", "russian":"Телохранитель"},
@@ -167,7 +167,7 @@
             {"english":"", "russian":"Теперь я лучший фотограф на этом леднике"}]}
       ]},
 
-    {"packName": {"english":"", "russian":"Загадочные личности"},
+      {"packName": {"english":"", "russian":"Загадочные личности"},
       "characters":[
         { "name":{"english":"", "russian":"Джонси Дэйв"},
           "characteristic": {"english":"", "russian":"Капитан мертвецов"},
@@ -188,7 +188,7 @@
             {"english":"", "russian":"Почему снег квадратный?"}]}
       ]},
 
-    {"packName": {"english":"", "russian":"Мифические персонажи"},
+      {"packName": {"english":"", "russian":"Мифические персонажи"},
       "characters":[
         { "name":{"english":"", "russian":"Йети"},
           "characteristic": {"english":"", "russian":"Любитель морковки"},
@@ -207,6 +207,27 @@
           "phrase": [{"english":"", "russian":"Где мой топор?"},
             {"english":"", "russian":"Я должен правильнее выбирать точку приземления в следующий раз"},
             {"english":"", "russian":"Это ведь не ловушка Локи?"}]}
+      ]},
+
+      {"packName": {"english":"", "russian":"Заблудшие Путешественники"},
+      "characters":[
+        { "name":{"english":"", "russian":"Барбара"},
+          "characteristic": {"english":"", "russian":"Настоящий картограф"},
+          "phrase": [{"english":"", "russian":"На карте этой проруби не было"},
+            {"english":"", "russian":"Может перевернуть карту?"},
+            {"english":"", "russian":"Ещё 10 шагов на север и 5 шагов на восток"}]},
+
+        { "name":{"english":"", "russian":"Рой"},
+          "characteristic": {"english":"", "russian":"Капитан команды"},
+          "phrase": [{"english":"", "russian":"Я с детьми отправился в поход, но мы оделись не по погоде"},
+            {"english":"", "russian":"Я должен найти Барбару и Тома, пока прорубь не замерзла"},
+            {"english":"", "russian":"В следующий раз надо взять спасательные жилеты"}]},
+
+        { "name":{"english":"", "russian":"Том"},
+          "characteristic": {"english":"", "russian":"Любитель походов"},
+          "phrase": [{"english":"", "russian":"Мы шли на юг или север. Но сейчас мы где?"},
+            {"english":"", "russian":"У меня самый тяжелых рюкзак"},
+            {"english":"", "russian":"Ничего не вижу из-за этого снега"}]}
       ]}
   ]
 }

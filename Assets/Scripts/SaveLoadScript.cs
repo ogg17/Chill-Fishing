@@ -36,6 +36,10 @@ public class SaveLoadScript : MonoBehaviour
             else
             {
                 tmp.LoadVariables();
+                while (CommonVariables.CharacterShops.Count < CommonVariables.CharacterCount)
+                {
+                    CommonVariables.CharacterShops.Add(new CharacterShop());
+                }
                 Debug.Log("Successful");
             }
         }
@@ -48,23 +52,26 @@ public class SaveLoadScript : MonoBehaviour
                     CommonVariables.CharacterShops.Add(new CharacterShop());
                 }
             }
-
-            CommonVariables.CharacterShops[0].BuyCharacter = true;
-        
-            CommonVariables.CharacterShops[12].ShardCount = 3;
-            CommonVariables.CharacterShops[13].ShardCount = 3;
-            CommonVariables.CharacterShops[14].ShardCount = 3;
-        
-            CommonVariables.CharacterShops[18].ShardCount = 3;
-            CommonVariables.CharacterShops[19].ShardCount = 3;
-            CommonVariables.CharacterShops[20].ShardCount = 3;
-        
-            CommonVariables.CharacterShops[21].ShardCount = 3;
-            CommonVariables.CharacterShops[23].ShardCount = 3;
-        
-            CommonVariables.CharacterShops[27].ShardCount = 7;
-            CommonVariables.CharacterShops[29].ShardCount = 7;
         }
+        //// Set ShardCount
+        CommonVariables.CharacterShops[0].BuyCharacter = true;
+        
+        CommonVariables.CharacterShops[12].ShardCount = 3;
+        CommonVariables.CharacterShops[13].ShardCount = 3;
+        CommonVariables.CharacterShops[14].ShardCount = 3;
+        
+        CommonVariables.CharacterShops[18].ShardCount = 3;
+        CommonVariables.CharacterShops[19].ShardCount = 3;
+        CommonVariables.CharacterShops[20].ShardCount = 3;
+        
+        CommonVariables.CharacterShops[21].ShardCount = 3;
+        CommonVariables.CharacterShops[23].ShardCount = 3;
+        
+        CommonVariables.CharacterShops[27].ShardCount = 7;
+        CommonVariables.CharacterShops[29].ShardCount = 7;
+            
+        CommonVariables.CharacterShops[31].ShardCount = 3;
+        CommonVariables.CharacterShops[32].ShardCount = 3;
         
         skinMenu.SetActive(true);
         EventController.GameEvents.startApp.Invoke();

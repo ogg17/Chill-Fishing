@@ -2,42 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/DisappeareTextGame.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/DisappeareTextGame.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish1.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish3.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish4.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish4.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DisappearTextGameScript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DisappearTextGameScript.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/SpriteAtlas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/SpriteAtlas.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DisappeareText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DisappeareText.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish1Point.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish1Point.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish2Point.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish2Point.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish3Point.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish3Point.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameStrings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/MicroSprites.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/MicroSprites.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Спрайты.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/АтласПерсонажи.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/АтласПерсонажи.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,16 +110,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameStrings.json" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AdsScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SeaweedScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CoinScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Materials/basicCG.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Resize2CameraScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Materials/basic.shader" />
@@ -158,6 +126,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DisappearTextGameScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameStrings.json" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
       </list>
     </option>
@@ -268,7 +239,7 @@
       <workItem from="1577193265207" duration="12072000" />
       <workItem from="1577206794909" duration="7581000" />
       <workItem from="1577273827386" duration="45607000" />
-      <workItem from="1577908474465" duration="26657000" />
+      <workItem from="1577908474465" duration="29021000" />
     </task>
     <servers />
   </component>
@@ -298,10 +269,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="707" y="224" key="RiderGenerateDialog/1920.-1.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1577208853805" />
-    <state x="433" y="170" width="1191" height="710" key="SettingsEditor" timestamp="1577976630508">
+    <state x="433" y="170" width="1191" height="710" key="SettingsEditor" timestamp="1578001702355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="433" y="170" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1577976630508" />
+    <state x="433" y="170" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578001702355" />
     <state x="433" y="170" width="1191" height="710" key="SettingsEditor/1920.1080/1920.1080" timestamp="1577199398910" />
     <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1577199400705">
       <screen x="0" y="0" width="1920" height="1050" />
