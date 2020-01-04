@@ -6,7 +6,7 @@ public class GameMethods : MonoBehaviour
 {
     public void GameOver()
     {
-        if(CommonVariables.GamePlaying) SoundScript.sounds.PlaySound(SoundType.Blop);
+        if(CommonVariables.GamePlaying) SoundCenter.sounds.PlayLose();
         CommonVariables.GamePlaying = false;
         if(CommonVariables.OnVibration) Handheld.Vibrate();
         if(CommonVariables.Record < CommonVariables.Score) CommonVariables.Record = CommonVariables.Score;
@@ -31,10 +31,9 @@ public class GameMethods : MonoBehaviour
         {
             CommonVariables.GamePlaying = true;
             EventController.GameEvents.startGame.Invoke();
-            SoundScript.sounds.PlaySound(SoundType.Lose);
+            SoundCenter.sounds.PlayStart();
         }
     }
-
     public void BuyIcePiece()
     {
         if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == false)
@@ -71,7 +70,6 @@ public class GameMethods : MonoBehaviour
             CommonVariables.GameLanguage = SystemLanguage.Russian;
         else CommonVariables.GameLanguage = SystemLanguage.English;
     }
-
     public void SetMusic()
     {
         CommonVariables.OnMusic = !CommonVariables.OnMusic;

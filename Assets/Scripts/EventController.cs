@@ -20,7 +20,7 @@ public class EventController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
     public UnityEvent stepGame = new UnityEvent();
     public UnityEvent startGame = new UnityEvent();
     public UnityEvent gameOver = new UnityEvent();
@@ -28,4 +28,6 @@ public class EventController : MonoBehaviour
     public UnityEvent closeApp = new UnityEvent();
     public UnityEvent pickUpCoin = new UnityEvent();
     public UnityEvent updatePanel = new UnityEvent();
+    public UnityEvent goldFishBonus = new UnityEvent();
+    public UnityEvent partFishBonus = new UnityEvent();
 }

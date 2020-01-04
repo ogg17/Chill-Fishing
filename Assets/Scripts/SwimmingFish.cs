@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public enum SwimmingType
@@ -11,16 +12,19 @@ public enum SwimmingType
     Transition
 }
 
-public class SwimmingFish : MonoBehaviour
+public class SwimmingFish : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private SpriteRenderer fishRenderer;
     [SerializeField] private DisappearTextGameScript disText;
     [SerializeField] private ParticleSystem goldParticle;
+    [SerializeField] private ParticleSystem bubbles;
+    [SerializeField] private ParticleSystem bubbleBurst;
     
     [Space(10)]
     [SerializeField] private int minCost = 2;
     [SerializeField] private int maxCost = 5;
-    [SerializeField] private int probably = 1;
+    [SerializeField] private int probablyGoldFish = 1;
+    [SerializeField] private int probablyBubbleFish = 1;
 
     [Space(10)]
     [SerializeField] private List<Sprite> paintFish = new List<Sprite>();
@@ -38,6 +42,8 @@ public class SwimmingFish : MonoBehaviour
     private bool reloadFish;
     private bool isGold;
     private bool isBubble;
+    private bool isPartBonus;
+    private bool isGoldBonus;
     
     private int cost;
     private int timeMoving;
@@ -47,22 +53,51 @@ public class SwimmingFish : MonoBehaviour
     private float speedSwimming;
     private Animator animator;
     private SwimmingType swimmingType;
+    private Image image;
+    private DateTime goldBonusTime;
+    private DateTime partBonusTime;
+    private Sprite ownSprite;
 
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        image = GetComponent<Image>();
+        image.raycastTarget = false;
         UpdateFish();
         InvokeRepeating("InvokeFish", 0, 0.1f);
         StartCoroutine(Initialized());
     }
     private void UpdateFish()
     {
-        if (Random.Range(0, 1000) < probably)
+        isGold = false;
+        isBubble = false;
+        bubbles.Stop();
+        ownSprite = paintFish[Random.Range(0, paintFish.Count)];
+        int randomFish = Random.Range(0, 1000);
+        if (randomFish < probablyGoldFish)
         {
             fishRenderer.sprite = goldFishSprite;
             isGold = true;
+            image.raycastTarget = true;
         }
-        else fishRenderer.sprite = paintFish[Random.Range(0, paintFish.Count)];
+        else if (randomFish < probablyBubbleFish)
+        {
+            bubbles.Play();
+            isBubble = true;
+            image.raycastTarget = true;
+        }
+        else
+        {
+            fishRenderer.sprite = ownSprite;
+        }
+        
+        if (isGoldBonus)
+        {
+            fishRenderer.sprite = goldFishSprite;
+            isGoldBonus = true;
+            image.raycastTarget = true; 
+        }
+        
 
         timeMoving = Random.Range(20, 50);
         swimmingType = (SwimmingType)Random.Range(0, 2);
@@ -80,18 +115,43 @@ public class SwimmingFish : MonoBehaviour
     private void ReloadFish()
     {
         reloadFish = true;
+        if (isGoldBonus) EndGoldBonus();
+        if (isPartBonus)
+        {
+            isPartBonus = false;
+            GameObjects.gameObjects.bonusPart.SetActive(false);
+        }
     }
 
     private IEnumerator Initialized()
     {
         yield return new WaitForSeconds(CommonVariables.InitializedTime);
         EventController.GameEvents.gameOver.AddListener(ReloadFish);
+        EventController.GameEvents.goldFishBonus.AddListener(OnGoldBonus);
+        EventController.GameEvents.partFishBonus.AddListener(OnPartBonus);
+    }
+
+    private void EndGoldBonus()
+    {
+        fishRenderer.sprite = ownSprite;
+        isGoldBonus = false;
+        GameObjects.gameObjects.goldFish.SetActive(false);
+        
+        if (isBubble) image.raycastTarget = true;
+        else image.raycastTarget = false;
     }
 
     private void Update()
     {
         move.x = direction ? -speedSwimming * Time.deltaTime : speedSwimming * Time.deltaTime;
         transform.Translate(move);
+
+        if (isGoldBonus && DateTime.Now > goldBonusTime + TimeSpan.FromSeconds(5)) EndGoldBonus();
+        if (isPartBonus && DateTime.Now > partBonusTime + TimeSpan.FromSeconds(5))
+        {
+            isPartBonus = false;
+            GameObjects.gameObjects.bonusPart.SetActive(false);
+        }
     }
 
     private void InvokeFish()
@@ -103,10 +163,10 @@ public class SwimmingFish : MonoBehaviour
                 fishActive = false;
                 // CommonVariables.FishNumber--;
             }
-            if (transform.position.y > CommonVariables.DepthHook + 0.2f) ReloadFish();
+            if (transform.position.y > CommonVariables.DepthHook + 0.2f) reloadFish = true;
         }
 
-        if (transform.position.x > board)
+        if (transform.position.x > board && !isPartBonus)
         {
             direction = true;
             fishRenderer.flipX = true;
@@ -116,7 +176,7 @@ public class SwimmingFish : MonoBehaviour
                 reloadFish = false;
             }
         }
-        else if (transform.position.x < -board)
+        else if (transform.position.x < -board && !isPartBonus)
         {
             direction = false;
             fishRenderer.flipX = false;
@@ -127,7 +187,7 @@ public class SwimmingFish : MonoBehaviour
             }
         }
 
-        if (swimmingType == SwimmingType.Transition && timeNow >= timeMoving)
+        if (swimmingType == SwimmingType.Transition && timeNow >= timeMoving && !isPartBonus)
         {
             direction = !direction;
             fishRenderer.flipX = !fishRenderer.flipX;
@@ -135,32 +195,48 @@ public class SwimmingFish : MonoBehaviour
         }
         timeNow++;
     }
-
-    private void OnMouseDown()
+    public void OnPointerClick(PointerEventData eventData)
     {
-        if (isGold && CommonVariables.GamePlaying) 
-        { 
-            cost = Random.Range(minCost, maxCost);
-            GoldFishChange();
-        }
+        if(CommonVariables.GamePlaying)
+            if (isGold || isGoldBonus) 
+            { 
+                cost = Random.Range(minCost, maxCost);
+                isGold = false;
+                isGoldBonus = false;
+                GoldFishChange();
+            }
+            else if (isBubble)
+            {
+                bubbles.Stop();
+                bubbleBurst.Play();
+                SoundCenter.sounds.PlayBubble();
+                Instantiate(GameObjects.gameObjects.bubble, transform.position, 
+                    transform.rotation, GameObjects.gameObjects.bubbleGenerator.transform);
+            }
     }
 
     private void GoldFishChange()
     {
-        CommonVariables.Gold += cost;
-        CommonVariables.GoldSession += cost;
-        disText.SetGoldText(cost);
+        int nowCost = cost * CommonVariables.bonusX2 * CommonVariables.bonusX3;
+        CommonVariables.Gold += nowCost;
+        CommonVariables.GoldSession += nowCost;
+        disText.SetGoldText(nowCost);
         goldParticle.Play();
-        SoundScript.sounds.PlaySound(SoundType.Coin);
-        isGold = false;
-        fishRenderer.sprite = paintFish[Random.Range(0, paintFish.Count)];
+        SoundCenter.sounds.PlayCoin();
+        fishRenderer.sprite = ownSprite;
+        image.raycastTarget = false;
+
+        if (isBubble) image.raycastTarget = true;
+        else image.raycastTarget = false;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Hook"))
         {
-            if (isGold)
+            Debug.Log( isGold + ":" + isGoldBonus);
+            if (isGold || isGoldBonus)
             {
                 cost = Random.Range(minCost*5, maxCost*4);
                 GoldFishChange();
@@ -168,6 +244,31 @@ public class SwimmingFish : MonoBehaviour
             EventController.GameEvents.gameOver.Invoke();
         }
     }
+
+    private void OnPartBonus()
+    {
+        if (transform.position.x > 0)
+        {
+            direction = false;
+            fishRenderer.flipX = false;
+        }
+        else
+        {
+            direction = true;
+            fishRenderer.flipX = true;
+        }
+        partBonusTime = DateTime.Now;
+        isPartBonus = true;
+    }
+
+    private void OnGoldBonus()
+    {
+        goldBonusTime = DateTime.Now;
+        fishRenderer.sprite = goldFishSprite;
+        isGoldBonus = true;
+        image.raycastTarget = true;
+    }
+
     private void DestroyFish()
     {
         Destroy(gameObject);

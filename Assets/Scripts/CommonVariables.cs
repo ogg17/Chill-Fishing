@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
@@ -13,7 +14,7 @@ public class CharacterShop
 [System.Serializable]
 public class CommonVariables
 {
-    public const float InitializedTime = 0.005f;
+    public const float InitializedTime = 0.05f;
     public const int CharacterCount = 33;
     public const int MaxIcePieceCount = 7;
     public const int PacksCount = 11;
@@ -31,9 +32,15 @@ public class CommonVariables
     public static int CurrentPanel { get; set; } // Current panel in pack
     public static int CurrentPack { get; set; } // Current pack in skin menu
     public static int EquippedSkin { get; set; } // Current equipped skin
+    public static int bonusX2 = 1;
+    public static int bonusX3 = 1;
     public static List<CharacterShop> CharacterShops { get; set; } = new List<CharacterShop>(); // Data of shop buys
     public static SystemLanguage GameLanguage { get; set; } = SystemLanguage.Russian;
+    public static DateTime timeBonusX2;
+    public static DateTime timeBonusX3;
     public static int[] CharacterPacks { get; set; } = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+    public static bool isBonusX2;
+    public static bool isBonusX3;
     public static bool OnUnderWater = false;
     public static bool OnClickPanel { get; set; } = false; // Clicked on panel in skin menu
     public static bool OnMusic { get; set; } = true; // on/off music

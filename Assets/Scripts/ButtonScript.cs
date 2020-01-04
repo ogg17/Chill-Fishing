@@ -5,12 +5,20 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+enum SoundType
+{
+    Click,
+    Coin
+}
+
 [System.Serializable]
 public class UnityBoolEvent : UnityEvent<bool>
 {
 }
 public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
+    [SerializeField] private SoundType soundType = SoundType.Click;
     [SerializeField] private Color pressedColor; // enable image change
     [SerializeField] private bool isPressedColor; // enable pressed color
     [SerializeField] private bool playingSound; // enable playing sound
@@ -20,7 +28,6 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     [SerializeField] private UnityEvent up = new UnityEvent();
 
     [SerializeField] private int timeInterval = 0;
-    [SerializeField] private SoundType soundType = SoundType.Click;
 
     private Image imageButton;
     private Color unpressedColor;
@@ -33,6 +40,12 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
         unpressedColor = imageButton.color;
         clickTimeSpan = new TimeSpan(0,0,0,0,timeInterval);
         clickTime = DateTime.Now;
+       // StartCoroutine(Initialized());
+    }
+
+    private IEnumerator Initialized()
+    {
+        yield return new WaitForSeconds(CommonVariables.InitializedTime);
     }
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
@@ -41,7 +54,9 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
         {
             clickTime = DateTime.Now;
             click.Invoke();
-            if(playingSound) SoundScript.sounds.PlaySound(soundType);
+            if(playingSound) 
+                if(soundType == SoundType.Click) SoundCenter.sounds.PlayClick();
+                else if (soundType == SoundType.Coin) SoundCenter.sounds.PlayCoin();
         }
     }
 
@@ -55,5 +70,15 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     {
         up.Invoke();
         imageButton.color = isPressedColor ? unpressedColor : imageButton.color;
+    }
+
+    public void InactivateButton()
+    {
+        imageButton.raycastTarget = false;
+    }
+
+    public void ActivateButton()
+    {
+        if(imageButton != null) imageButton.raycastTarget = true;
     }
 }

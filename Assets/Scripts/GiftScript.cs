@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class GiftScript : MonoBehaviour
 {
     [SerializeField] private GameObject gift;
+    [SerializeField] private ButtonScript buttonGift;
     [SerializeField] private SpriteScript penguin;
     [SerializeField] private GameObject cloudZzz;
     [SerializeField] private ParticleSystem goldParticle;
@@ -60,6 +61,7 @@ public class GiftScript : MonoBehaviour
             gift.SetActive(false);
             cloudZzz.SetActive(true);
         }
+        if(!CommonVariables.GamePlaying) buttonGift.ActivateButton();
     }
     
     private void Save(){ 

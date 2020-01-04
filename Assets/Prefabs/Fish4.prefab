@@ -109,7 +109,7 @@ PrefabInstance:
     - target: {fileID: 8427778365139075137, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}
       propertyPath: speedSwimmingMax
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8427778365139075137, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}

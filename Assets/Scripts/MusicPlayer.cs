@@ -41,7 +41,7 @@ public class MusicPlayer : MonoBehaviour
                     underwaterPlayer.Play();
                     if (underwaterBloop) 
                     {
-                        SoundScript.sounds.PlaySound(SoundType.Blop);
+                        SoundCenter.sounds.PlayBlop();
                         underwaterBloop = false;
                     }
                 }
@@ -54,7 +54,7 @@ public class MusicPlayer : MonoBehaviour
                     reverbFilter.reverbPreset = AudioReverbPreset.Off;
                     underwaterPlayer.Stop();
                     underwaterBloop = true;
-                    SoundScript.sounds.PlaySound(SoundType.Blop);
+                   // SoundCenter.sounds.PlayBlop();
                 }
             }
         }

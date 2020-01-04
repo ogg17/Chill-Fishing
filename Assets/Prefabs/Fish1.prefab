@@ -104,12 +104,12 @@ PrefabInstance:
     - target: {fileID: 8427778365139075137, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}
       propertyPath: speedSwimmingMax
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8427778365139075137, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}
       propertyPath: speedSwimmingMin
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8427778365814993633, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}
@@ -117,5 +117,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9138447195950085610, guid: 244d501659877b54eb40adf068c3ecdf,
         type: 3}
+    - target: {fileID: 8447540582325223307, guid: 72ad358641147d82e8dfd42d4cacb3b2,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447540582325223307, guid: 72ad358641147d82e8dfd42d4cacb3b2,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447540582325223307, guid: 72ad358641147d82e8dfd42d4cacb3b2,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72ad358641147d82e8dfd42d4cacb3b2, type: 3}

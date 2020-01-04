@@ -94,12 +94,12 @@ PrefabInstance:
     - target: {fileID: 8427778365139075137, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}
       propertyPath: speedSwimmingMin
-      value: 0.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8427778365139075137, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}
       propertyPath: speedSwimmingMax
-      value: 1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8427778365139075137, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}

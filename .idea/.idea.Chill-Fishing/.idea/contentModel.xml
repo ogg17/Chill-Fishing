@@ -11,11 +11,11 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AdsScript.cs" t="Include" />
+          <e p="BubbleGenerator.cs" t="Include" />
           <e p="ButtonScript.cs" t="Include" />
           <e p="CameraScript.cs" t="Include" />
           <e p="CharacterSkinEffect.cs" t="Include" />
           <e p="CharacterSkinScript.cs" t="Include" />
-          <e p="CoinScript.cs" t="Include" />
           <e p="CommonVariables.cs" t="Include" />
           <e p="DisappearTextGameScript.cs" t="Include" />
           <e p="DisappearTextScript.cs" t="Include" />
@@ -23,6 +23,7 @@
           <e p="FpsCounter.cs" t="Include" />
           <e p="GameButtonsScript.cs" t="Include" />
           <e p="GameMethods.cs" t="Include" />
+          <e p="GameObjects.cs" t="Include" />
           <e p="GameSprites.cs" t="Include" />
           <e p="GameString.cs" t="Include" />
           <e p="GiftScript.cs" t="Include" />
@@ -30,6 +31,7 @@
           <e p="HorizontalSnapScroll.cs" t="Include" />
           <e p="IceScript.cs" t="Include" />
           <e p="ImageScript.cs" t="Include" />
+          <e p="ItemScript.cs" t="Include" />
           <e p="LoadScreenActivate.cs" t="Include" />
           <e p="MenuMotion.cs" t="Include" />
           <e p="MusicPlayer.cs" t="Include" />
@@ -40,6 +42,7 @@
           <e p="ScoreUIScript.cs" t="Include" />
           <e p="SeaweedGenerator.cs" t="Include" />
           <e p="SeaweedScript.cs" t="Include" />
+          <e p="SoundCenter.cs" t="Include" />
           <e p="SoundScript.cs" t="Include" />
           <e p="SpawnFish.cs" t="Include" />
           <e p="SpriteScript.cs" t="Include" />

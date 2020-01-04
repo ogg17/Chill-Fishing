@@ -13,7 +13,7 @@ public class SpawnFish : MonoBehaviour
     {
         for(int i = 0; i < maxFish; i++)
         {
-            Instantiate(fish[Random.Range(0, fish.Length)]);
+            Instantiate(fish[Random.Range(0, fish.Length)], transform);
         }
     }
 }
