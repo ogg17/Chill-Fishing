@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class GuideScript : MonoBehaviour
 {
     [SerializeField] private List<Sprite> slides = new List<Sprite>();
-
-    [SerializeField] private UnityEvent endSlide;
+    [SerializeField] private GameObject nextButton;
+    [SerializeField] private GameObject backButton;
 
     private Image image;
     private int slideCounter;
@@ -22,7 +22,16 @@ public class GuideScript : MonoBehaviour
     {
         slideCounter++;
         image.sprite = slides[slideCounter];
-        if (slideCounter >= slides.Count - 1) endSlide.Invoke();
+        if(slideCounter > 0) backButton.SetActive(true);
+        if (slideCounter == slides.Count - 1) nextButton.SetActive(false);
+    }
+
+    public void BackSlide()
+    {
+        slideCounter--;
+        image.sprite = slides[slideCounter];
+        if(slideCounter < slides.Count - 1) nextButton.SetActive(true);
+        if (slideCounter == 0) backButton.SetActive(false);
     }
     
 }
