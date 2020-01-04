@@ -25,7 +25,7 @@ public class EventController : MonoBehaviour
     public UnityEvent startGame = new UnityEvent();
     public UnityEvent gameOver = new UnityEvent();
     public UnityEvent startApp = new UnityEvent();
-    public UnityEvent closeApp = new UnityEvent();
+    public UnityEvent firstStartApp = new UnityEvent();
     public UnityEvent pickUpCoin = new UnityEvent();
     public UnityEvent updatePanel = new UnityEvent();
     public UnityEvent goldFishBonus = new UnityEvent();

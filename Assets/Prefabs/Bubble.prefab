@@ -4772,8 +4772,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!224 &2437217996141461687
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4828,7 +4828,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &2437217996248994923
 RectTransform:
@@ -4901,21 +4901,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb8e251952d7cdeb874c36009582105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depthCoinMin: 1
-  depthCoinMax: 2
-  deepOffset: 3
   speed: 0.2
-  probablyGoldFish: 400
-  probablyBonusX3: 500
-  probablyPart: 600
-  probablyBonusX2: 700
-  probablyGold5: 800
-  probablyGold2: 900
+  probablyGoldFish: 10
+  probablyBonusX3: 70
+  probablyPart: 120
+  probablyBonusX2: 220
+  probablyGold5: 370
+  probablyGold2: 670
   cost: 1
-  probably: 50
   baubles: {fileID: 2437217996034845294}
   core: {fileID: 2437217996141461680}
-  itemImage: {fileID: 2437217996863530484}
+  itemImage: {fileID: 1745539458528711654}
   disText: {fileID: 7192996014454113085}
   itemSprites:
   - {fileID: -8652156427138170503, guid: 244d501659877b54eb40adf068c3ecdf, type: 3}
@@ -4941,7 +4937,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &2437217996557366620
 RectTransform:
@@ -5010,13 +5006,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2437217996863530485}
   - component: {fileID: 2437217996863530475}
-  - component: {fileID: 2437217996863530484}
+  - component: {fileID: 1745539458528711654}
   m_Layer: 0
   m_Name: ItemImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &2437217996863530485
 RectTransform:
@@ -5027,7 +5023,7 @@ RectTransform:
   m_GameObject: {fileID: 2437217996863530486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 2437217996141461687}
   m_RootOrder: 0
@@ -5035,7 +5031,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 6, y: 5}
+  m_SizeDelta: {x: 12, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2437217996863530475
 CanvasRenderer:
@@ -5045,36 +5041,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2437217996863530486}
   m_CullTransparentMesh: 0
---- !u!114 &2437217996863530484
-MonoBehaviour:
+--- !u!212 &1745539458528711654
+SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2437217996863530486}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 7954351241714608008, guid: 244d501659877b54eb40adf068c3ecdf,
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 2732824926898254408, guid: 244d501659877b54eb40adf068c3ecdf,
     type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.21, y: 0.11}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &2437217996855802562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5082,6 +5097,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2437217996248994923}
     m_Modifications:
+    - target: {fileID: 3121027994792718963, guid: 75f4e848dd6f2064d8d013a77a1057f4,
+        type: 3}
+      propertyPath: m_Name
+      value: DisappeareText
+      objectReference: {fileID: 0}
     - target: {fileID: -4467541035247863297, guid: 75f4e848dd6f2064d8d013a77a1057f4,
         type: 3}
       propertyPath: color.r
@@ -5101,11 +5121,6 @@ PrefabInstance:
         type: 3}
       propertyPath: disappearSpeed
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121027994792718963, guid: 75f4e848dd6f2064d8d013a77a1057f4,
-        type: 3}
-      propertyPath: m_Name
-      value: DisappeareText
       objectReference: {fileID: 0}
     - target: {fileID: 3121027994792718962, guid: 75f4e848dd6f2064d8d013a77a1057f4,
         type: 3}

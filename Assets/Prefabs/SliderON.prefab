@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+  m_Color: {r: 0.56554824, g: 0.63858604, b: 0.6698113, a: 0.84705883}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -275,7 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3a6b7143c68a9995ab4434f424dcc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressedColor: {r: 0, g: 0, b: 0, a: 1}
+  soundType: 0
+  pressedColor: {r: 0.4033909, g: 0.44414932, b: 0.46226418, a: 0.84705883}
   isPressedColor: 1
   playingSound: 1
   click:

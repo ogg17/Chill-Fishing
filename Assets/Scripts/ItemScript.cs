@@ -34,7 +34,7 @@ public class ItemScript : MonoBehaviour, IPointerClickHandler
     [Space(10)]
     [SerializeField] private ParticleSystem baubles;
     [SerializeField] private GameObject core;
-    [SerializeField] private Image itemImage;
+    [SerializeField] private SpriteRenderer itemImage;
     [SerializeField] private DisappearTextScript disText;
     
     [Space(10)]

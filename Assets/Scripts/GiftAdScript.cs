@@ -5,13 +5,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class GiftScript : MonoBehaviour
+public class GiftAdScript : MonoBehaviour
 {
     [SerializeField] private GameObject gift;
     [SerializeField] private DisappearTextScript disText;
     [SerializeField] private ButtonScript buttonGift;
-    //[SerializeField] private SpriteScript penguin;
-    //[SerializeField] private GameObject cloudZzz;
+    [SerializeField] private GameObject checkWindow;
     [SerializeField] private ParticleSystem goldParticle;
     [SerializeField] private ParticleSystem cloudParticle;
     [SerializeField] private int timeInterval = 5;
@@ -23,10 +22,10 @@ public class GiftScript : MonoBehaviour
     private void Start()
     {
         updateGiftTime = new TimeSpan(0, timeInterval, 0);
-        if (PlayerPrefs.HasKey("timeM"))
-            timeGive = new DateTime(PlayerPrefs.GetInt("timeY"), PlayerPrefs.GetInt("timeMo"), 
-                PlayerPrefs.GetInt("timeD"), PlayerPrefs.GetInt("timeH"), PlayerPrefs.GetInt("timeM"),
-                PlayerPrefs.GetInt("timeS"));
+        if (PlayerPrefs.HasKey("timeMa"))
+            timeGive = new DateTime(PlayerPrefs.GetInt("timeYa"), PlayerPrefs.GetInt("timeMoa"), 
+                PlayerPrefs.GetInt("timeDa"), PlayerPrefs.GetInt("timeHa"), PlayerPrefs.GetInt("timeMa"),
+                PlayerPrefs.GetInt("timeSa"));
         
         StartCoroutine(Initialized());
     }
@@ -48,6 +47,11 @@ public class GiftScript : MonoBehaviour
         disText.SetGoldText();
         timeGive = DateTime.Now;
     }
+
+    public void OpenCheckWindow()
+    {
+        checkWindow.SetActive(true);
+    }
     public void UpdateGift()
     {
         if (DateTime.Now > timeGive + updateGiftTime)
@@ -63,12 +67,12 @@ public class GiftScript : MonoBehaviour
     }
     
     private void Save(){ 
-        PlayerPrefs.SetInt("timeS", timeGive.Second);
-        PlayerPrefs.SetInt("timeM", timeGive.Minute);
-        PlayerPrefs.SetInt("timeH", timeGive.Hour);
-        PlayerPrefs.SetInt("timeD", timeGive.Day);
-        PlayerPrefs.SetInt("timeMo", timeGive.Month);
-        PlayerPrefs.SetInt("timeY", timeGive.Year);
+        PlayerPrefs.SetInt("timeSa", timeGive.Second);
+        PlayerPrefs.SetInt("timeMa", timeGive.Minute);
+        PlayerPrefs.SetInt("timeHa", timeGive.Hour);
+        PlayerPrefs.SetInt("timeDa", timeGive.Day);
+        PlayerPrefs.SetInt("timeMoa", timeGive.Month);
+        PlayerPrefs.SetInt("timeYa", timeGive.Year);
         PlayerPrefs.Save();}
     private void OnApplicationPause(bool pauseStatus){if (pauseStatus == true) Save();}
     private void OnApplicationQuit() => Save();

@@ -54,7 +54,7 @@ public class MusicPlayer : MonoBehaviour
                     reverbFilter.reverbPreset = AudioReverbPreset.Off;
                     underwaterPlayer.Stop();
                     underwaterBloop = true;
-                   // SoundCenter.sounds.PlayBlop();
+                    SoundCenter.sounds.PlayBlop();
                 }
             }
         }

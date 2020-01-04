@@ -85,6 +85,7 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
             bubbles.Play();
             isBubble = true;
             image.raycastTarget = true;
+            fishRenderer.sprite = ownSprite;
         }
         else
         {
@@ -110,6 +111,7 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
             new Vector3(board, CommonVariables.DepthHook - 0.2f * randomPos, 0);
         var randomScale = Random.Range(scaleMin, scaleMax);
         transform.localScale = new Vector3(randomScale, randomScale, 1);
+        fishActive = true;
     }
 
     private void ReloadFish()
@@ -158,12 +160,8 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
     {
         if (transform.position.y > CommonVariables.DepthHook)
         {
-            if (fishActive)
-            {
-                fishActive = false;
-                // CommonVariables.FishNumber--;
-            }
-            if (transform.position.y > CommonVariables.DepthHook + 0.2f) reloadFish = true;
+            if(fishActive)reloadFish = true;
+            fishActive = false;
         }
 
         if (transform.position.x > board && !isPartBonus)
@@ -207,6 +205,7 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
             }
             else if (isBubble)
             {
+                isBubble = false;
                 bubbles.Stop();
                 bubbleBurst.Play();
                 SoundCenter.sounds.PlayBubble();

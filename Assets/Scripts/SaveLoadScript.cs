@@ -52,7 +52,9 @@ public class SaveLoadScript : MonoBehaviour
                     CommonVariables.CharacterShops.Add(new CharacterShop());
                 }
             }
+            EventController.GameEvents.firstStartApp.Invoke();
         }
+        EventController.GameEvents.firstStartApp.Invoke();
         //// Set ShardCount
         CommonVariables.CharacterShops[0].BuyCharacter = true;
         
