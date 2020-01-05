@@ -100,18 +100,19 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
         }
         
 
-        timeMoving = Random.Range(20, 50);
+        timeMoving = Random.Range(10, 50);
         swimmingType = (SwimmingType)Random.Range(0, 2);
         
         animator.SetFloat("offset", Random.Range(0f, 1f));
         speedSwimming = Random.Range(speedSwimmingMin, speedSwimmingMax);
         var randomPos = Random.Range(6, 25);
         transform.position = Random.Range(0, 2) == 0 ? 
-            new Vector3(-board, CommonVariables.DepthHook - 0.2f * randomPos, 0) : 
-            new Vector3(board, CommonVariables.DepthHook - 0.2f * randomPos, 0);
+            new Vector3(-board + 0.01f, CommonVariables.DepthHook - 0.2f * randomPos, 0) : 
+            new Vector3(board - 0.01f, CommonVariables.DepthHook - 0.2f * randomPos, 0);
         var randomScale = Random.Range(scaleMin, scaleMax);
         transform.localScale = new Vector3(randomScale, randomScale, 1);
-        fishActive = true;
+        
+        //Debug.Log("Update!" + DateTime.Now);
     }
 
     private void ReloadFish()
@@ -158,39 +159,29 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
 
     private void InvokeFish()
     {
-        if (transform.position.y > CommonVariables.DepthHook)
-        {
-            if(fishActive)reloadFish = true;
-            fishActive = false;
-        }
-
-        if (transform.position.x > board && !isPartBonus)
+        if (transform.position.x > board + 0.01f && !isPartBonus)
         {
             direction = true;
             fishRenderer.flipX = true;
-            if (reloadFish)
-            {
+            if (transform.position.y > CommonVariables.DepthHook)
                 UpdateFish();
-                reloadFish = false;
-            }
         }
-        else if (transform.position.x < -board && !isPartBonus)
+        else if (transform.position.x < -board - 0.01f && !isPartBonus)
         {
             direction = false;
             fishRenderer.flipX = false;
-            if (reloadFish)
-            {
+            if (transform.position.y > CommonVariables.DepthHook)
                 UpdateFish();
-                reloadFish = false;
-            }
         }
-
         if (swimmingType == SwimmingType.Transition && timeNow >= timeMoving && !isPartBonus)
         {
+            timeMoving = Random.Range(10, 50);
             direction = !direction;
             fishRenderer.flipX = !fishRenderer.flipX;
             timeNow = 0;
         }
+        if (transform.position.y > CommonVariables.DepthHook + CommonVariables.CameraSize * 2)
+            UpdateFish();
         timeNow++;
     }
     public void OnPointerClick(PointerEventData eventData)

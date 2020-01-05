@@ -51,6 +51,7 @@ public class ItemScript : MonoBehaviour, IPointerClickHandler
     {
         image = GetComponent<Image>();
         StartCoroutine(Initialized());
+        InvokeRepeating("UpdatePos", 0.1f, 0.1f);
         SpawningCoin();
     }
 
@@ -77,6 +78,13 @@ public class ItemScript : MonoBehaviour, IPointerClickHandler
         image.raycastTarget = true;
     }
 
+    private void UpdatePos()
+    {
+        if (transform.position.y > CommonVariables.DepthHook + 0.2f + CommonVariables.CameraSize * 2)
+        {
+            Destroy(this.gameObject);
+        }
+    }
     private void Update()
     {
         if (!pickUp && CommonVariables.GamePlaying)

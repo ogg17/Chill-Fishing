@@ -977,9 +977,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slides:
-  - {fileID: 21300000, guid: 98603be61e1dad54184424b9a132006a, type: 3}
-  - {fileID: -4650941003003874115, guid: 244d501659877b54eb40adf068c3ecdf, type: 3}
-  - {fileID: 21300000, guid: ab4da66110bc64249943ddc22314c73d, type: 3}
+  - {fileID: 6506776770209576652, guid: bf51a756b6dffe54ba34c561c4271eaa, type: 3}
+  - {fileID: -256854109861965086, guid: 50ccee63c7b5c764a9de52fe95c571a9, type: 3}
+  - {fileID: -6169158822302207646, guid: 9c49e25c8bcfdc7499a925af7a0f9b20, type: 3}
+  - {fileID: 8124534083215703433, guid: 803b03deddfb11544bf4278b47acf7aa, type: 3}
+  - {fileID: 4421537082753475884, guid: 2015d7e2a17eaf14ea00c7b26dec057b, type: 3}
   nextButton: {fileID: 1798877872}
   backButton: {fileID: 964568266}
 --- !u!114 &131491581
@@ -996,13 +998,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 98603be61e1dad54184424b9a132006a, type: 3}
+  m_Sprite: {fileID: 6506776770209576652, guid: bf51a756b6dffe54ba34c561c4271eaa,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1033,10 +1036,10 @@ RectTransform:
   m_Father: {fileID: 2089404770}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 12.5}
-  m_SizeDelta: {x: -13, y: -28.205078}
+  m_SizeDelta: {x: 127, y: 207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &150813945
 GameObject:
@@ -15939,6 +15942,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1551960984}
+        m_MethodName: InactivateButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   gameOver:
@@ -27990,6 +28004,7 @@ GameObject:
   - component: {fileID: 1144646200}
   - component: {fileID: 1144646202}
   - component: {fileID: 1144646201}
+  - component: {fileID: 1144646203}
   m_Layer: 5
   m_Name: ScreenGuide
   m_TagString: Untagged
@@ -28053,6 +28068,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144646199}
   m_CullTransparentMesh: 0
+--- !u!114 &1144646203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144646199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a6b7143c68a9995ab4434f424dcc9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 0
+  pressedColor: {r: 0, g: 0, b: 0, a: 0}
+  isPressedColor: 0
+  playingSound: 1
+  click:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 131491580}
+        m_MethodName: NextSlide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  down:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  up:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  timeInterval: 0
 --- !u!1 &1190892925
 GameObject:
   m_ObjectHideFlags: 0
@@ -54292,7 +54350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2089404770
 RectTransform:
   m_ObjectHideFlags: 0
