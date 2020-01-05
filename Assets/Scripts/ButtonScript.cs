@@ -24,10 +24,10 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     [SerializeField] private bool playingSound; // enable playing sound
 
     [SerializeField] protected UnityEvent click = new UnityEvent();
-    [SerializeField] private UnityEvent down = new UnityEvent();
-    [SerializeField] private UnityEvent up = new UnityEvent();
+    [SerializeField] protected UnityBoolEvent clickBool = new UnityBoolEvent();
 
     [SerializeField] private int timeInterval = 0;
+    [SerializeField] private bool trigger;
 
     private Image imageButton;
     private Color unpressedColor;
@@ -52,8 +52,10 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
     {
         if (DateTime.Now > clickTime + clickTimeSpan)
         {
+            trigger = !trigger;
             clickTime = DateTime.Now;
             click.Invoke();
+            clickBool.Invoke(trigger);
             if(playingSound) 
                 if(soundType == SoundType.Click) SoundCenter.sounds.PlayClick();
                 else if (soundType == SoundType.Coin) SoundCenter.sounds.PlayCoin();
@@ -62,13 +64,11 @@ public class ButtonScript : MonoBehaviour, IPointerClickHandler, IPointerDownHan
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
-        down.Invoke();
         imageButton.color = isPressedColor ? pressedColor : imageButton.color;
     }
 
     void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
     {
-        up.Invoke();
         imageButton.color = isPressedColor ? unpressedColor : imageButton.color;
     }
 

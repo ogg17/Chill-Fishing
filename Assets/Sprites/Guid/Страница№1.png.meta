@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: bf51a756b6dffe54ba34c561c4271eaa
+guid: af7d9b8b3b7fac84fb39b5cb26322ca4
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 6506776770209576652
-    second: page0_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -43,13 +40,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 224, y: 0, z: 224, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -68,7 +65,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 3
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -79,7 +76,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 3
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -90,45 +87,24 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 3
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: page0_0
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 576
-        height: 1023
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 772edb2dbf9c3504cb5392930204f9b7
-      internalID: 6506776770209576652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e26eee604a203da41a4fd60b891c536d
+    spriteID: 78d536d31ab92784db4dda0365b14f12
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+  spritePackingTag: guid
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 

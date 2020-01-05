@@ -9577,8 +9577,8 @@ MonoBehaviour:
   bubbleBurst: {fileID: 552322819119820639}
   minCost: 2
   maxCost: 5
-  probablyGoldFish: 10
-  probablyBubbleFish: 30
+  probablyGoldFish: 40
+  probablyBubbleFish: 100
   paintFish:
   - {fileID: 9138447195950085610, guid: 244d501659877b54eb40adf068c3ecdf, type: 3}
   - {fileID: -8549954782876399611, guid: 244d501659877b54eb40adf068c3ecdf, type: 3}

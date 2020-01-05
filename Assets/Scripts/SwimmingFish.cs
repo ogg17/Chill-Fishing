@@ -38,8 +38,6 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float board;
 
     private bool direction; // 0 - right, 1 - left
-    private bool fishActive = true;
-    private bool reloadFish;
     private bool isGold;
     private bool isBubble;
     private bool isPartBonus;
@@ -117,13 +115,13 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
 
     private void ReloadFish()
     {
-        reloadFish = true;
         if (isGoldBonus) EndGoldBonus();
         if (isPartBonus)
         {
             isPartBonus = false;
             GameObjects.gameObjects.bonusPart.SetActive(false);
         }
+        UpdateFish();
     }
 
     private IEnumerator Initialized()

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -13,7 +14,9 @@ public class GiftAdScript : MonoBehaviour
     [SerializeField] private GameObject checkWindow;
     [SerializeField] private ParticleSystem goldParticle;
     [SerializeField] private ParticleSystem cloudParticle;
-    [SerializeField] private int timeInterval = 5;
+    [SerializeField] private int rewardIntervalMinutes = 5;
+    [SerializeField] private int minReward = 50;
+    [SerializeField] private int maxReward = 90;
 
     private DateTime timeGive;
     private TimeSpan updateGiftTime = TimeSpan.Zero;
@@ -21,7 +24,7 @@ public class GiftAdScript : MonoBehaviour
 
     private void Start()
     {
-        updateGiftTime = new TimeSpan(0, timeInterval, 0);
+        updateGiftTime = TimeSpan.FromMinutes(rewardIntervalMinutes);
         if (PlayerPrefs.HasKey("timeMa"))
             timeGive = new DateTime(PlayerPrefs.GetInt("timeYa"), PlayerPrefs.GetInt("timeMoa"), 
                 PlayerPrefs.GetInt("timeDa"), PlayerPrefs.GetInt("timeHa"), PlayerPrefs.GetInt("timeMa"),
@@ -42,7 +45,7 @@ public class GiftAdScript : MonoBehaviour
         cloudParticle.Play();
         SoundCenter.sounds.PlayCoin();
         gift.SetActive(false);
-        CommonVariables.GoldGift = Random.Range(2, 16);
+        CommonVariables.GoldGift = Random.Range(minReward, maxReward);
         CommonVariables.Gold += CommonVariables.GoldGift;
         disText.SetGoldText();
         timeGive = DateTime.Now;

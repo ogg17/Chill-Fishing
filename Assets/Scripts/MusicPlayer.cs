@@ -10,6 +10,8 @@ public class MusicPlayer : MonoBehaviour
     private int _currentClip = -2;
     [SerializeField] AudioClip[] music = new AudioClip[10];
     [SerializeField] private AudioSource underwaterPlayer;
+    [SerializeField] private float volume = 0.4f;
+    [SerializeField] private float underVolume = 0.3f;
     void Start()
     {
         _player = GetComponent<AudioSource>();
@@ -36,7 +38,7 @@ public class MusicPlayer : MonoBehaviour
             {
                 if (!underwaterPlayer.isPlaying)
                 {
-                    _player.volume = 0.8f;
+                    _player.volume = underVolume;
                     reverbFilter.reverbPreset = AudioReverbPreset.Underwater;
                     underwaterPlayer.Play();
                     if (underwaterBloop) 
@@ -50,7 +52,7 @@ public class MusicPlayer : MonoBehaviour
             {
                 if (underwaterPlayer.isPlaying)
                 {
-                    _player.volume = 1f;
+                    _player.volume = volume;
                     reverbFilter.reverbPreset = AudioReverbPreset.Off;
                     underwaterPlayer.Stop();
                     underwaterBloop = true;

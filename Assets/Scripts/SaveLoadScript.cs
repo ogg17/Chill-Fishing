@@ -52,7 +52,7 @@ public class SaveLoadScript : MonoBehaviour
                     CommonVariables.CharacterShops.Add(new CharacterShop());
                 }
             }
-            //EventController.GameEvents.firstStartApp.Invoke();
+            EventController.GameEvents.firstStartApp.Invoke();
         }
         //// Set ShardCount
         CommonVariables.CharacterShops[0].BuyCharacter = true;
@@ -85,7 +85,6 @@ public class SaveLoadScript : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         skinMenu.SetActive(false);
         loadScreen.SetActive(false);
-        EventController.GameEvents.firstStartApp.Invoke();
     }
 
     private void Save()
