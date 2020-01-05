@@ -20,18 +20,24 @@ public class GuideScript : MonoBehaviour
 
     public void NextSlide()
     {
-        slideCounter++;
-        image.sprite = slides[slideCounter];
-        if(slideCounter > 0) backButton.SetActive(true);
-        if (slideCounter == slides.Count - 1) nextButton.SetActive(false);
+        if (slideCounter < slides.Count - 1)
+        {
+            slideCounter++;
+            image.sprite = slides[slideCounter];
+            if (slideCounter > 0) backButton.SetActive(true);
+            if (slideCounter == slides.Count - 1) nextButton.SetActive(false);
+        }
     }
 
     public void BackSlide()
     {
-        slideCounter--;
-        image.sprite = slides[slideCounter];
-        if(slideCounter < slides.Count - 1) nextButton.SetActive(true);
-        if (slideCounter == 0) backButton.SetActive(false);
+        if (slideCounter > 0)
+        {
+            slideCounter--;
+            image.sprite = slides[slideCounter];
+            if (slideCounter < slides.Count - 1) nextButton.SetActive(true);
+            if (slideCounter == 0) backButton.SetActive(false);
+        }
     }
     
 }

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/slide1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/slide1.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GuideScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GuideScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/slide1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/slide1.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Resize2CameraScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3C248BA9-E796-489F-BC22-1259B090C66F/ff/54804618/Monetization.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2094A731-351D-475D-BA68-F5920DE30ED8/75/316dafaa/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58C54DEF-84EA-4B3B-B28C-35158ED32599/df/58b54c42/Math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMPro_Private.cs" root0="SKIP_HIGHLIGHTING" />
@@ -130,9 +134,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GuideScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
       </list>
     </option>
   </component>
@@ -244,7 +248,7 @@
       <workItem from="1577273827386" duration="45607000" />
       <workItem from="1577908474465" duration="64071000" />
       <workItem from="1578171849997" duration="161000" />
-      <workItem from="1578172902192" duration="1660000" />
+      <workItem from="1578172902192" duration="7485000" />
     </task>
     <servers />
   </component>
