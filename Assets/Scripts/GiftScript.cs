@@ -43,7 +43,7 @@ public class GiftScript : MonoBehaviour
         cloudParticle.Play();
         SoundCenter.sounds.PlayCoin();
         gift.SetActive(false);
-        CommonVariables.GoldGift = Random.Range(2, 16);
+        CommonVariables.GoldGift = Random.Range(8, 20);
         CommonVariables.Gold += CommonVariables.GoldGift;
         disText.SetGoldText();
         timeGive = DateTime.Now;

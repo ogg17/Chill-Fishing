@@ -15,7 +15,7 @@ public enum SwimmingType
 public class SwimmingFish : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private SpriteRenderer fishRenderer;
-    [SerializeField] private DisappearTextGameScript disText;
+    [SerializeField] private DisappearTextScript disText;
     [SerializeField] private ParticleSystem goldParticle;
     [SerializeField] private ParticleSystem bubbles;
     [SerializeField] private ParticleSystem bubbleBurst;
@@ -38,8 +38,6 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float board;
 
     private bool direction; // 0 - right, 1 - left
-    private bool fishActive = true;
-    private bool reloadFish;
     private bool isGold;
     private bool isBubble;
     private bool isPartBonus;
@@ -71,6 +69,7 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
     {
         isGold = false;
         isBubble = false;
+        image.raycastTarget = false;
         bubbles.Stop();
         ownSprite = paintFish[Random.Range(0, paintFish.Count)];
         int randomFish = Random.Range(0, 1000);
@@ -107,8 +106,8 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
         speedSwimming = Random.Range(speedSwimmingMin, speedSwimmingMax);
         var randomPos = Random.Range(6, 25);
         transform.position = Random.Range(0, 2) == 0 ? 
-            new Vector3(-board + 0.01f, CommonVariables.DepthHook - 0.2f * randomPos, 0) : 
-            new Vector3(board - 0.01f, CommonVariables.DepthHook - 0.2f * randomPos, 0);
+            new Vector3(-board + 0.01f, CommonVariables.DepthHook - 0.2f * randomPos, -2) : 
+            new Vector3(board - 0.01f, CommonVariables.DepthHook - 0.2f * randomPos, -2);
         var randomScale = Random.Range(scaleMin, scaleMax);
         transform.localScale = new Vector3(randomScale, randomScale, 1);
         
@@ -117,13 +116,13 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
 
     private void ReloadFish()
     {
-        reloadFish = true;
         if (isGoldBonus) EndGoldBonus();
         if (isPartBonus)
         {
             isPartBonus = false;
             GameObjects.gameObjects.bonusPart.SetActive(false);
         }
+        UpdateFish();
     }
 
     private IEnumerator Initialized()
@@ -215,6 +214,7 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
         SoundCenter.sounds.PlayCoin();
         fishRenderer.sprite = ownSprite;
         image.raycastTarget = false;
+        EventController.GameEvents.pickUpCoin.Invoke();
 
         if (isBubble) image.raycastTarget = true;
         else image.raycastTarget = false;

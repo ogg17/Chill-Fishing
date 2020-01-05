@@ -3,13 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/bouble.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/bouble.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bubble.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bubble.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GuideScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GuideScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/slide1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/slide1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/boke.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/boke.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/boke.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/boke.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,20 +126,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameObjects.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BubbleGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundCenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AdsScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GiftAdScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GuideScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GiftAdScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
       </list>
     </option>
@@ -249,6 +253,7 @@
       <workItem from="1577908474465" duration="64071000" />
       <workItem from="1578171849997" duration="161000" />
       <workItem from="1578172902192" duration="7485000" />
+      <workItem from="1578225912021" duration="14668000" />
     </task>
     <servers />
   </component>
