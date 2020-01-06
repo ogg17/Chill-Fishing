@@ -12,6 +12,7 @@ public class GiftAdScript : MonoBehaviour
     [SerializeField] private DisappearTextScript disText;
     [SerializeField] private ButtonScript buttonGift;
     [SerializeField] private GameObject checkWindow;
+    [SerializeField] private TextScript goldText;
     [SerializeField] private ParticleSystem goldParticle;
     [SerializeField] private ParticleSystem cloudParticle;
     [SerializeField] private int rewardIntervalMinutes = 5;
@@ -48,6 +49,7 @@ public class GiftAdScript : MonoBehaviour
         CommonVariables.GoldGift = Random.Range(minReward, maxReward);
         CommonVariables.Gold += CommonVariables.GoldGift;
         disText.SetGoldText();
+        goldText.SetGoldText();
         timeGive = DateTime.Now;
     }
 

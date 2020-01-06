@@ -4903,11 +4903,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   probablyGoldFish: 30
-  probablyBonusX3: 100
-  probablyPart: 140
-  probablyBonusX2: 240
-  probablyGold5: 390
-  probablyGold2: 600
+  probablyBonusX3: 60
+  probablyPart: 110
+  probablyBonusX2: 190
+  probablyGold5: 290
+  probablyGold2: 590
   cost: 1
   baubles: {fileID: 2437217996034845294}
   core: {fileID: 2437217996141461680}

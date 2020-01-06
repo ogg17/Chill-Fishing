@@ -9,7 +9,7 @@ public class CharacterShop
     public bool BuyCharacter = false;
     public int ShardCount = 5;
     public int CrushShardCount = 0;
-    public int ShardPrice = 30;
+    public int ShardPrice = 50;
 }
 [System.Serializable]
 public class CommonVariables

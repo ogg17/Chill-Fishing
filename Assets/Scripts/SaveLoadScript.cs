@@ -7,6 +7,7 @@ public class SaveLoadScript : MonoBehaviour
 {
     [SerializeField] private GameObject skinMenu;
     [SerializeField] private GameObject loadScreen;
+    [SerializeField] private String keySave = "Save019";
     private void Awake()
     {
         //PlayerPrefs.DeleteAll();
@@ -25,7 +26,7 @@ public class SaveLoadScript : MonoBehaviour
         yield return new WaitForSeconds(CommonVariables.InitializedTime);
 
         bool error = false;
-        if (PlayerPrefs.HasKey("Save"))
+        if (PlayerPrefs.HasKey(keySave))
         {
             CommonVariables tmp = JsonUtility.FromJson<CommonVariables>(PlayerPrefs.GetString("Save"));
             if (tmp.tmpCharacterShops == null)
@@ -43,7 +44,7 @@ public class SaveLoadScript : MonoBehaviour
                 Debug.Log("Successful");
             }
         }
-        if(error || !PlayerPrefs.HasKey("Save"))
+        if(error || !PlayerPrefs.HasKey(keySave))
         {
             for (var i = 0; i < CommonVariables.PacksCount; i++)
             {
@@ -52,7 +53,11 @@ public class SaveLoadScript : MonoBehaviour
                     CommonVariables.CharacterShops.Add(new CharacterShop());
                 }
             }
-            EventController.GameEvents.firstStartApp.Invoke();
+        }
+
+        if (!PlayerPrefs.HasKey("guide"))
+        {
+            EventController.GameEvents.firstStartApp.Invoke(); 
         }
         //// Set ShardCount
         CommonVariables.CharacterShops[0].BuyCharacter = true;
@@ -90,7 +95,7 @@ public class SaveLoadScript : MonoBehaviour
     private void Save()
     {
         CommonVariables tmp = new CommonVariables();
-        PlayerPrefs.SetString("Save", tmp.SaveVariables());
+        PlayerPrefs.SetString(keySave, tmp.SaveVariables());
         PlayerPrefs.Save();
     }
     private void OnApplicationQuit() => Save();

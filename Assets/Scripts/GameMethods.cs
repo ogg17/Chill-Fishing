@@ -95,4 +95,10 @@ public class GameMethods : MonoBehaviour
     {
         Application.OpenURL("https://sites.google.com/view/chill-fishing-privacy-policy/");
     }
+
+    public void FirstOpenGuide()
+    {
+        PlayerPrefs.SetInt("guide", 1);
+        PlayerPrefs.Save();
+    }
 }
