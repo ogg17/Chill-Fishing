@@ -1557,7 +1557,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1.8, y: 3.8}
+  m_SizeDelta: {x: 1.8, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &178503122
 MonoBehaviour:
@@ -30719,7 +30719,7 @@ MonoBehaviour:
   checkWindow: {fileID: 1410687522}
   goldParticle: {fileID: 1830383540}
   cloudParticle: {fileID: 2023679299}
-  rewardIntervalMinutes: 0
+  rewardIntervalMinutes: 20
   minReward: 50
   maxReward: 90
 --- !u!1001 &1481256364
