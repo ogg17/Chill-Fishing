@@ -34,6 +34,8 @@
           <e p="IceScript.cs" t="Include" />
           <e p="ImageScript.cs" t="Include" />
           <e p="ItemScript.cs" t="Include" />
+          <e p="LanguageSetPackScript.cs" t="Include" />
+          <e p="LanguageSetScript.cs" t="Include" />
           <e p="LoadScreenActivate.cs" t="Include" />
           <e p="MenuMotion.cs" t="Include" />
           <e p="MusicPlayer.cs" t="Include" />

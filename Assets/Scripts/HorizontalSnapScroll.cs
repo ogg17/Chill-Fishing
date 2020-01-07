@@ -93,6 +93,7 @@ public class HorizontalSnapScroll : MonoBehaviour, IEndDragHandler, IBeginDragHa
         for (var i = 0; i < packsPanels.Length; i++)
         {
             packsPanels[i].TextPack.GetComponent<Text>().text = GameString.gameString.stringPacks.packs[i].packName;
+            packsPanels[i].TextPack.GetComponent<LanguageSetPackScript>().indx = i;
         }
 
         UpdateImagePanel();

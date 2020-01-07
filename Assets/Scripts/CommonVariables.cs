@@ -35,7 +35,7 @@ public class CommonVariables
     public static int bonusX2 = 1;
     public static int bonusX3 = 1;
     public static List<CharacterShop> CharacterShops { get; set; } = new List<CharacterShop>(); // Data of shop buys
-    public static SystemLanguage GameLanguage { get; set; } = SystemLanguage.Russian;
+    public static SystemLanguage GameLanguage { get; set; } = SystemLanguage.English;
     public static DateTime timeBonusX2;
     public static DateTime timeBonusX3;
     public static int[] CharacterPacks { get; set; } = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3};

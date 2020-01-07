@@ -21,8 +21,8 @@ public class GameString : MonoBehaviour
     public TranslateString bCharacterEquip;
     public TranslateString bCharacterEquipped;
     public TranslateString bCharacterBuy;
-    public TranslateString bExit;
-    
+    public TranslateString bLanguage;
+
     private void Start()
     {
         if (gameString == null)

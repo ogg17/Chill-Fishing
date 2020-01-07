@@ -30,4 +30,5 @@ public class EventController : MonoBehaviour
     public UnityEvent updatePanel = new UnityEvent();
     public UnityEvent goldFishBonus = new UnityEvent();
     public UnityEvent partFishBonus = new UnityEvent();
+    public UnityEvent setLanguage = new UnityEvent();
 }

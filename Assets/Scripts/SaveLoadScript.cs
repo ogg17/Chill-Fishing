@@ -81,6 +81,7 @@ public class SaveLoadScript : MonoBehaviour
         
         skinMenu.SetActive(true);
         EventController.GameEvents.startApp.Invoke();
+        EventController.GameEvents.setLanguage.Invoke();
 
         StartCoroutine(StopInitialized());
     }

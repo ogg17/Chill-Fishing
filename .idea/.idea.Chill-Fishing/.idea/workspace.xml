@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7ab83a-79a1-43f7-87cc-6086ae80cd43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LanguageSetPackScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LanguageSetScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chill-Fishing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bubble.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bubble.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fish.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Test.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Test.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ExitButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ExitButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NameText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NameText.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PackText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PackText.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GiftAdScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GiftAdScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameString.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameString.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +69,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2094A731-351D-475D-BA68-F5920DE30ED8/57/3e8e700c/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuMotion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LanguageSetPackScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/67EB2317-F8EA-4884-9C95-7697F404E6FB/21/022e9d59/UnityAdsSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GuideScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundCenter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -83,12 +92,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TranslateString.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ads@3.4.1/Runtime/Advertisement/Platform/IPlatform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LanguageSetScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameSprites.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreUIScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnCoin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharachterSkinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterSkinScript.cs" />
@@ -103,8 +111,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UnwindingFishingLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameButtonsScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TranslateString.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameString.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ImageScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpriteScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SeaweedScript.cs" />
@@ -119,14 +125,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/HookMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/GameStrings.json" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnFish.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PanelTouch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameObjects.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BubbleGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundCenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AdsScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GuideScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" />
@@ -134,10 +138,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GiftScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwimmingFish.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GiftAdScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameString.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EventController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameMethods.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LanguageSetPackScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HorizontalSnapScroll.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LanguageSetScript.cs" />
       </list>
     </option>
   </component>
@@ -251,7 +261,7 @@
       <workItem from="1578171849997" duration="161000" />
       <workItem from="1578172902192" duration="7485000" />
       <workItem from="1578225912021" duration="15272000" />
-      <workItem from="1578307939268" duration="3001000" />
+      <workItem from="1578307939268" duration="8273000" />
     </task>
     <servers />
   </component>

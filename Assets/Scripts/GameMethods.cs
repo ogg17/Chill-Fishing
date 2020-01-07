@@ -69,6 +69,7 @@ public class GameMethods : MonoBehaviour
         if (CommonVariables.GameLanguage == SystemLanguage.English)
             CommonVariables.GameLanguage = SystemLanguage.Russian;
         else CommonVariables.GameLanguage = SystemLanguage.English;
+        EventController.GameEvents.setLanguage.Invoke();
     }
     public void SetMusic()
     {

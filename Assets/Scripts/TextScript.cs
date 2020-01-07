@@ -58,7 +58,7 @@ public class TextScript : MonoBehaviour
         if (CommonVariables.CharacterShops[CommonVariables.CurrentIndexPanel].BuyCharacter == true)
         {
             bool check = true;
-            while (check)
+           // while (check)
             {
                 string newPhrase = GameString.gameString.stringPacks.packs[CommonVariables.CurrentPack]
                     .characters[CommonVariables.CurrentPanel].phrase[UnityEngine.Random.
@@ -112,7 +112,7 @@ public class TextScript : MonoBehaviour
 
     public void SetLanguageText()
     {
-        _text.text = CommonVariables.GameLanguage == SystemLanguage.Russian ? "Язык:Русский" : "Language:English";
+        _text.text = GameString.gameString.bLanguage;
     }
 
     public void SetEndGameText()

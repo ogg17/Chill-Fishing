@@ -252,6 +252,21 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u0412\u044B\u0445\u043E\u0434"
       objectReference: {fileID: 0}
+    - target: {fileID: 1120496398906872050, guid: 3033cfb7a946f43438e56dc5ec5b75ab,
+        type: 3}
+      propertyPath: active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120496398906872050, guid: 3033cfb7a946f43438e56dc5ec5b75ab,
+        type: 3}
+      propertyPath: text.english
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120496398906872050, guid: 3033cfb7a946f43438e56dc5ec5b75ab,
+        type: 3}
+      propertyPath: text.russian
+      value: "\u0412\u044B\u0445\u043E\u0434"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3033cfb7a946f43438e56dc5ec5b75ab, type: 3}
 --- !u!224 &2097904749692081629 stripped
