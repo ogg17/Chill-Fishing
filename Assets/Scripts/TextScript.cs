@@ -22,11 +22,11 @@ public class TextScript : MonoBehaviour
     }
     public void SetScoreText()
     {
-        if (CommonVariables.GamePlaying) _text.text = GameString.gameString.uiScore + CommonVariables.Score;
+        if (CommonVariables.GamePlaying) _text.text = CommonVariables.Score + "m";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
     }
     public void SetGoldText()
     {
-        _text.text = GameString.gameString.uiGold + CommonVariables.Gold;
+        _text.text = CommonVariables.Gold + "G";
     }
 
     public void SetIceShardCount()
@@ -115,18 +115,42 @@ public class TextScript : MonoBehaviour
         _text.text = GameString.gameString.bLanguage;
     }
 
-    public void SetEndGameText()
+    public void SetEndGold()
     {
         if (_text != null)
-            _text.text = "-Золото:" + CommonVariables.GoldSession + "\n-Рекорд:" +
-                         CommonVariables.Record + "\n-Счёт:" + CommonVariables.Score;
-        else StartCoroutine(setEndTextEnumerator());
+            _text.text = GameString.gameString.uiEndGold + CommonVariables.GoldSession;
+        else StartCoroutine(setEndGold());
     }
 
-    public IEnumerator setEndTextEnumerator()
+    public IEnumerator setEndGold()
     {
         yield return new WaitForSeconds(CommonVariables.InitializedTime);
-        _text.text = "-Золото:" + CommonVariables.GoldSession + "\n-Рекорд:" +
-                     CommonVariables.Record + "\n-Счёт:" + CommonVariables.Score;
+        _text.text = _text.text = GameString.gameString.uiEndGold + CommonVariables.GoldSession;
+    }
+    
+    public void SetEndRecord()
+    {
+        if (_text != null)
+            _text.text = GameString.gameString.uiEndRecord + CommonVariables.Record;
+        else StartCoroutine(setEndRecord());
+    }
+
+    public IEnumerator setEndRecord()
+    {
+        yield return new WaitForSeconds(CommonVariables.InitializedTime);
+        _text.text = GameString.gameString.uiEndRecord + CommonVariables.Record;
+    }
+    
+    public void SetEndScore()
+    {
+        if (_text != null)
+            _text.text = GameString.gameString.uiEndScore + CommonVariables.Score;
+        else StartCoroutine(setEndScore());
+    }
+
+    public IEnumerator setEndScore()
+    {
+        yield return new WaitForSeconds(CommonVariables.InitializedTime);
+        _text.text = GameString.gameString.uiEndScore + CommonVariables.Score;
     }
 }

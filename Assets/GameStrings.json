@@ -1,11 +1,13 @@
 {"packs": 
   [ {"packName": {"english":"Fishermans", "russian":"Рыбаки"},
     "characters":[
-    { "name":{"english":"", "russian":"Стив Ловец"},
-      "characteristic": {"english":"", "russian":"Опытный Рыбак"},
-      "phrase": [{"english":"", "russian":"С моим спасательным жилетом утонуть невозможно"},
-                {"english":"", "russian":"Здесь прохладно"},
-                {"english":"", "russian":"Рыбу ловить проще, чем не ловить её"}]},
+    { "name":{"english":"Steve Trapper", "russian":"Стив Ловец"},
+      "characteristic": {"english":"Proficient Fisherman", "russian":"Опытный Рыбак"},
+      "phrase": [{"english":"It’s impossible to drown with my life jacket",
+                  "russian":"С моим спасательным жилетом утонуть невозможно"},
+                 {"english":"It's cool here", "russian":"Здесь прохладно"},
+                 {"english":"It’s easier to fish than not to fish.", 
+                  "russian":"Рыбу ловить проще, чем не ловить её"}]},
       
     { "name":{"english":"", "russian":"Боб Бокула"},
       "characteristic": {"english":"", "russian":"Старый рыбак"},

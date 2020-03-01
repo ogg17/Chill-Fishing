@@ -25,7 +25,7 @@ TextureImporter:
     second: Slider
   - first:
       213: 1979480508004918450
-    second: SlideON
+    second: Slide
   - first:
       213: -1357527981758181522
     second: SlideOFF
@@ -191,6 +191,12 @@ TextureImporter:
   - first:
       213: 543378606895051815
     second: GiftRewarded
+  - first:
+      213: -6460368395533782001
+    second: Coin
+  - first:
+      213: -4285472713329345698
+    second: ScaleMetr
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -247,7 +253,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -258,7 +264,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -269,7 +276,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -280,6 +288,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -413,13 +422,13 @@ TextureImporter:
       name: Slider
       rect:
         serializedVersion: 2
-        x: 2
-        y: 136
-        width: 8
+        x: 36
+        y: 100
+        width: 5
         height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 3, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -431,16 +440,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlideON
+      name: Slide
       rect:
         serializedVersion: 2
-        x: 10
-        y: 137
-        width: 15
-        height: 5
+        x: 30
+        y: 101
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -452,34 +461,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlideOFF
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 137
-        width: 15
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aac80a180e8517a4797b2ddd16d6047e
-      internalID: -1357527981758181522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: MenuButton
       rect:
         serializedVersion: 2
         x: 40
-        y: 137
-        width: 13
-        height: 11
+        y: 138
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -497,9 +485,9 @@ TextureImporter:
       name: CharacButton
       rect:
         serializedVersion: 2
-        x: 53
-        y: 137
-        width: 13
+        x: 52
+        y: 138
+        width: 12
         height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -707,10 +695,10 @@ TextureImporter:
       name: AdIcon
       rect:
         serializedVersion: 2
-        x: 2
-        y: 113
-        width: 13
-        height: 9
+        x: 135
+        y: 37
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -728,10 +716,10 @@ TextureImporter:
       name: CloseIcon
       rect:
         serializedVersion: 2
-        x: 25
-        y: 111
-        width: 12
-        height: 11
+        x: 26
+        y: 112
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1552,7 +1540,7 @@ TextureImporter:
         width: 16
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1573,7 +1561,7 @@ TextureImporter:
         width: 16
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1581,6 +1569,48 @@ TextureImporter:
       bones: []
       spriteID: 219c4f267c81f3a478db447ccf1c725b
       internalID: 543378606895051815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coin
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 51
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f047c0a3c292856a0800000000000000
+      internalID: -6460368395533782001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScaleMetr
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 51
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bff5bc541f684c0800000000000000
+      internalID: -4285472713329345698
       vertices: []
       indices: 
       edges: []

@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 100, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6547789525069503089
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6547789525069503085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -77,8 +77,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7084584173d22654983b18e18d00ce93, type: 3}
     m_FontSize: 6
@@ -105,6 +103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f45040462a074b803f2b0063c8629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
   text:
     english: 
     russian: 
+    rusFontSize: 0
+    engFontSize: 0

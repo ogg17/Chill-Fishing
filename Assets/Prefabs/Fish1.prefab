@@ -7,11 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8427778365139075138, guid: 72ad358641147d82e8dfd42d4cacb3b2,
-        type: 3}
-      propertyPath: m_Name
-      value: Fish1
-      objectReference: {fileID: 0}
     - target: {fileID: 8427778365139075136, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -110,6 +105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speedSwimmingMin
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427778365139075138, guid: 72ad358641147d82e8dfd42d4cacb3b2,
+        type: 3}
+      propertyPath: m_Name
+      value: Fish1
       objectReference: {fileID: 0}
     - target: {fileID: 8427778365814993633, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}

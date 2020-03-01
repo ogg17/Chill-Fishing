@@ -24,7 +24,7 @@ public class CameraScript : MonoBehaviour
     private IEnumerator Initialized()
     {
         yield return new WaitForSeconds(CommonVariables.InitializedTime);
-        EventController.GameEvents.gameOver.AddListener(ReloadCamera);
+        EventController.GameEvents.gameOverExitButton.AddListener(ReloadCamera);
     }
 
     public void ReloadCamera()
@@ -38,10 +38,10 @@ public class CameraScript : MonoBehaviour
             if (transform.localPosition.y > CommonVariables.DepthHook + CommonVariables.CameraSize - 0.4f) pos.y -= 3 * speedMove * Time.deltaTime;
             else pos.y -= speedMove * Time.deltaTime;
         }
-        else pos.y = CommonVariables.DepthHook;
+        //else pos.y = CommonVariables.DepthHook;
         transform.localPosition = Vector3.Lerp(transform.localPosition, pos, 10 * Time.deltaTime);
         
-        if(transform.localPosition.y < CommonVariables.DepthHook - CommonVariables.CameraSize) EventController.GameEvents.gameOver.Invoke();
+        if(CommonVariables.GamePlaying && transform.localPosition.y < CommonVariables.DepthHook - CommonVariables.CameraSize) EventController.GameEvents.gameOver.Invoke();
 
         if (transform.localPosition.y < -0.2f) CommonVariables.OnUnderWater = true;
         else CommonVariables.OnUnderWater = false;

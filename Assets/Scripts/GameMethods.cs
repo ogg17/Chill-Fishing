@@ -10,6 +10,7 @@ public class GameMethods : MonoBehaviour
         CommonVariables.GamePlaying = false;
         if(CommonVariables.OnVibration) Handheld.Vibrate();
         if(CommonVariables.Record < CommonVariables.Score) CommonVariables.Record = CommonVariables.Score;
+        Debug.Log("Game Over!");
     }
 
     public void GameStart()

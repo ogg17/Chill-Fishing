@@ -12,13 +12,14 @@ public class SaveLoadScript : MonoBehaviour
     {
         //PlayerPrefs.DeleteAll();
 
-        //CommonVariables.GameLanguage = Application.systemLanguage == SystemLanguage.Russian 
-         //   ? SystemLanguage.Russian : SystemLanguage.English;
+        CommonVariables.GameLanguage = Application.systemLanguage == SystemLanguage.Russian 
+            ? SystemLanguage.Russian : SystemLanguage.English;
     }
     private void Start()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         StartCoroutine(Initialized());
+        StartCoroutine(StopInitialized());
     }
 
     private IEnumerator Initialized()
@@ -28,7 +29,7 @@ public class SaveLoadScript : MonoBehaviour
         bool error = false;
         if (PlayerPrefs.HasKey(keySave))
         {
-            CommonVariables tmp = JsonUtility.FromJson<CommonVariables>(PlayerPrefs.GetString("Save"));
+            CommonVariables tmp = JsonUtility.FromJson<CommonVariables>(PlayerPrefs.GetString(keySave));
             if (tmp.tmpCharacterShops == null)
             {
                 error = true; 
@@ -53,12 +54,9 @@ public class SaveLoadScript : MonoBehaviour
                     CommonVariables.CharacterShops.Add(new CharacterShop());
                 }
             }
+            EventController.GameEvents.firstStartApp.Invoke();
         }
-
-        if (!PlayerPrefs.HasKey("guide"))
-        {
-            EventController.GameEvents.firstStartApp.Invoke(); 
-        }
+        
         //// Set ShardCount
         CommonVariables.CharacterShops[0].BuyCharacter = true;
         
@@ -82,8 +80,6 @@ public class SaveLoadScript : MonoBehaviour
         skinMenu.SetActive(true);
         EventController.GameEvents.startApp.Invoke();
         EventController.GameEvents.setLanguage.Invoke();
-
-        StartCoroutine(StopInitialized());
     }
 
     private IEnumerator StopInitialized()

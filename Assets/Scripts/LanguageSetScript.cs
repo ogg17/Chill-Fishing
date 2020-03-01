@@ -24,6 +24,11 @@ public class LanguageSetScript : MonoBehaviour
 
     private void SetLanguage()
     {
-        if(active) uiText.text = this.text;
+        if (active)
+        {
+            uiText.text = this.text;
+            if (text.GetFontSize() != 0) uiText.fontSize = text.GetFontSize();
+            else uiText.fontSize = 8;
+        }
     }
 }

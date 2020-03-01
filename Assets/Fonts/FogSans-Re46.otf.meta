@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 1cc098dd255d2a349aaf83171f4291dd
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Fog Sans
+  fontNames:
+  - Fog Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: aabcb456a5d5b8140b4a12b9ffeb03f7, type: 3}
+  - {fileID: 12800000, guid: d01daf9e7cb76c342987ebba84e051b6, type: 3}
+  - {fileID: 12800000, guid: f9a5970f11f3e054581463ab48465a07, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

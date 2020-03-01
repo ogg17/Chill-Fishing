@@ -15,6 +15,7 @@ public class SoundCenter : MonoBehaviour
    [SerializeField] private SoundScript crack;
    [SerializeField] private SoundScript coin;
    [SerializeField] private SoundScript ice;
+   [SerializeField] private SoundScript breakIce;
    [SerializeField] private SoundScript start;
    private void Start()
    {
@@ -55,6 +56,11 @@ public class SoundCenter : MonoBehaviour
    public void PlayIce()
    {
       if (CommonVariables.OnSound) ice.PlaySound();
+   }
+
+   public void PlayBreakIce()
+   {
+      if(CommonVariables.OnSound) breakIce.PlaySound();
    }
    public void PlayStart()
    {

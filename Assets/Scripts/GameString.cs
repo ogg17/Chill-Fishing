@@ -15,6 +15,9 @@ public class GameString : MonoBehaviour
     // UI Strings ---------------------------------
     public TranslateString uiGold;
     public TranslateString uiScore;
+    public TranslateString uiEndGold;
+    public TranslateString uiEndRecord;
+    public TranslateString uiEndScore;
 
     // Button Strings -----------------------------
     public TranslateString bCharacterSmash;

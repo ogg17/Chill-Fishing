@@ -7,11 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8427778365139075138, guid: 72ad358641147d82e8dfd42d4cacb3b2,
-        type: 3}
-      propertyPath: m_Name
-      value: Fish2
-      objectReference: {fileID: 0}
     - target: {fileID: 8427778365139075136, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -117,6 +112,11 @@ PrefabInstance:
       propertyPath: speedSwimmingMin
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8427778365139075138, guid: 72ad358641147d82e8dfd42d4cacb3b2,
+        type: 3}
+      propertyPath: m_Name
+      value: Fish2
+      objectReference: {fileID: 0}
     - target: {fileID: 8427778365139075143, guid: 72ad358641147d82e8dfd42d4cacb3b2,
         type: 3}
       propertyPath: m_Size.x
@@ -133,5 +133,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6127392264268460882, guid: 244d501659877b54eb40adf068c3ecdf,
         type: 3}
+    - target: {fileID: 8427778365814993633, guid: 72ad358641147d82e8dfd42d4cacb3b2,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427778365814993633, guid: 72ad358641147d82e8dfd42d4cacb3b2,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72ad358641147d82e8dfd42d4cacb3b2, type: 3}

@@ -5,19 +5,21 @@ using UnityEngine.Serialization;
 
 public class MenuMotion : MonoBehaviour
 {
-    [SerializeField] private bool enabledWindow = false;
+    [SerializeField] private bool inverse = false;
     [SerializeField] private Vector2 startValue;
     [SerializeField] private Vector2 endValue;
     [SerializeField] private float speed = 0.2f;
     private Vector3 moveValue;
+    private bool firstState = true;
     private void Start()
     {
+        if (inverse) firstState = false;
         moveValue = transform.localPosition;
     }
     public void MoveWindow()
     {
-        if (!enabledWindow) { moveValue.x = endValue.x; moveValue.y = endValue.y; enabledWindow = true; }
-        else { moveValue.x = startValue.x; moveValue.y = startValue.y; enabledWindow = false; }
+        if (firstState) { moveValue.x = endValue.x; moveValue.y = endValue.y; firstState = false; }
+        else { moveValue.x = startValue.x; moveValue.y = startValue.y; firstState = true; }
     }
 
     private void FixedUpdate()

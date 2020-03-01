@@ -24,6 +24,7 @@ public class EventController : MonoBehaviour
     public UnityEvent stepGame = new UnityEvent();
     public UnityEvent startGame = new UnityEvent();
     public UnityEvent gameOver = new UnityEvent();
+    public UnityEvent gameOverExitButton = new UnityEvent();
     public UnityEvent startApp = new UnityEvent();
     public UnityEvent firstStartApp = new UnityEvent();
     public UnityEvent pickUpCoin = new UnityEvent();

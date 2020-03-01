@@ -42,6 +42,7 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
     private bool isBubble;
     private bool isPartBonus;
     private bool isGoldBonus;
+    private bool isCatch;
     
     private int cost;
     private int timeMoving;
@@ -69,6 +70,8 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
     {
         isGold = false;
         isBubble = false;
+        isCatch = false;
+        animator.speed = 1;
         image.raycastTarget = false;
         bubbles.Stop();
         ownSprite = paintFish[Random.Range(0, paintFish.Count)];
@@ -128,7 +131,7 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
     private IEnumerator Initialized()
     {
         yield return new WaitForSeconds(CommonVariables.InitializedTime);
-        EventController.GameEvents.gameOver.AddListener(ReloadFish);
+        EventController.GameEvents.gameOverExitButton.AddListener(ReloadFish);
         EventController.GameEvents.goldFishBonus.AddListener(OnGoldBonus);
         EventController.GameEvents.partFishBonus.AddListener(OnPartBonus);
     }
@@ -145,8 +148,11 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
 
     private void Update()
     {
-        move.x = direction ? -speedSwimming * Time.deltaTime : speedSwimming * Time.deltaTime;
-        transform.Translate(move);
+        if (!isCatch)
+        {
+            move.x = direction ? -speedSwimming * Time.deltaTime : speedSwimming * Time.deltaTime;
+            transform.Translate(move);
+        }
 
         if (isGoldBonus && DateTime.Now > goldBonusTime + TimeSpan.FromSeconds(5)) EndGoldBonus();
         if (isPartBonus && DateTime.Now > partBonusTime + TimeSpan.FromSeconds(5))
@@ -172,7 +178,7 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
             if (transform.position.y > CommonVariables.DepthHook)
                 UpdateFish();
         }
-        if (swimmingType == SwimmingType.Transition && timeNow >= timeMoving && !isPartBonus)
+        if (!isCatch && swimmingType == SwimmingType.Transition && timeNow >= timeMoving && !isPartBonus)
         {
             timeMoving = Random.Range(10, 50);
             direction = !direction;
@@ -223,9 +229,11 @@ public class SwimmingFish : MonoBehaviour, IPointerClickHandler
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Hook"))
+        if (other.CompareTag("Hook") && CommonVariables.GamePlaying)
         {
-            Debug.Log( isGold + ":" + isGoldBonus);
+            isCatch = true;
+            animator.speed = 2;
+            Debug.Log( "Collision:" + isGold + ":" + isGoldBonus);
             if (isGold || isGoldBonus)
             {
                 cost = Random.Range(minCost*5, maxCost*4);
