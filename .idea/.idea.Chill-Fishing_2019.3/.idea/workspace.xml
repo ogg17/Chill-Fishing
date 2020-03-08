@@ -58,8 +58,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundCenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonVariables.cs" />
       </list>
     </option>
   </component>
@@ -117,7 +117,7 @@
       <workItem from="1582374764081" duration="925000" />
       <workItem from="1582376382680" duration="3487000" />
       <workItem from="1582452186751" duration="15880000" />
-      <workItem from="1583042632122" duration="9900000" />
+      <workItem from="1583042632122" duration="11549000" />
     </task>
     <servers />
   </component>

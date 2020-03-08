@@ -1,0 +1,133 @@
+@import "../css/hat.css";
+
+body {
+    background-image: url(../img/back.png);
+    font-family: Troika;
+    font-size: 18px;
+    background-size: 100% 100%;
+    margin: auto;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 72px;
+    margin: 32px auto;
+    max-width: 1800px;
+    padding: 16px;
+    border-radius: 28px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+h2 {
+    text-align: center;
+    font-size: 48px;
+    max-width: 1200px;
+    padding: 16px;
+    margin: 16px auto;
+    border-radius: 28px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+p { margin: 24px; }
+
+.screenshot {
+    width: 30%;
+    min-width: 450px;
+    margin: 0.5%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 32px;
+    padding: 2%;
+}
+.content {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.content-text {
+    margin: 0 auto;
+    font-size: 35px;
+    text-align: justify;
+}
+
+.content-video {
+    margin: 5%;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 80%;
+    width: 40%;
+    height: 0;
+    overflow: visible;
+}
+
+.content-video iframe {
+    position: absolute;
+    padding: 2%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 32px;
+}
+
+.footer {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.footer p {
+    margin: 24px;
+}
+
+.footer a {
+    text-decoration-line: underline;
+    color: snow;
+}
+
+.ref-google-play {
+    height: 200px;
+    margin-left: -35px;
+}
+
+.ref-icon {
+    height: 150px;
+    margin: 25px;
+}
+
+.content-download {
+    text-align: center;
+    margin: 32px auto;
+    max-width: 720px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 28px;
+}
+
+.copyright-google {
+    font-size: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (orientation: portrait) {
+    h1 {
+        font-size: 100px;
+        max-width: none;
+    }
+
+    h2 {
+        font-size: 64px;
+    }
+
+    .screenshot {
+        width: 90%;
+        min-width: none;
+    }
+
+    .content-text {
+        font-size: 48px;
+    }
+}
